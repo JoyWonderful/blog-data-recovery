@@ -184,6 +184,17 @@ body {
   font-weight: 900;
   color: #000000;
 }
+summary {
+  cursor: pointer;
+}
+summary::marker {
+  font-family: 'Font Awesome 6 Free';
+  content: '\f0da\0020\0020';
+  color: #707070;
+}
+details[open]>summary::marker {
+  content: '\f0d7\0020\0020';
+}
 body {
   background: var(--body-bg-color);
   box-sizing: border-box;
@@ -280,6 +291,7 @@ blockquote {
 }
 blockquote p {
   padding-left: 10px;
+  padding-right: 10px;
 }
 blockquote::before {
   text-align: left;
