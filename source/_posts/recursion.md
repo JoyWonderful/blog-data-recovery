@@ -8,6 +8,10 @@ categories: 课程笔记
 #comments: false
 ---
 
+> **写递归的要点**  
+> 明白一个函数的作用并相信它能完成这个任务，千万不要跳进这个函数里面企图探究更多细节， 否则就会陷入无穷的细节无法自拔，人脑能压几个栈啊。  
+> <span style="display:block;text-align:right;">—— <a target="_blank" rel="noopener" href="https://oi-wiki.org/basic/divide-and-conquer/#%E5%86%99%E9%80%92%E5%BD%92%E7%9A%84%E8%A6%81%E7%82%B9">OI-wiki</a></span>
+
 递归，就是一个函数自身调用自身。递归起到类似与循环的效果。但是，与循环不同，递归可以**分支**。如果循环一定是一条直线，那么递归可能是树形结构。
 
 ## 循环 -> 递归

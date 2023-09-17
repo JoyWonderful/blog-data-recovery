@@ -62,65 +62,7 @@
 <link rel="stylesheet" href="/fonts/smiley-sans/smileysans-regular.css">
 <link rel="stylesheet" href="/fonts/alimama-dongfangdakai/alimama-dongfangdakai.css">
 
-<style type="text/css">
-    body
-    {
-        font-family: LXGW WenKai Lite;
-        font-size: 1em;
-    }
-    h1
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    h2, h3, h4, h5, h6
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-title-link
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    .site-title
-    {
-        font-family: smileysans;
-        font-size: 1.7em;
-    }
-    .post-body
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-meta
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .search-result-icon
-    {
-        display: flex;
-        text-align: center;
-    }
-    .page-number.current
-    {
-        border-radius: 15%;
-    }
 
-    details {
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.5em 0.5em 0;
-    }
-    summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-    }
-    details[open] {
-        padding: 0.5em;
-    }
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 0.5em;
-    }
-</style>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -161,7 +103,32 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+
+    <div id="more-el-div">
+        <li class="menu-item menu-item-more">
+          <a href="/more/" rel="section" id="morebtn">
+            <i class="fa fa-ellipsis-vertical fa-fw"></i>
+            更多
+          </a>
+          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item">
+            <i class="far fa-address-card fa-fw"></i>
+            友情链接
+          </a>
+          <a href="/pic/" rel="section" id="morepic" class="morebtn-item">
+            <i class="fa fa-image fa-fw"></i>
+            留影
+          </a>
+          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item">
+            <i class="fa fa-pen-to-square fa-fw"></i>
+            留言板
+          </a>
+          <a href="/about/" rel="section" id="moreabt" class="morebtn-item">
+            <i class="fa fa-circle-info fa-fw"></i>
+            关于
+          </a>
+        </li>
+    </div>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -224,7 +191,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -235,7 +202,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -283,10 +250,10 @@
       
       <div class="post-body"><div class="tag-cloud">
   <div class="tag-cloud-title">
-    目前共计 26 个标签
+    目前共计 32 个标签
   </div>
   <div class="tag-cloud-tags">
-    <a href="/tags/Cpp%E6%96%B0%E6%A6%82%E5%BF%B5/" style="font-size: 12px;" class="tag-cloud-0">Cpp新概念</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 12px;" class="tag-cloud-0">二分</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 12px;" class="tag-cloud-0">代码格式化</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 15.6px;" class="tag-cloud-2">优化</a> <a href="/tags/%E4%BD%9C%E6%96%87/" style="font-size: 12px;" class="tag-cloud-0">作文</a> <a href="/tags/%E5%87%BD%E6%95%B0%EF%BC%8C%E5%8F%82%E6%95%B0/" style="font-size: 12px;" class="tag-cloud-0">函数，参数</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%8C%E5%B7%AE%E5%88%86/" style="font-size: 15.6px;" class="tag-cloud-2">前缀和，差分</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" style="font-size: 30px;" class="tag-cloud-10">基础算法</a> <a href="/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/" style="font-size: 12px;" class="tag-cloud-0">复杂度</a> <a href="/tags/%E5%B8%B8%E9%87%8F/" style="font-size: 12px;" class="tag-cloud-0">常量</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 12px;" class="tag-cloud-0">指针</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 12px;" class="tag-cloud-0">排序</a> <a href="/tags/%E6%90%9C%E7%B4%A2/" style="font-size: 15.6px;" class="tag-cloud-2">搜索</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 22.8px;" class="tag-cloud-6">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 12px;" class="tag-cloud-0">数论</a> <a href="/tags/%E6%A0%88/" style="font-size: 12px;" class="tag-cloud-0">栈</a> <a href="/tags/%E6%A0%91/" style="font-size: 19.2px;" class="tag-cloud-4">树</a> <a href="/tags/%E7%94%BB/" style="font-size: 12px;" class="tag-cloud-0">画</a> <a href="/tags/%E7%B1%BB/" style="font-size: 12px;" class="tag-cloud-0">类</a> <a href="/tags/%E7%BB%93%E6%9E%84%E4%BD%93/" style="font-size: 12px;" class="tag-cloud-0">结构体</a> <a href="/tags/%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86/" style="font-size: 12px;" class="tag-cloud-0">编译预处理</a> <a href="/tags/%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3/" style="font-size: 12px;" class="tag-cloud-0">解题思想</a> <a href="/tags/%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" style="font-size: 26.4px;" class="tag-cloud-8">语言入门</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15.6px;" class="tag-cloud-2">递归</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 15.6px;" class="tag-cloud-2">队列</a> <a href="/tags/%E9%9D%99%E7%89%A9%E9%80%9F%E5%86%99/" style="font-size: 12px;" class="tag-cloud-0">静物速写</a>
+    <a href="/tags/Cpp%E6%96%B0%E6%A6%82%E5%BF%B5/" style="font-size: 12px;" class="tag-cloud-0">Cpp新概念</a> <a href="/tags/Git/" style="font-size: 12px;" class="tag-cloud-0">Git</a> <a href="/tags/HTML/" style="font-size: 12px;" class="tag-cloud-0">HTML</a> <a href="/tags/JavaScript/" style="font-size: 12px;" class="tag-cloud-0">JavaScript</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 12px;" class="tag-cloud-0">二分</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 12px;" class="tag-cloud-0">代码格式化</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 15.6px;" class="tag-cloud-2">优化</a> <a href="/tags/%E4%BD%9C%E6%96%87/" style="font-size: 12px;" class="tag-cloud-0">作文</a> <a href="/tags/%E5%87%BD%E6%95%B0%EF%BC%8C%E5%8F%82%E6%95%B0/" style="font-size: 12px;" class="tag-cloud-0">函数，参数</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%8C%E5%B7%AE%E5%88%86/" style="font-size: 15.6px;" class="tag-cloud-2">前缀和，差分</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 12px;" class="tag-cloud-0">动态规划</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" style="font-size: 30px;" class="tag-cloud-10">基础算法</a> <a href="/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/" style="font-size: 12px;" class="tag-cloud-0">复杂度</a> <a href="/tags/%E5%B8%B8%E9%87%8F/" style="font-size: 12px;" class="tag-cloud-0">常量</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 12px;" class="tag-cloud-0">指针</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 12px;" class="tag-cloud-0">排序</a> <a href="/tags/%E6%90%9C%E7%B4%A2/" style="font-size: 19.2px;" class="tag-cloud-4">搜索</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 22.8px;" class="tag-cloud-6">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 12px;" class="tag-cloud-0">数论</a> <a href="/tags/%E6%A0%88/" style="font-size: 12px;" class="tag-cloud-0">栈</a> <a href="/tags/%E6%A0%91/" style="font-size: 19.2px;" class="tag-cloud-4">树</a> <a href="/tags/%E7%94%BB/" style="font-size: 12px;" class="tag-cloud-0">画</a> <a href="/tags/%E7%B1%BB/" style="font-size: 12px;" class="tag-cloud-0">类</a> <a href="/tags/%E7%BB%93%E6%9E%84%E4%BD%93/" style="font-size: 12px;" class="tag-cloud-0">结构体</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 12px;" class="tag-cloud-0">编译</a> <a href="/tags/%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86/" style="font-size: 12px;" class="tag-cloud-0">编译预处理</a> <a href="/tags/%E8%83%8C%E5%8C%85/" style="font-size: 12px;" class="tag-cloud-0">背包</a> <a href="/tags/%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3/" style="font-size: 12px;" class="tag-cloud-0">解题思想</a> <a href="/tags/%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" style="font-size: 26.4px;" class="tag-cloud-8">语言入门</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15.6px;" class="tag-cloud-2">递归</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 15.6px;" class="tag-cloud-2">队列</a> <a href="/tags/%E9%9D%99%E7%89%A9%E9%80%9F%E5%86%99/" style="font-size: 12px;" class="tag-cloud-0">静物速写</a>
   </div>
 </div>
 
@@ -321,14 +288,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">65k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:59</span>
   </span>
 </div>
 

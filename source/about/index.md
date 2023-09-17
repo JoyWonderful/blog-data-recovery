@@ -21,6 +21,8 @@ date: 2023-05-01 09:21:17
 
 upd: 删了一些段落，不写的那么伤感了。
 
+等会儿， Github 好像现在暂时访问不了了（悲）
+
 省流：  
 The blog hosted on Github Pages, use frame Hexo theme NexT.  
 不对，没有人在最后放上省流吧？

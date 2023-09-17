@@ -57,65 +57,7 @@
 <link rel="stylesheet" href="/fonts/smiley-sans/smileysans-regular.css">
 <link rel="stylesheet" href="/fonts/alimama-dongfangdakai/alimama-dongfangdakai.css">
 
-<style type="text/css">
-    body
-    {
-        font-family: LXGW WenKai Lite;
-        font-size: 1em;
-    }
-    h1
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    h2, h3, h4, h5, h6
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-title-link
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    .site-title
-    {
-        font-family: smileysans;
-        font-size: 1.7em;
-    }
-    .post-body
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-meta
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .search-result-icon
-    {
-        display: flex;
-        text-align: center;
-    }
-    .page-number.current
-    {
-        border-radius: 15%;
-    }
 
-    details {
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.5em 0.5em 0;
-    }
-    summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-    }
-    details[open] {
-        padding: 0.5em;
-    }
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 0.5em;
-    }
-</style>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -156,7 +98,32 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+
+    <div id="more-el-div">
+        <li class="menu-item menu-item-more">
+          <a href="/more/" rel="section" id="morebtn">
+            <i class="fa fa-ellipsis-vertical fa-fw"></i>
+            更多
+          </a>
+          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item">
+            <i class="far fa-address-card fa-fw"></i>
+            友情链接
+          </a>
+          <a href="/pic/" rel="section" id="morepic" class="morebtn-item">
+            <i class="fa fa-image fa-fw"></i>
+            留影
+          </a>
+          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item">
+            <i class="fa fa-pen-to-square fa-fw"></i>
+            留言板
+          </a>
+          <a href="/about/" rel="section" id="moreabt" class="morebtn-item">
+            <i class="fa fa-circle-info fa-fw"></i>
+            关于
+          </a>
+        </li>
+    </div>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -219,7 +186,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -230,7 +197,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -268,7 +235,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/code-format/">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/bfs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -286,7 +253,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/code-format/" class="post-title-link" itemprop="url">个人意见：如何写出漂亮的代码</a>
+          <a href="/posts/bfs/" class="post-title-link" itemprop="url">广度优先搜索</a>
         </h2>
 
         <div class="post-meta-container">
@@ -296,15 +263,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-07-07 16:42:34" itemprop="dateCreated datePublished" datetime="2023-07-07T16:42:34+08:00">2023-07-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-09 17:49:14" itemprop="dateModified" datetime="2023-07-09T17:49:14+08:00">2023-07-09</time>
+      <time title="创建时间：2023-07-30 17:43:12 / 修改时间：16:37:24" itemprop="dateCreated datePublished" datetime="2023-07-30T17:43:12+08:00">2023-07-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -312,7 +273,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">编程随记</span></a>
+          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
         </span>
     </span>
 
@@ -328,12 +289,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="note warning"><p style="color:#f0ad4e;font-weight:800;margin-bottom:0px;">创作说明：</p>
-<p style="margin-bottom:0px;">此文章仅为个人看法。您写代码的习惯可以依据您的个人喜好。此文章只是一些个人的建议。</p>
-<p style="margin-bottom:0px;">您在 OI 竞赛中，您<strong>完全可以</strong>不去注意代码风格。</p>
-<p style="margin-bottom:0px;">此文章的建议主要用于工程代码中。</p></div>
-
-<p>代码的维护还是很重要的。相信谁也不愿意去维护连自己都看得头晕的代码。在这里，我想给出一些个人建议，让代码的可读性强一些。大部分代码以 C++ 为例。这篇文章其实也是给自己看的。</p>
+          <p>这不，刚学完<a style="border-bottom:none;" href="/posts/dfs">深搜</a>没多久，又来写广搜笔记了（话说我队列笔记还没来得急写呢）。<strong>广度优先搜索</strong>，广搜，英文为<strong>Breadth First Search</strong>，简称 <strong>BFS</strong>。是从一个结点向其他方向的结点不断扩散，如同一道水晕在湖面上荡漾开来。主要可以用来找路径<strong>权值一定</strong>的最短路径。<br>深搜可以用到队列先进先出的特性。当一个结点准备扩散时，即弹出队列，再将接下来扩散到结点加入队列。随后按照队首扩散、弹出，不断循环。这也是叫它广度优先搜索的原因。</p>
           <!--noindex-->
           <!--/noindex-->
         
@@ -362,7 +318,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/recursion/">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/graph-tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -380,7 +336,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/recursion/" class="post-title-link" itemprop="url">递归</a>
+          <a href="/posts/graph-tree/" class="post-title-link" itemprop="url">数据结构：树的概念与储存</a>
         </h2>
 
         <div class="post-meta-container">
@@ -391,14 +347,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-07-05 12:39:34" itemprop="dateCreated datePublished" datetime="2023-07-05T12:39:34+08:00">2023-07-05</time>
+      <time title="创建时间：2023-07-27 19:34:23" itemprop="dateCreated datePublished" datetime="2023-07-27T19:34:23+08:00">2023-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-06 15:25:08" itemprop="dateModified" datetime="2023-08-06T15:25:08+08:00">2023-08-06</time>
+      <time title="修改时间：2023-08-03 11:11:22" itemprop="dateModified" datetime="2023-08-03T11:11:22+08:00">2023-08-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -422,261 +378,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>递归，就是一个函数自身调用自身。递归起到类似与循环的效果。但是，与循环不同，递归可以<strong>分支</strong>。如果循环一定是一条直线，那么递归可能是树形结构。</p>
-<h2 id="循环-gt-递归"><a href="#循环-gt-递归" class="headerlink" title="循环 -&gt; 递归"></a>循环 -&gt; 递归</h2><p>前面说了，循环和递归很像。那么，我们可以将 <code>for</code> 循环尝试转为递归。先来一个循环的示例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;qwq, %d\n&quot;</span>, n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先，让我们来想一想，<code>for</code> 循环的括号中 3 个语句分别是干什么的呢？</p>
-<ol>
-<li><code>int i = 1;</code> 这是循环的<strong>初始化</strong>，定义了一个变量 $i$，将其赋值为 $1$。</li>
-<li><code>i &lt;= n;</code> 这是循环<strong>每次进行下去的条件</strong>，当 $i&gt;n$ 时即退出循环。</li>
-<li><code>i++</code> 这是循环<strong>每次结束后干的事</strong>，当执行完循环体时， $i$ 则加 $1$。</li>
-</ol>
-<p>这样回忆下来，可以发现，在 <code>for</code> 循环的括号中 3 个语句其实可以拆分出来。
-          <!--noindex-->
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/cpp-shujufanwei/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/cpp-shujufanwei/" class="post-title-link" itemprop="url">C++ 数据范围</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-07-02 17:30:34 / 修改时间：18:10:33" itemprop="dateCreated datePublished" datetime="2023-07-02T17:30:34+08:00">2023-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">编程随记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这就是一个随记，方便自己用的。</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称(可加)</th>
-<th align="center">所占字节</th>
-<th align="left">数据范围(以 $2^n$ 表示)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>(signed) int</code></td>
-<td align="center"><code>4</code></td>
-<td align="left"><code>-2147483648</code> ~ <code>2147482647</code> ($-2^{31}$ ~ $2^{31}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>unsigned int</code></td>
-<td align="center"><code>4</code></td>
-<td align="left"><code>0</code> ~ <code>4294967295</code> ($0$ ~ $2^{32}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>(signed) long (int)</code></td>
-<td align="center"><code>4</code></td>
-<td align="left"><code>-2147483648</code> ~ <code>2147483647</code> ($-2^{31}$ ~ $2^{31}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>unsigned long (int)</code></td>
-<td align="center"><code>4</code></td>
-<td align="left"><code>0</code> ~ <code>4294967295</code> ($0$ ~ $2^{32}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>long long</code></td>
-<td align="center"><code>8</code></td>
-<td align="left"><code>-9223372036854775808</code> ~ <code>9223372036854775807</code> ($-2^{63}$ ~ $2^{63}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>unsigned long long</code></td>
-<td align="center"><code>8</code></td>
-<td align="left"><code>0</code> ~ <code>18446744073709551615</code> ($0$ ~ $2^{64}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>(signed) short (int)</code></td>
-<td align="center"><code>2</code></td>
-<td align="left"><code>-32768</code> ~ <code>32767</code> ($-2^{15}$ ~ $2^{15}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>unsigned short (int)</code></td>
-<td align="center"><code>2</code></td>
-<td align="left"><code>0</code> ~ <code>65535</code> ($0$ ~ $2^{16}-1$)</td>
-</tr>
-<tr>
-<td align="left"><code>float</code></td>
-<td align="center"><code>4</code></td>
-<td align="left"><code>3.4E +/- 38</code></td>
-</tr>
-<tr>
-<td align="left"><code>double</code></td>
-<td align="center"><code>8</code></td>
-<td align="left"><code>1.7E +/- 308</code></td>
-</tr>
-<tr>
-<td align="left"><code>long double</code></td>
-<td align="center"><code>8</code></td>
-<td align="left"><code>1.7E +/- 308</code></td>
-</tr>
-<tr>
-<td align="left"><code>bool</code></td>
-<td align="center"><code>1</code></td>
-<td align="left"><code>true</code> or <code>false</code> or <code>1</code> or <code>0</code></td>
-</tr>
-<tr>
-<td align="left"><code>char</code></td>
-<td align="center"><code>1</code></td>
-<td align="left"><code>-128</code> ~ <code>127</code> ($-2^{7}$ ~ $2^{7}-1$)</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/two-pointers/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/two-pointers/" class="post-title-link" itemprop="url">双指针-快慢指针</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-06-26 18:00:45 / 修改时间：18:44:40" itemprop="dateCreated datePublished" datetime="2023-06-26T18:00:45+08:00">2023-06-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>双指针其实不是真正的指针，而是有两个变量在序列上进行一些操作。<br>——Lqingyi(Lxandqi)</p>
-</blockquote>
-<h2 id="思想分类"><a href="#思想分类" class="headerlink" title="思想分类"></a>思想分类</h2><ul>
-<li>普通双指针 也就是两个普通的 <code>for</code> （也可以是其他的）循环嵌套。</li>
-<li>左右指针 其实就是二分搜索，一个变量指向开头，一个变量指向末尾，根据条件向中间遍历，直到指针相遇或满足某种条件。（也就是逼近答案）</li>
-<li>快慢指针 两个指针（变量）开始同时开头，但一个遍历的快，一个慢，直到条件满足或指针到末尾。</li>
+          <p><strong>树</strong>也是一种数据结构，它是<strong>非线性数据结构</strong>，它能很好地描述一个数据集合中的分支和层次，是一个比较重要的课题，以后的搜索和竞赛都有可能要用到它。树形结构的应用非常广泛，什么索引、语法结构。虽说概念比较繁琐 <del>老师讲了一个小时</del>。有点让人头疼（我咕了好多篇笔记了）。</p>
+<h2 id="树的概念"><a href="#树的概念" class="headerlink" title="树的概念"></a>树的概念</h2><h3 id="前面"><a href="#前面" class="headerlink" title="前面"></a>前面</h3><p>前置芝士，简单说一下这些奇怪的名称：</p>
+<ul>
+<li>树中的每一个元素称为<strong>结点 node</strong>。</li>
+<li>两个结点之间的线称为<strong>边 edge</strong>。</li>
+<li>通过几条边，这几条边组成<strong>路径</strong>。</li>
 </ul>
           <!--noindex-->
           <!--/noindex-->
@@ -706,7 +413,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/drawpic/">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/lianbiao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -724,7 +431,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/drawpic/" class="post-title-link" itemprop="url">自己画的一些画</a>
+          <a href="/posts/lianbiao/" class="post-title-link" itemprop="url">线性数据结构：链表的模板</a>
         </h2>
 
         <div class="post-meta-container">
@@ -735,14 +442,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-06-23 13:48:32" itemprop="dateCreated datePublished" datetime="2023-06-23T13:48:32+08:00">2023-06-23</time>
+      <time title="创建时间：2023-07-19 15:23:32" itemprop="dateCreated datePublished" datetime="2023-07-19T15:23:32+08:00">2023-07-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-14 18:46:45" itemprop="dateModified" datetime="2023-07-14T18:46:45+08:00">2023-07-14</time>
+      <time title="修改时间：2023-07-25 08:18:46" itemprop="dateModified" datetime="2023-07-25T08:18:46+08:00">2023-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -750,7 +457,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%90%90%E7%A2%8E/" itemprop="url" rel="index"><span itemprop="name">琐碎</span></a>
+          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
         </span>
     </span>
 
@@ -766,10 +473,179 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="note info"><p style="color:#428bca;margin-bottom:0px;font-weight:bold;">附注：</p>
-于<p style="display:inline;border-bottom:dashed #0f0f0f 1px;">2023年7月13日</p>新增了“<a style="border-bottom:none;" href="/pic">记忆的留影</a>”界面，建议前往分类于“<a style="border-bottom:none;" href="/pic/#draws">画</a>”的地方查看更多。<br>此文章将保留。</div>
+          <p>链表类似于数组，与数组不同的是，链表可以更加方便地更改数据和删除数据。数组若想将中间的数据删除，则要非很大功夫，而链表就不同了，它的操作更加简单一些（后面说）。</p>
+<p>链表的数据组可以叫做“结点”，结点分成两个部分：一个是数据域，一个是指针域，数据域存数据，指针域指向下一个结点的数据地址。正是指针域将链表的每一个结点连在了一起。这种特性有一个好处：内存地址可以不连续，而数组的内存地址是必须要连续的。<br>比如内存还有 2GB 空闲，我申请了一个 1GB 大的数组，理论上是可以申请下来的，但占用的内存不一定完全是连续的。假设内存被一大堆东西占用的零零碎碎：确实有 2GB，但分成 4 个 500MB，这就申请不下来。而链表呢，可以充分利用内存碎片，通过指针变量，将分开的数据连在一起。</p>
+          <!--noindex-->
+          <!--/noindex-->
+        
+      
+    </div>
 
-<p>放假了闲着没事情干，便画了一些画，放在这儿，留此纪念。</p>
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/cpp-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/cpp-file/" class="post-title-link" itemprop="url">C++ 文件操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-07-17 17:23:11 / 修改时间：17:02:58" itemprop="dateCreated datePublished" datetime="2023-07-17T17:23:11+08:00">2023-07-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">编程随记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我曾经用 Python 的 tkinter 库写过一个<a style="border-bottom:none;" target="_blank" rel="noopener" href="https://github.com/JoyWonderful/My-Python-File/blob/main/text-txt.py">文本编辑器</a>，一百多行，当时幼稚的我以为自己很了不起，因为当时的我认为读写文件是一件很复杂的事情。后来看看，这个东西做得很蹩脚，一个简单的 <code>with open()</code> 就完成了读写文件的操作，可见文件的读写是个很平常的事情。当年的喜悦大概是学到读写文件的喜悦吧。<br>C++ 读写文件，也算是比较平常的。当数据点大的时候输出到文件里更方便。就在这里小记一下读写文件的操作。</p>
+          <!--noindex-->
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/dfs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/dfs/" class="post-title-link" itemprop="url">深度优先搜索</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-07-14 17:18:43 / 修改时间：18:29:45" itemprop="dateCreated datePublished" datetime="2023-07-14T17:18:43+08:00">2023-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前置知识：图论"><a href="#前置知识：图论" class="headerlink" title="前置知识：图论"></a>前置知识：图论</h2><p>引用广为人知的一句话：</p>
+<blockquote>
+<p>图论 (Graph Theory) 是数学的一个分支。它以图为研究对象。图论中的图是由若干给定的点及连接两点的线所构成的图形，这种图形通常用来描述某些事物之间的某种特定关系，用点代表事物，用连接两点的线表示相应两个事物间具有这种关系。</p>
+</blockquote>
+<p>像深度优先搜索，其实也要用到“图”这个概念。其实，“图”体现了搜索（递归）的过程，计算机中的“图”有很多使用的场景。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>深度优先搜索</strong>（深搜），英文名 <strong>Depth First Search</strong>，简称 <strong>DFS</strong>。即从初始节点出发，按一定顺序不断地向下一节点扩展，达到条件则返回上一个节点，以此类推。这正是一个<a href="/posts/recursion">递归</a>的过程。叫深搜是因为它递归的过程若形象来看是不断“加深”的，这样一搜到底也是递归的特性。
           <!--noindex-->
           <!--/noindex-->
         
@@ -791,7 +667,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -815,14 +691,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">65k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:59</span>
   </span>
 </div>
 

@@ -103,7 +103,7 @@ menu:
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap/ || fa fa-sitemap
-  more: /more/ || fa fa-ellipsis-vertical
+  #more: /more/ || fa fa-ellipsis-vertical
   #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.

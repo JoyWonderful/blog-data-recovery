@@ -57,65 +57,7 @@
 <link rel="stylesheet" href="/fonts/smiley-sans/smileysans-regular.css">
 <link rel="stylesheet" href="/fonts/alimama-dongfangdakai/alimama-dongfangdakai.css">
 
-<style type="text/css">
-    body
-    {
-        font-family: LXGW WenKai Lite;
-        font-size: 1em;
-    }
-    h1
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    h2, h3, h4, h5, h6
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-title-link
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    .site-title
-    {
-        font-family: smileysans;
-        font-size: 1.7em;
-    }
-    .post-body
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-meta
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .search-result-icon
-    {
-        display: flex;
-        text-align: center;
-    }
-    .page-number.current
-    {
-        border-radius: 15%;
-    }
 
-    details {
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.5em 0.5em 0;
-    }
-    summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-    }
-    details[open] {
-        padding: 0.5em;
-    }
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 0.5em;
-    }
-</style>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -156,7 +98,32 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+
+    <div id="more-el-div">
+        <li class="menu-item menu-item-more">
+          <a href="/more/" rel="section" id="morebtn">
+            <i class="fa fa-ellipsis-vertical fa-fw"></i>
+            更多
+          </a>
+          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item">
+            <i class="far fa-address-card fa-fw"></i>
+            友情链接
+          </a>
+          <a href="/pic/" rel="section" id="morepic" class="morebtn-item">
+            <i class="fa fa-image fa-fw"></i>
+            留影
+          </a>
+          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item">
+            <i class="fa fa-pen-to-square fa-fw"></i>
+            留言板
+          </a>
+          <a href="/about/" rel="section" id="moreabt" class="morebtn-item">
+            <i class="fa fa-circle-info fa-fw"></i>
+            关于
+          </a>
+        </li>
+    </div>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -219,7 +186,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -230,7 +197,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -268,7 +235,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/xiaolianbi/">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/code-format/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -286,7 +253,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/xiaolianbi/" class="post-title-link" itemprop="url">一些六年级的小练笔</a>
+          <a href="/posts/code-format/" class="post-title-link" itemprop="url">个人意见：如何写出漂亮的代码</a>
         </h2>
 
         <div class="post-meta-container">
@@ -297,14 +264,455 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-06-20 09:25:18" itemprop="dateCreated datePublished" datetime="2023-06-20T09:25:18+08:00">2023-06-20</time>
+      <time title="创建时间：2023-07-07 16:42:34" itemprop="dateCreated datePublished" datetime="2023-07-07T16:42:34+08:00">2023-07-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-03 17:54:15" itemprop="dateModified" datetime="2023-07-03T17:54:15+08:00">2023-07-03</time>
+      <time title="修改时间：2023-07-09 17:49:14" itemprop="dateModified" datetime="2023-07-09T17:49:14+08:00">2023-07-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">编程随记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <div class="note warning"><p style="color:#f0ad4e;font-weight:800;margin-bottom:0px;">创作说明：</p>
+<p style="margin-bottom:0px;">此文章仅为个人看法。您写代码的习惯可以依据您的个人喜好。此文章只是一些个人的建议。</p>
+<p style="margin-bottom:0px;">您在 OI 竞赛中，您<strong>完全可以</strong>不去注意代码风格。</p>
+<p style="margin-bottom:0px;">此文章的建议主要用于工程代码中。</p></div>
+
+<p>代码的维护还是很重要的。相信谁也不愿意去维护连自己都看得头晕的代码。在这里，我想给出一些个人建议，让代码的可读性强一些。大部分代码以 C++ 为例。这篇文章其实也是给自己看的。</p>
+          <!--noindex-->
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/recursion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/recursion/" class="post-title-link" itemprop="url">递归</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-07-05 12:39:34" itemprop="dateCreated datePublished" datetime="2023-07-05T12:39:34+08:00">2023-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-18 17:48:00" itemprop="dateModified" datetime="2023-08-18T17:48:00+08:00">2023-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p><strong>写递归的要点</strong><br>明白一个函数的作用并相信它能完成这个任务，千万不要跳进这个函数里面企图探究更多细节， 否则就会陷入无穷的细节无法自拔，人脑能压几个栈啊。<br><span style="display:block;text-align:right;">—— <a target="_blank" rel="noopener" href="https://oi-wiki.org/basic/divide-and-conquer/#%E5%86%99%E9%80%92%E5%BD%92%E7%9A%84%E8%A6%81%E7%82%B9">OI-wiki</a></span></p>
+</blockquote>
+<p>递归，就是一个函数自身调用自身。递归起到类似与循环的效果。但是，与循环不同，递归可以<strong>分支</strong>。如果循环一定是一条直线，那么递归可能是树形结构。</p>
+<h2 id="循环-gt-递归"><a href="#循环-gt-递归" class="headerlink" title="循环 -&gt; 递归"></a>循环 -&gt; 递归</h2><p>前面说了，循环和递归很像。那么，我们可以将 <code>for</code> 循环尝试转为递归。先来一个循环的示例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;qwq, %d\n&quot;</span>, n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先，让我们来想一想，<code>for</code> 循环的括号中 3 个语句分别是干什么的呢？</p>
+<ol>
+<li><code>int i = 1;</code> 这是循环的<strong>初始化</strong>，定义了一个变量 $i$，将其赋值为 $1$。</li>
+<li><code>i &lt;= n;</code> 这是循环<strong>每次进行下去的条件</strong>，当 $i&gt;n$ 时即退出循环。</li>
+<li><code>i++</code> 这是循环<strong>每次结束后干的事</strong>，当执行完循环体时， $i$ 则加 $1$。</li>
+</ol>
+<p>这样回忆下来，可以发现，在 <code>for</code> 循环的括号中 3 个语句其实可以拆分出来。
+          <!--noindex-->
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/cpp-shujufanwei/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/cpp-shujufanwei/" class="post-title-link" itemprop="url">C++ 数据范围</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-07-02 17:30:34 / 修改时间：18:10:33" itemprop="dateCreated datePublished" datetime="2023-07-02T17:30:34+08:00">2023-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">编程随记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这就是一个随记，方便自己用的。</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称(可加)</th>
+<th align="center">所占字节</th>
+<th align="left">数据范围(以 $2^n$ 表示)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>(signed) int</code></td>
+<td align="center"><code>4</code></td>
+<td align="left"><code>-2147483648</code> ~ <code>2147482647</code> ($-2^{31}$ ~ $2^{31}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned int</code></td>
+<td align="center"><code>4</code></td>
+<td align="left"><code>0</code> ~ <code>4294967295</code> ($0$ ~ $2^{32}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>(signed) long (int)</code></td>
+<td align="center"><code>4</code></td>
+<td align="left"><code>-2147483648</code> ~ <code>2147483647</code> ($-2^{31}$ ~ $2^{31}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned long (int)</code></td>
+<td align="center"><code>4</code></td>
+<td align="left"><code>0</code> ~ <code>4294967295</code> ($0$ ~ $2^{32}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>long long</code></td>
+<td align="center"><code>8</code></td>
+<td align="left"><code>-9223372036854775808</code> ~ <code>9223372036854775807</code> ($-2^{63}$ ~ $2^{63}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned long long</code></td>
+<td align="center"><code>8</code></td>
+<td align="left"><code>0</code> ~ <code>18446744073709551615</code> ($0$ ~ $2^{64}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>(signed) short (int)</code></td>
+<td align="center"><code>2</code></td>
+<td align="left"><code>-32768</code> ~ <code>32767</code> ($-2^{15}$ ~ $2^{15}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned short (int)</code></td>
+<td align="center"><code>2</code></td>
+<td align="left"><code>0</code> ~ <code>65535</code> ($0$ ~ $2^{16}-1$)</td>
+</tr>
+<tr>
+<td align="left"><code>float</code></td>
+<td align="center"><code>4</code></td>
+<td align="left"><code>3.4E +/- 38</code></td>
+</tr>
+<tr>
+<td align="left"><code>double</code></td>
+<td align="center"><code>8</code></td>
+<td align="left"><code>1.7E +/- 308</code></td>
+</tr>
+<tr>
+<td align="left"><code>long double</code></td>
+<td align="center"><code>8</code></td>
+<td align="left"><code>1.7E +/- 308</code></td>
+</tr>
+<tr>
+<td align="left"><code>bool</code></td>
+<td align="center"><code>1</code></td>
+<td align="left"><code>true</code> or <code>false</code> or <code>1</code> or <code>0</code></td>
+</tr>
+<tr>
+<td align="left"><code>char</code></td>
+<td align="center"><code>1</code></td>
+<td align="left"><code>-128</code> ~ <code>127</code> ($-2^{7}$ ~ $2^{7}-1$)</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/two-pointers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/two-pointers/" class="post-title-link" itemprop="url">双指针-快慢指针</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-26 18:00:45 / 修改时间：18:44:40" itemprop="dateCreated datePublished" datetime="2023-06-26T18:00:45+08:00">2023-06-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
+        </span>
+    </span>
+
+  
+
+
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>双指针其实不是真正的指针，而是有两个变量在序列上进行一些操作。<br>——Lqingyi(Lxandqi)</p>
+</blockquote>
+<h2 id="思想分类"><a href="#思想分类" class="headerlink" title="思想分类"></a>思想分类</h2><ul>
+<li>普通双指针 也就是两个普通的 <code>for</code> （也可以是其他的）循环嵌套。</li>
+<li>左右指针 其实就是二分搜索，一个变量指向开头，一个变量指向末尾，根据条件向中间遍历，直到指针相遇或满足某种条件。（也就是逼近答案）</li>
+<li>快慢指针 两个指针（变量）开始同时开头，但一个遍历的快，一个慢，直到条件满足或指针到末尾。</li>
+</ul>
+          <!--noindex-->
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/drawpic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JoyWonderful">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/drawpic/" class="post-title-link" itemprop="url">自己画的一些画</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-23 13:48:32" itemprop="dateCreated datePublished" datetime="2023-06-23T13:48:32+08:00">2023-06-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-14 18:46:45" itemprop="dateModified" datetime="2023-07-14T18:46:45+08:00">2023-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -328,382 +736,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>一些六年级写的小作文（小练笔），留作纪念。</p>
-<h2 id="主题：点面结合写“体检”300字以上"><a href="#主题：点面结合写“体检”300字以上" class="headerlink" title="主题：点面结合写“体检”300字以上"></a>主题：点面结合写“体检”300字以上</h2><p>同学们紧张地等待着，一年一度的体检开始了。<br>与往常不同的是，这次体检要抽血。验血区里，紧张的气氛非常明显。我一拿到<em><strong>条形码</strong></em>(当时验血有一个条形码，用来验证身份和当作标签)，就直奔验血区,怕时间长了自己会害怕。很快就轮到了我。我卷起袖子，将胳膊往桌上一放，马上扭过头闭上眼，不敢看针扎进我的胳膊里的样子。
-          <!--noindex-->
-          <!--/noindex-->
-        
-      
-    </div>
+          <div class="note info"><p style="color:#428bca;margin-bottom:0px;font-weight:bold;">附注：</p>
+于<p style="display:inline;border-bottom:dashed #0f0f0f 1px;">2023年7月13日</p>新增了“<a style="border-bottom:none;" href="/pic">记忆的留影</a>”界面，建议前往分类于“<a style="border-bottom:none;" href="/pic/#draws">画</a>”的地方查看更多。<br>此文章将保留。</div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/sort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/sort/" class="post-title-link" itemprop="url">排序</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-06-10 17:21:38" itemprop="dateCreated datePublished" datetime="2023-06-10T17:21:38+08:00">2023-06-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-13 11:27:17" itemprop="dateModified" datetime="2023-08-13T11:27:17+08:00">2023-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一些说在前面的要点"><a href="#一些说在前面的要点" class="headerlink" title="一些说在前面的要点"></a>一些说在前面的要点</h2><ul>
-<li><strong>稳定性</strong><ul>
-<li>在我们以下学过的排序算法中，只有<strong>选择排序</strong>不是稳定的。</li>
-<li>稳定性，就是有两个相同的数字，在排序后两个数字的相对位置不变。（前面的在前面，后面的在后面）</li>
-</ul>
-</li>
-<li><strong>逆序对</strong><ul>
-<li>前面的一个数字大于后面一个数字，这就叫做逆序对。</li>
-<li>例如 $5\ 1\ 2\ 3\ 4$ 中，有 $4$ 对逆序对。</li>
-</ul>
-</li>
-</ul>
-          <!--noindex-->
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/struct-class/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/struct-class/" class="post-title-link" itemprop="url">C++类（结构体）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-31 19:16:45" itemprop="dateCreated datePublished" datetime="2023-05-31T19:16:45+08:00">2023-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-22 16:12:34" itemprop="dateModified" datetime="2023-06-22T16:12:34+08:00">2023-06-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="创建一个类"><a href="#创建一个类" class="headerlink" title="创建一个类"></a>创建一个类</h2><p><strong>类</strong>类似于结构体，只不过他是C++独有的而已。对于我这个入门者来说，类几乎等于结构体，只不过他出现了一种概念：公有 <code>public</code> 私有 <code>private</code> 受保护的 <code>protected</code> 。当然，对于我来说，除了 <code>public</code> 能用，其他的<strong>都不能用</strong>。<del>我还是<strong>太蒻了</strong>。捂脸.jpg</del> 但是继承类似乎可以用。例如：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">myclass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> :</span><br><span class="line">        <span class="type">int</span> a ;</span><br><span class="line">    <span class="keyword">private</span> :</span><br><span class="line">        <span class="type">int</span> b ;</span><br><span class="line">    <span class="keyword">protected</span> :</span><br><span class="line">        <span class="type">int</span> c ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对于我来说，除了 $a$ 都不能用。<br>好像也没啥能记的了。再次捂脸.jpg</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/erfen/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/erfen/" class="post-title-link" itemprop="url">二分</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-21 15:22:53" itemprop="dateCreated datePublished" datetime="2023-05-21T15:22:53+08:00">2023-05-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-22 16:12:34" itemprop="dateModified" datetime="2023-06-22T16:12:34+08:00">2023-06-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="二分的意义"><a href="#二分的意义" class="headerlink" title="二分的意义"></a>二分的意义</h2><p><strong>优化</strong>。顾名思义，将一整个<strong>有序的</strong>数列分成两个部分，不断缩小边界，查找某个数字。<br>二分的时间复杂度为 $O(log\ 2\ n)$ 。</p>
-<p>此时，我们学的还是整数二分以及浮点二分。</p>
-<h2 id="整数二分的两个模板"><a href="#整数二分的两个模板" class="headerlink" title="整数二分的两个模板"></a>整数二分的两个模板</h2><p>二分的前提是这个序列是<strong>有序的</strong>，也就是单调递增的。<br>一般来说，二分会取中间值进行初始化，再判断这个中间值是否大于目标值。若是，则缩减左边界，否则缩减右边界。直至逼近答案。<br>说“逼近”，是因为有时查找的元素不存在于序列中，那所二分出的答案是接近于的，但又是不正确的。所以要加上一个特判。除非说明给出的想查询的元素所有都是存在于序列中的。</p>
-          <!--noindex-->
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://joywonderful.github.io/posts/zhizhen/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JoyWonderful">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JoyWonderful的小窝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/zhizhen/" class="post-title-link" itemprop="url">指针</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-18 19:50:56" itemprop="dateCreated datePublished" datetime="2023-05-18T19:50:56+08:00">2023-05-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-22 16:12:34" itemprop="dateModified" datetime="2023-06-22T16:12:34+08:00">2023-06-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
-        </span>
-    </span>
-
-  
-
-
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="指针的作用"><a href="#指针的作用" class="headerlink" title="指针的作用"></a>指针的作用</h2><p>指针，顾名思义，就是指向某一东西的标志。</p>
-<p>当我们想存地址时，就可以使用指针变量：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a ;</span><br><span class="line"><span class="type">int</span> *b = &amp;a ;</span><br></pre></td></tr></table></figure>
-
-<p><code>b</code>就是一个指针变量，存着<code>a</code>的地址。</p>
+<p>放假了闲着没事情干，便画了一些画，放在这儿，留此纪念。</p>
           <!--noindex-->
           <!--/noindex-->
         
@@ -725,7 +761,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -749,14 +785,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">65k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:59</span>
   </span>
 </div>
 

@@ -184,6 +184,17 @@ body {
   font-weight: 900;
   color: #000000;
 }
+summary {
+  cursor: pointer;
+}
+summary::marker {
+  font-family: 'Font Awesome 6 Free';
+  content: '\f0da\0020\0020';
+  color: #707070;
+}
+details[open]>summary::marker {
+  content: '\f0d7\0020\0020';
+}
 body {
   background: var(--body-bg-color);
   box-sizing: border-box;
@@ -280,6 +291,7 @@ blockquote {
 }
 blockquote p {
   padding-left: 10px;
+  padding-right: 10px;
 }
 blockquote::before {
   text-align: left;
@@ -2429,12 +2441,12 @@ ul.breadcrumb li:last-child {
   border-radius: 5px;
   height: 80%;
   margin: auto;
-  transform: scale(0);
-  transition: transform 0.4s;
+  transform: translate(-200%, 0%);
+  transition: all 0.6s;
   width: 700px;
 }
 .search-active .search-popup {
-  transform: scale(1);
+  transform: translate(0%, 0%);
 }
 @media (max-width: 767px) {
   .search-popup {
@@ -2451,6 +2463,7 @@ ul.breadcrumb li:last-child {
 }
 .search-popup .popup-btn-close {
   cursor: pointer;
+  transition: all 0.8s;
 }
 .search-popup .popup-btn-close:hover .fa {
   color: #222;
@@ -2645,6 +2658,19 @@ header.header {
     height: var(--scroll-height);
     visibility: unset;
   }
+}
+.morebtn-item {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0!important;
+  height: 0;
+  transition: all 0.6s!important;
+}
+a#morebtn:hover ~ .morebtn-item, .menu-item-more:hover .morebtn-item {
+  visibility: visible;
+  opacity: 1;
+  padding: 5px 20px!important;
+  height: auto;
 }
 .menu .menu-item {
   display: block;
@@ -2907,4 +2933,62 @@ body {
   body {
     background-image: none;
   }
+}
+
+body
+{
+    font-family: LXGW WenKai Lite;
+    font-size: 1em;
+}
+h1
+{
+    font-family: AlimamaDongFangDaKai;
+}
+h2, h3, h4, h5, h6
+{
+    font-family: LXGW WenKai Lite;
+}
+.post-title-link
+{
+    font-family: AlimamaDongFangDaKai;
+}
+.site-title
+{
+    font-family: smileysans;
+    font-size: 1.7em;
+}
+.post-body
+{
+    font-family: LXGW WenKai Lite;
+}
+.post-meta
+{
+    font-family: LXGW WenKai Lite;
+}
+.search-result-icon
+{
+    display: flex;
+    text-align: center;
+}
+.page-number.current
+{
+    border-radius: 15%;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+details[open] {
+    padding: 0.5em;
+}
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
 }

@@ -57,65 +57,7 @@
 <link rel="stylesheet" href="/fonts/smiley-sans/smileysans-regular.css">
 <link rel="stylesheet" href="/fonts/alimama-dongfangdakai/alimama-dongfangdakai.css">
 
-<style type="text/css">
-    body
-    {
-        font-family: LXGW WenKai Lite;
-        font-size: 1em;
-    }
-    h1
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    h2, h3, h4, h5, h6
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-title-link
-    {
-        font-family: AlimamaDongFangDaKai;
-    }
-    .site-title
-    {
-        font-family: smileysans;
-        font-size: 1.7em;
-    }
-    .post-body
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .post-meta
-    {
-        font-family: LXGW WenKai Lite;
-    }
-    .search-result-icon
-    {
-        display: flex;
-        text-align: center;
-    }
-    .page-number.current
-    {
-        border-radius: 15%;
-    }
 
-    details {
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.5em 0.5em 0;
-    }
-    summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-    }
-    details[open] {
-        padding: 0.5em;
-    }
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 0.5em;
-    }
-</style>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -156,7 +98,32 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-more"><a href="/more/" rel="section"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+
+    <div id="more-el-div">
+        <li class="menu-item menu-item-more">
+          <a href="/more/" rel="section" id="morebtn">
+            <i class="fa fa-ellipsis-vertical fa-fw"></i>
+            更多
+          </a>
+          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item">
+            <i class="far fa-address-card fa-fw"></i>
+            友情链接
+          </a>
+          <a href="/pic/" rel="section" id="morepic" class="morebtn-item">
+            <i class="fa fa-image fa-fw"></i>
+            留影
+          </a>
+          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item">
+            <i class="fa fa-pen-to-square fa-fw"></i>
+            留言板
+          </a>
+          <a href="/about/" rel="section" id="moreabt" class="morebtn-item">
+            <i class="fa fa-circle-info fa-fw"></i>
+            关于
+          </a>
+        </li>
+    </div>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -219,7 +186,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -230,7 +197,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -267,13 +234,114 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 26 篇日志。 继续努力。</span>
+        
+        <span class="collection-header">还行! 目前共计 31 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2023</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-30T17:43:12+08:00"
+              content="2023-07-30">
+          07-30
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/bfs/" itemprop="url">
+            <span itemprop="name">广度优先搜索</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-27T19:34:23+08:00"
+              content="2023-07-27">
+          07-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/graph-tree/" itemprop="url">
+            <span itemprop="name">数据结构：树的概念与储存</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-19T15:23:32+08:00"
+              content="2023-07-19">
+          07-19
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/lianbiao/" itemprop="url">
+            <span itemprop="name">线性数据结构：链表的模板</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-17T17:23:11+08:00"
+              content="2023-07-17">
+          07-17
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/cpp-file/" itemprop="url">
+            <span itemprop="name">C++ 文件操作</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-14T17:18:43+08:00"
+              content="2023-07-14">
+          07-14
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/dfs/" itemprop="url">
+            <span itemprop="name">深度优先搜索</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -375,106 +443,6 @@
     </header>
   </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-23T13:48:32+08:00"
-              content="2023-06-23">
-          06-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/drawpic/" itemprop="url">
-            <span itemprop="name">自己画的一些画</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-20T09:25:18+08:00"
-              content="2023-06-20">
-          06-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/xiaolianbi/" itemprop="url">
-            <span itemprop="name">一些六年级的小练笔</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-10T17:21:38+08:00"
-              content="2023-06-10">
-          06-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/sort/" itemprop="url">
-            <span itemprop="name">排序</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-04T11:14:18+08:00"
-              content="2023-06-04">
-          06-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/test-tag-pulgins/" itemprop="url">
-            <span itemprop="name">test-tag-pulgins</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-05-31T19:16:45+08:00"
-              content="2023-05-31">
-          05-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/struct-class/" itemprop="url">
-            <span itemprop="name">C++类（结构体）</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
 
     </div>
   </div>
@@ -482,7 +450,7 @@
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/archives/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/archives/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -506,14 +474,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">65k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:36</span>
+    <span title="站点阅读时长">1:59</span>
   </span>
 </div>
 

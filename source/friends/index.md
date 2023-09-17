@@ -73,7 +73,7 @@ date: 2023-06-23 14:01:09
 
 <div class="frienddiv" style="">
     <div class="friendcon">
-        <a href="https://github.com/Lxandqy" title="Lxandqy → Github → 如果别人尝试过一次就能理解（而我无法理解），我会尝试100次；如果他们必须尝试十次才能理解，我会尝试1000次。如果每个人都能做到，不管你有多傻，我最终都会理解的。即使是最弱的时刻也会变得强大。" rel="noopener me" target="_blank">
+        <a href="https://github.com/Lxandqy" title="Github" rel="noopener me" target="_blank">
             <img src="https://avatars.githubusercontent.com/u/65651714?v=4" class="friendicon">
             <p class="friendname">Lxandqy</p>
             <p class="friendtag">老师</p>
@@ -81,7 +81,7 @@ date: 2023-06-23 14:01:09
         </a>
     </div>
     <div class="friendcon">
-        <a href="https://www.luogu.com.cn/user/819467" title="ZhangBingqian → LuoGu → 生活索然无味，蛤蟆点评人类。" rel="noopener me" target="_blank">
+        <a href="https://www.luogu.com.cn/user/819467" title="LuoGu" rel="noopener me" target="_blank">
             <img src="https://cdn.luogu.com.cn/upload/usericon/819467.png" class="friendicon">
             <p class="friendname">ZhangBingqian</p>
             <p class="friendtag">校友</p>
@@ -89,13 +89,17 @@ date: 2023-06-23 14:01:09
         </a>
     </div>
     <div class="friendcon">
-        <a href="https://pinlyu.com/" title="班班 → Blog → 风卷过的起点" rel="noopener me" target="_blank">
+        <a href="https://pinlyu.com/" title="Blog" rel="noopener me" target="_blank">
             <img src="https://pinlyu.com/resources/img/avatar.webp" class="friendicon">
             <p class="friendname">频率</p>
             <!--&nbsp;<p class="friendtag"></p>-->
             <p class="friendtalk">风卷过的起点</p>
         </a>
     </div>
+</div>
+
+<div style="text-align:center;">
+    <a href="https://forms.office.com/r/kfku3EmH0M">收录或更新友链</a>
 </div>
 
 <script>
@@ -113,4 +117,91 @@ date: 2023-06-23 14:01:09
     }
     window.addEventListener("load", editGridCol);
     window.addEventListener("resize", editGridCol);
+</script>
+
+<script>
+    function genAllTalk() {
+        var alldiv = document.querySelectorAll("div.frienddiv");
+        var allFriConDiv = alldiv[0].querySelectorAll("div.friendcon");
+        for(let i = 0; i < allFriConDiv.length; i++) {
+            var tophei = allFriConDiv[i].offsetTop;
+            var lefthei = allFriConDiv[i].offsetLeft;
+            var friTalk = allFriConDiv[i].querySelectorAll("p.friendtalk")[0].innerHTML;
+            var friName = allFriConDiv[i].querySelectorAll("p.friendname")[0].innerHTML;
+            
+            var genDiv = document.createElement("div");
+            var genFriName = document.createElement("p");
+            var genFriTalk = document.createElement("p");
+
+            genDiv.style.position = "absolute";
+            genDiv.style.left = String(lefthei) + "px";
+            genDiv.style.backgroundColor = "#333";
+            genDiv.style.color = "#eee";
+            genDiv.style.minWidth = String(allFriConDiv[i].clientWidth) + "px";
+            genDiv.style.maxWidth = String(allFriConDiv[i].clientWidth) + "px";
+            genDiv.style.borderRadius = "3px";
+            genDiv.id = String(i) + "alltalk";
+            genDiv.style.opacity = "0";
+            genDiv.style.visibility = "hidden";
+            genDiv.style.transform = "translate(0, -10px)";
+            genDiv.style.transition = "all 0.3s"
+
+            genFriName.innerHTML = friName;
+            genFriName.className = "friendname";
+
+            genFriTalk.innerHTML = friTalk;
+            genFriTalk.style.lineHeight = "18px";
+            genFriTalk.style.paddingLeft = "15px";
+            genFriTalk.style.paddingBottom = "10px";
+            genFriTalk.style.margin = "5px 10px 0 0";
+            genFriTalk.style.fontSize = "15px";
+
+            genDiv.appendChild(genFriName);
+            genDiv.appendChild(genFriTalk);
+            alldiv[0].appendChild(genDiv);
+            var hei = genDiv.clientHeight;
+            genDiv.style.top = String(tophei + allFriConDiv[i].clientHeight + 5) + "px";
+        }
+    }
+    var setzindex = -114514, setopa = -114514, thelastid = "-114514";
+    function showAllTalk(id) {
+        return function() {
+            var showtalk = document.getElementById(id + "alltalk");
+            showtalk.style.visibility = "visible";
+            showtalk.style.transform = "translate(0, 0)";
+            showtalk.style.opacity = "0.9";
+        }
+    }
+    function hideAllTalk(id) {
+        return function() {
+            var hidetalk = document.getElementById(id + "alltalk");
+            hidetalk.style.opacity = "0";
+            hidetalk.style.transform = "translate(0, -10px)";
+            hidetalk.style.visibility = "hidden";
+        }
+    }
+    function addEveAllTalk() {
+        var alldiv = document.querySelectorAll("div.frienddiv");
+        var allFriConDiv = alldiv[0].querySelectorAll("div.friendcon");
+        for(let i = 0; i < allFriConDiv.length; i++) {
+            allFriConDiv[i].addEventListener("mouseenter", showAllTalk(String(i)));
+            allFriConDiv[i].addEventListener("mouseleave", hideAllTalk(String(i)));
+        }
+    }
+    function resizeTalkEl() {
+        var alldiv = document.querySelectorAll("div.frienddiv");
+        var allFriConDiv = alldiv[0].querySelectorAll("div.friendcon");
+        for(let i = 0; i < allFriConDiv.length; i++) {
+            var elem = document.getElementById(String(i) + "alltalk");
+            elem.style.left = String(allFriConDiv[i].offsetLeft) + "px";
+            var hei = elem.clientHeight;
+            elem.style.top = String(allFriConDiv[i].offsetTop + allFriConDiv[i].clientHeight + 5) + "px";
+            elem.style.maxWidth = String(allFriConDiv[i].clientWidth) + "px";
+            elem.style.minWidth = String(allFriConDiv[i].clientWidth) + "px";
+            console.log(elem.style.maxWidth);
+        }
+    }
+    window.addEventListener("load", genAllTalk);
+    window.addEventListener("load", addEveAllTalk);
+    window.addEventListener("resize", resizeTalkEl);
 </script>
