@@ -16,7 +16,7 @@
 
 
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"joywonderful.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"joywonderful.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="树也是一种数据结构，它是非线性数据结构，它能很好地描述一个数据集合中的分支和层次，是一个比较重要的课题，以后的搜索和竞赛都有可能要用到它。树形结构的应用非常广泛，什么索引、语法结构。虽说概念比较繁琐 老师讲了一个小时。有点让人头疼（我咕了好多篇笔记了）。 树的概念前面前置芝士，简单说一下这些奇怪的名称：  树中的每一个元素称为结点 node。 两个结点之间的线称为边 edge。 通过几条边，这几条">
 <meta property="og:type" content="article">
@@ -62,7 +62,8 @@
 
 
 
-
+<script src="/js/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="/css/sweetalert2.min.css">
 
 
 
@@ -115,26 +116,11 @@
 
     <div id="more-el-div">
         <li class="menu-item menu-item-more">
-          <a href="/more/" rel="section" id="morebtn">
-            <i class="fa fa-ellipsis-vertical fa-fw"></i>
-            更多
-          </a>
-          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item">
-            <i class="far fa-address-card fa-fw"></i>
-            友情链接
-          </a>
-          <a href="/pic/" rel="section" id="morepic" class="morebtn-item">
-            <i class="fa fa-image fa-fw"></i>
-            留影
-          </a>
-          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item">
-            <i class="fa fa-pen-to-square fa-fw"></i>
-            留言板
-          </a>
-          <a href="/about/" rel="section" id="moreabt" class="morebtn-item">
-            <i class="fa fa-circle-info fa-fw"></i>
-            关于
-          </a>
+          <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
+          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
+          <a href="/pic/" rel="section" id="morepic" class="morebtn-item"><i class="fa fa-image fa-fw"></i>留影</a>
+          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
+          <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
         </li>
     </div>
       <li class="menu-item menu-item-search">
@@ -200,7 +186,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -403,36 +389,18 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">65k</span>
+    <span title="站点总字数">74k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:59</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 
-<div>
-<span id="timeDate">loading</span><span id="times"> time...</span>
-<script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("04/30/2023 20:53:34");//在此处修改你的建站时间
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "WebSite created "+dnum+" days "; 
-        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " minutes " + snum + " seconds."; 
-    } 
-setInterval("createtime()",250);
-</script>
-</div><script color="221, 221, 221" pointColor="240, 240, 240" opacity="0.4" zIndex="-2" count="50" src="/js/canvas-nest/dist/canvas-nest.js"></script>
+<script color="221, 221, 221" pointColor="240, 240, 240" opacity="0.4" zIndex="-2" count="50" src="/js/canvas-nest/dist/canvas-nest.js"></script>
 
     </div>
   </footer>
@@ -440,16 +408,16 @@ setInterval("createtime()",250);
   
 
 <noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+  <div class="noscript-warning">请不要禁用 JavaScript，否则有些页面无法正常加载。</div>
 </noscript>
 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+  
+<script src="/js/search.js"></script>
 <script src="/js/third-party/search/local-search.js"></script>
 
 

@@ -12,7 +12,7 @@ NexT.boot.registerEvents = function() {
     event.currentTarget.classList.toggle('toggle-close');
     const siteNav = document.querySelector('.site-nav');
     if (!siteNav) return;
-    siteNav.style.setProperty('--scroll-height', siteNav.scrollHeight + 'px');
+    siteNav.style.setProperty('--scroll-height', siteNav.scrollHeight + 180 + 'px');
     document.body.classList.toggle('site-nav-on');
   });
 

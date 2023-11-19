@@ -26,3 +26,84 @@ upd: 删了一些段落，不写的那么伤感了。
 省流：  
 The blog hosted on Github Pages, use frame Hexo theme NexT.  
 不对，没有人在最后放上省流吧？
+
+<script src="/js/my-mod-js/get-last-commit.js" type="module"></script>
+
+<style>
+    #github-commit-info a, #github-commit-info span {
+        color: #999;
+        font-size: 0.875em;
+        font-family: consolas, Menlo, monospace;
+    }
+    #github-commit-info span {
+        margin-left: 15px;
+    }
+    #github-commit-info a {
+        border-bottom: none;
+        transition: all 0.4s;
+    }
+    #github-commit-info a:hover {
+        border-bottom: 1px solid #777;
+        color: #777;
+    }
+
+    :where(iframe#gh-act) .status-heading {
+        margin-bottom: 1px;
+    }
+    :where(iframe#gh-act) .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-weight: 600 !important;
+    }
+    :where(iframe#gh-act) .h4 {
+        font-size: 1rem !important;
+    }
+    :where(iframe#gh-act) h3 {
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+    :where(iframe#gh-act) h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .merge-status-icon {
+        min-width: 30px;
+    }
+    .flex-self-center {
+        align-self: center !important;
+    }
+    .color-fg-success {
+        color: #1a7f37 !important;
+    }
+    .branch-action-item-simple .merge-status-item {
+        padding-left: 12px;
+    }
+    .merge-status-item {
+        position: relative;
+        padding: 8px 16px;
+        background-color: #f6f8fa;
+        border-bottom: 1px solid #d0d7de;
+    }
+    .d-flex {
+        display: flex !important;
+    }
+    .flex-items-baseline {
+        align-items: baseline !important;
+    }
+    .commit-build-statuses .dropdown-menu .merge-status-list {
+        max-height: 170px;
+        visibility: visible;
+        border-bottom: 0;
+    }
+    .merge-status-list.hide-closed-list {
+        visibility: hidden;
+        transition: max-height .25s ease-in-out,visibility 0s linear .25s;
+    }
+    .branch-action-item {
+        padding: 16px 16px 16px 55px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+</style>
+
+<br>
+
+<div title="最后一次 commit 信息：(hash / message / date)" id="github-commit-info"></div>

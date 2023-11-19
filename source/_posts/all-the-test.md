@@ -6,6 +6,10 @@ hidden: true
 ---
 
 ## 二级标题
+
+<a class="btn" id="showTest">点我测试 SweetAlert2 Toast 消息</a>
+<a href="/posts/use-swal">更多 SweetAlert 的测试</a>
+
 **我是粗体**  
 *我是斜体*  
 ***粗斜***
@@ -172,3 +176,13 @@ hidden: true
 <p>test</p><p>test</p><p>test</p>
 <p>test</p><p>test</p><p>test</p>
 {% endnote %}
+
+<script type="module">
+    const icon_list = ["success", "error", "warning", "info", "question"];
+    async function testSwal2Toast() {
+        for(let i = 0; i < 5; i++) {
+            await Toast.fire({icon:icon_list[i], text:icon_list[i]});
+        }
+    }
+    document.querySelector("a.btn#showTest").addEventListener("click", testSwal2Toast);
+</script>

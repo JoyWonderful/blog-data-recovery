@@ -433,16 +433,18 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 .highlight:hover .copy-btn,
 pre:hover .copy-btn {
   opacity: 1;
+  visibility: visible;
 }
 figure.highlight .table-container {
-  position: relative;
+  position: static;
 }
 .copy-btn {
-  z-index: 7;
+  z-index: 1;
   color: #333;
   cursor: pointer;
   line-height: 1.6;
   opacity: 0;
+  visibility: hidden;
   padding: 2px 6px;
   position: absolute;
   transition: all 0.2s ease-in-out;
@@ -515,19 +517,27 @@ figure.highlight {
   border: solid #f0f0f0 0.96px;
   border-radius: 2.8px;
 }
+figure.highlight .code {
+  z-index: 0;
+}
 figure.highlight::before {
-  z-index: 6;
+  z-index: 1;
   opacity: 1;
+  visibility: visible;
   content: attr(class);
   color: #a8a8a8;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1em;
   position: absolute;
   right: .3rem;
   top: .1em;
   font-family: consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
   text-transform: uppercase;
-  transition: all 2s;
+  transition: all .3s;
+}
+figure.highlight:hover::before {
+  opacity: 0;
+  visibility: hidden;
 }
 figure.highlight pre {
   border: 0;
@@ -542,12 +552,15 @@ figure.highlight table {
 figure.highlight td {
   border: 0;
   padding: 0;
+  left: 0;
 }
 figure.highlight .gutter {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  position: sticky;
+  z-index: 1;
 }
 figure.highlight .gutter pre {
   background: var(--highlight-gutter-background);
@@ -2666,11 +2679,11 @@ header.header {
   height: 0;
   transition: all 0.6s!important;
 }
-a#morebtn:hover ~ .morebtn-item, .menu-item-more:hover .morebtn-item {
+a#morebtn:hover ~ .morebtn-item, .menu-item-more:hover .morebtn-item, body.site-nav-on .morebtn-item {
   visibility: visible;
   opacity: 1;
   padding: 5px 20px!important;
-  height: auto;
+  height: 26px;
 }
 .menu .menu-item {
   display: block;

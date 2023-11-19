@@ -210,6 +210,19 @@ class LocalSearch {
   // Highlight the search words provided in the url in the text
   highlightSearchWords(body) {
     const params = new URL(location.href).searchParams.get('highlight');
+    const nowurl = new URL(location.href);
+    if(nowurl.pathname.slice(0, 7) != "/posts/" && params != null) {
+      console.log("Change to");
+      window.stop();
+      Swal.fire({
+        icon: "warning",
+        title: "重定向",
+        html: "<span>非文章页面，请<strong>不要强制高亮词汇</strong>，否则会出现问题<br><del>你是不是特意想找 bug（狗头保命）</del><br>五秒后自动重定向，减去 URL 的参数</span>",
+        confirmButtonText: "现在重定向",
+        timer: 5000,
+        timerProgressBar: true
+      }).then(() => {location.href = nowurl.origin + nowurl.pathname;});
+    }
     const keywords = params ? params.split(' ') : [];
     if (!keywords.length || !body) return;
     const walk = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, null);
