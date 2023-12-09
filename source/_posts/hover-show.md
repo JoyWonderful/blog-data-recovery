@@ -9,97 +9,6 @@ categories: 编程随记
 
 <!--more-->
 
-<style>
-    [aria-label][balloon-shown] {
-        position: relative;
-    }
-    [aria-label][balloon-shown="left"]::before {
-        border: 5px solid transparent;
-        border-left-color: #202335;
-    }
-    [aria-label][balloon-shown="right"]::before {
-        border: 5px solid transparent;
-        border-right-color: #202335;
-    }
-    [aria-label][balloon-shown="up"]::before {
-        border: 5px solid transparent;
-        border-top-color: #202335;
-    }
-    [aria-label][balloon-shown="down"]::before {
-        border: 5px solid transparent;
-        border-bottom-color: #202335;
-    }
-    [aria-label][balloon-shown]::before {
-        width: 0;
-        height: 0;
-        z-index: 10;
-        content: "";
-        position: absolute;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .4s, transform .4s, visibility .4s;
-    }
-    [aria-label][balloon-shown]::after {
-        opacity: 0;
-        z-index: 10;
-        visibility: hidden;
-        background-color: #202335;
-        content: attr(aria-label);
-        white-space: nowrap;
-        border-radius: 2px;
-        position: absolute;
-        padding: .5em 1em;
-        transition: opacity .4s, transform .4s, visibility .4s;
-        color: #eee;
-    }
-    [aria-label][balloon-shown]:hover::after, [aria-label][balloon-shown]:hover::before {
-        opacity: 0.9;
-        visibility: visible;
-    }
-    [aria-label][balloon-shown="left"]::after {
-        margin-right: 10px;
-    }
-    [aria-label][balloon-shown="left"]::after, [aria-label][balloon-shown="left"]::before {
-        right: 100%;
-        top: 50%;
-        transform: translate(5px, -50%);
-    }
-    [aria-label][balloon-shown="right"]::after {
-        margin-left: 10px;
-    }
-    [aria-label][balloon-shown="right"]::after, [aria-label][balloon-shown="right"]::before {
-        left: 100%;
-        top: 50%;
-        transform: translate(-5px, -50%);
-    }
-    [aria-label][balloon-shown="left"]:hover::after, [aria-label][balloon-shown="left"]:hover::before, [aria-label][balloon-shown="right"]:hover::after, [aria-label][balloon-shown="right"]:hover::before {
-        transform: translate(0, -50%);
-    }
-    [aria-label][balloon-shown="up"]::after {
-        margin-bottom: 10px;
-    }
-    [aria-label][balloon-shown="up"]::after, [aria-label][balloon-shown="up"]::before {
-        bottom: 100%;
-        left: 50%;
-        transform: translate(-50%, 5px);
-    }
-    [aria-label][balloon-shown="down"]::after {
-        margin-top: 10px;
-    }
-    [aria-label][balloon-shown="down"]::after, [aria-label][balloon-shown="down"]::before {
-        left: 50%;
-        top: 100%;
-        transform: translate(-50%, -5px);
-    }
-    [aria-label][balloon-shown="up"]:hover::after, [aria-label][balloon-shown="up"]:hover::before, [aria-label][balloon-shown="down"]:hover::after, [aria-label][balloon-shown="down"]:hover::before {
-        transform: translate(-50%, 0);
-    }
-
-    a.yigethis-page-button:hover {
-        background-color: #aaa;
-    }
-</style>
-
 <span>测试：<span><span aria-label="左边提示" balloon-shown="left" style="margin-left:30px;">把鼠标悬浮到这段文字上会在左边显示提示</span>  
 <span style="margin-right:20px;">这是一个使用场景的实例（图标解说）：</span><a aria-label="刷新" balloon-shown="right" style="border-bottom:none;border:1px solid #aaa;border-radius:3px;background-color:inherit;transition:backgrond-color .3s;padding:5px;" href="#" class="yigethis-page-button"><i class="fa fa-rotate"></i></a>  
 <span style="margin-right:20px;">实例（更详细的说明）</span><span aria-label="公开程度" balloon-shown="up" style="border:1px solid #aaa;border-radius:2em;padding:1px 7px;">受保护的</span>  
@@ -129,6 +38,7 @@ categories: 编程随记
 [aria-label][balloon-shown]::before {
     width: 0;
     height: 0;
+    /* pointer-events: none; */ /* 让鼠标无法悬浮在所弹出的伪元素上 */
     z-index: 10;
     content: "";
     position: absolute;
@@ -139,6 +49,7 @@ categories: 编程随记
 [aria-label][balloon-shown]::after {
     opacity: 0;
     z-index: 10;
+    /* pointer-events: none; */ /* 让鼠标无法悬浮在所弹出的伪元素上 */
     visibility: hidden;
     background-color: #202335;
     content: attr(aria-label);

@@ -1,3 +1,68 @@
+function showSearchingBar() {
+  var rmednd = 0;
+  var mkls = document.querySelectorAll("mark.search-keyword");
+  if(mkls.length == 0) {Toast.fire({icon:"warning", text:"没有搜索结果"}); return;}
+  var mkheight = [];
+  for(let i = 0; i < mkls.length - rmednd; i++) {
+      var ofPart = mkls[i].offsetParent;
+      if(ofPart == null) {
+          mkls[i] = undefined;
+          --i;
+          ++rmednd;
+          continue;
+      }
+      mkheight[i] = mkls[i].offsetTop;
+      while(String(ofPart) != "[object HTMLBodyElement]") {
+          mkheight[i] += ofPart.offsetTop;
+          ofPart = ofPart.offsetParent;
+      }
+  }
+  if(mkls.length - rmednd == 0) {Toast.fire({icon:"warning", text:"没有搜索结果"}); return;}
+
+  var scDiv = document.createElement("div");
+  scDiv.className = "search-results-container";
+  scDiv.innerHTML = `<span>搜索结果 </span><span class="count">1/${mkheight.length}</span><button class="bef-btn"><i class="fa fa-arrow-up fa-fw"></i></button><button class="aft-btn"><i class="fa fa-arrow-down fa-fw"></i></button><button class="cls-btn"><i class="fa fa-xmark fa-fw"></i></button>`;
+  document.querySelector("body").appendChild(scDiv);
+  
+  window.searchNumber = 0;
+  window.anime({
+      targets: document.scrollingElement,
+      duration: 200,
+      easing: "linear",
+      scrollTop: mkheight[window.searchNumber]
+  });
+  document.querySelector("div.search-results-container button.bef-btn").addEventListener("click", () => {
+      if(window.searchNumber <= 0)
+      {
+          window.searchNumber = mkheight.length;
+      }
+      window.anime({
+          targets: document.scrollingElement,
+          duration: 500,
+          easing: "linear",
+          scrollTop: mkheight[--window.searchNumber]
+      });
+      document.querySelector("div.search-results-container span.count").innerHTML = `${window.searchNumber + 1}/${mkheight.length}`;
+  });
+  document.querySelector("div.search-results-container button.aft-btn").addEventListener("click", () => {
+      if(window.searchNumber >= mkheight.length - 1)
+      {
+          window.searchNumber = -1;
+      }
+      window.anime({
+          targets: document.scrollingElement,
+          duration: 500,
+          easing: "linear",
+          scrollTop: mkheight[++window.searchNumber]
+      });
+      document.querySelector("div.search-results-container span.count").innerHTML = `${window.searchNumber + 1}/${mkheight.length}`;
+  });
+  document.querySelector("div.search-results-container button.cls-btn").addEventListener("click", () => {
+      document.querySelector("div.search-results-container").remove();
+      const nowurl = new URL(location.href);
+      location.href = nowurl.origin + nowurl.pathname;
+  });
+}
 class LocalSearch {
   constructor({
     path = '',
@@ -236,5 +301,7 @@ class LocalSearch {
       const slice = this.mergeIntoSlice(0, node.nodeValue.length, indexOfNode);
       this.highlightText(node, slice, 'search-keyword');
     });
+    window.addEventListener("load", showSearchingBar);
   }
 }
+
