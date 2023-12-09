@@ -1,6 +1,5 @@
 .deploy_git/
 .github/
-node_modules/
 db.json
 package-lock.json
 package.json
