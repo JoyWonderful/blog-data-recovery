@@ -1,7 +1,6 @@
 ---
 title: 测试全部渲染
 date: 2023-07-08 18:52:56
-categories: 测试
 hidden: true
 ---
 

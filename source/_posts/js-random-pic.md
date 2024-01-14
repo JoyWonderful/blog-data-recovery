@@ -67,7 +67,7 @@ selp[0].innerHTML = "这段文字被更改过了。";
 代码是这样的：
 
 ```javascript
-var picLink = ["/pic/naozhong.jpg", "/pic/dog-heihei.jpg", "/pic/pencil-box.jpg", "/pic/class-balloon.jpg", "/pic/dgbbs-bridge.jpg", "/pic/dhbbs-ting.jpg", "/pic/dhbbs-boat.jpg"];
+var picLink = ["https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg", "https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg", "https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg", "https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg", "https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png", "https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg", "https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg"];
 var imgSel = document.querySelectorAll("img#random-pic");
 var randomNumber = Math.round(Math.random() * (picLink.length) - 1);
 imgSel[0].src = picLink[randomNumber];
@@ -75,7 +75,7 @@ imgSel[0].src = picLink[randomNumber];
 
 <script>
     function showRandomPic() {
-        var picLink = ["/pic/naozhong.jpg", "/pic/dog-heihei.jpg", "/pic/pencil-box.jpg", "/pic/class-balloon.jpg", "/pic/dgbbs-bridge.jpg", "/pic/dhbbs-ting.jpg", "/pic/dhbbs-boat.jpg"];
+        var picLink = ["https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg", "https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg", "https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg", "https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg", "https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png", "https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg", "https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg"];
         var imgSel = document.querySelectorAll("img#random-pic");
         var randomNumber = Math.round(Math.random() * (picLink.length - 1));
         console.log("[INFO] randomNumber: " + randomNumber + "\n[INFO] picLink: " + picLink[randomNumber]);
@@ -85,19 +85,19 @@ imgSel[0].src = picLink[randomNumber];
 </script>
 
 <p style="border-radius:2px; border:1px solid #999;">
-    <img id="random-pic" style="margin:3px; width:70%;" alt="img1" src="/pic/icon.png">
+    <img id="random-pic" style="margin:3px; width:70%;" alt="img1" src="/images/icon.png">
     <a href="javascript:showRandomPic()" class="btn" style="margin:5px;">换张图片？</a>
 </p>
 
 ## 封装函数
 
 <p style="border-radius:2px; border:1px solid #999;">
-    <img id="random-pic2" alt="img" style="margin:3px; width:70%;" src="/pic/icon.png">
+    <img id="random-pic2" alt="img" style="margin:3px; width:70%;" src="/images/icon.png">
     <a id="rdm-btn" class="btn" style="margin:5px;">换张图片？</a>
 </p>
 
 <script>
-    var imgArr = ["/pic/naozhong.jpg", "/pic/dog-heihei.jpg", "/pic/pencil-box.jpg", "/pic/class-balloon.jpg", "/pic/dgbbs-bridge.jpg", "/pic/dhbbs-ting.jpg", "/pic/dhbbs-boat.jpg", "/pic/tree-sun.jpg", "/pic/Inkeddog-huahua.jpg"];
+    var imgArr = ["https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg", "https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg", "https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg", "https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg", "https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png", "https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg", "https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg"];
 
     function showRandomImage(ImgArray, Selector) {
         return function() {

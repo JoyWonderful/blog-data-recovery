@@ -6,7 +6,6 @@ tags:
 - 前缀和，差分
 - 优化
 categories: 课程笔记
-#comments: false
 ---
 
 ## 什么是差分，差分与前缀和的关系

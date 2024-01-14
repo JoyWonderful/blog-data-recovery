@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/pic/icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/pic/icon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/pic/icon-16x16.png">
-  <link rel="mask-icon" href="/pic/icon.png" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -18,15 +18,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"joywonderful.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="function changeCopyInfo() {       navigator.clipboard.writeText(&quot;https:&#x2F;&#x2F;joywonderful.github.io&#x2F;atom.xml&quot;).then(         function () {             var cpinnertext &#x3D; document.getElementById(&quot;copyb">
+    <meta name="description" content="function changeCopyInfo() {         const atomUrl &#x3D; &quot;https:&#x2F;&#x2F;joywonderful.github.io&#x2F;atom.xml&quot;;         if(navigator.clipboard) {             navigator.clipboard.writeText(atomUrl).then(">
 <meta property="og:type" content="website">
 <meta property="og:title" content="订阅选项">
 <meta property="og:url" content="https://joywonderful.github.io/rss-read/index.html">
 <meta property="og:site_name" content="JoyWonderful的小窝">
-<meta property="og:description" content="function changeCopyInfo() {       navigator.clipboard.writeText(&quot;https:&#x2F;&#x2F;joywonderful.github.io&#x2F;atom.xml&quot;).then(         function () {             var cpinnertext &#x3D; document.getElementById(&quot;copyb">
+<meta property="og:description" content="function changeCopyInfo() {         const atomUrl &#x3D; &quot;https:&#x2F;&#x2F;joywonderful.github.io&#x2F;atom.xml&quot;;         if(navigator.clipboard) {             navigator.clipboard.writeText(atomUrl).then(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-20T02:16:34.000Z">
-<meta property="article:modified_time" content="2023-08-12T04:44:36.499Z">
+<meta property="article:modified_time" content="2024-01-07T01:35:12.119Z">
 <meta property="article:author" content="JoyWonderful">
 <meta name="twitter:card" content="summary">
 
@@ -106,15 +106,12 @@
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
 
-    <div id="more-el-div">
-        <li class="menu-item menu-item-more">
-          <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
-          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
-          <a href="/pic/" rel="section" id="morepic" class="morebtn-item"><i class="fa fa-image fa-fw"></i>留影</a>
-          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
-          <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
-        </li>
-    </div>
+    <li class="menu-item menu-item-more">
+      <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
+      <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
+      <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
+      <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
+    </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -177,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,7 +185,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -237,18 +234,36 @@
       <div class="post-body">
           <script>
     function changeCopyInfo() {
-      navigator.clipboard.writeText("https://joywonderful.github.io/atom.xml").then(
-        function () {
-            var cpinnertext = document.getElementById("copybtninfo");
-            cpinnertext.innerHTML = "已复制";
-            setTimeout(() => cpinnertext.innerHTML = "复制atom.xml源文件链接", 2000);
-        },
-        function () {
-            var cpinnertext = document.getElementById("copybtninfo");
-            cpinnertext.innerHTML = "复制时出现错误";
-            setTimeout(() => cpinnertext.innerHTML = "复制atom.xml源文件链接", 2000);
-        },
-      );
+        const atomUrl = "https://joywonderful.github.io/atom.xml";
+        if(navigator.clipboard) {
+            navigator.clipboard.writeText(atomUrl).then(
+            function () {
+                Toast.fire({icon: "success", text: "已复制"});
+                console.debug("[debug] navigator.clipboard success.");
+            },
+            function () {
+                Toast.fire({icon: "error", text: "复制时出现错误"});
+                console.debug("[debug] navigator error.");
+            },);
+        }
+        else { // 兼容不支持 clipboard 方法的
+            console.debug("[debug] broswer do not support clipboard.")
+            const ta = document.createElement("textarea");
+            ta.style.top = window.scrollY + "px";
+            ta.style.position = "absolute";
+            ta.style.opacity = "0";
+            ta.readOnly = true;
+            ta.value = atomUrl;
+            document.body.append(ta);
+            ta.select();
+            ta.setSelectionRange(0, atomUrl.length);
+            ta.readOnly = false;
+            const res = document.execCommand("copy");
+            if(res){Toast.fire({icon: "success", text: "已复制"});}
+            else{Toast.fire({icon: "error", text: "复制时出现错误"});}
+            ta.blur();
+            document.body.removeChild(ta);
+        }
     } /*自己又写了一个屎山 JS。。。也没啥用，我的强迫症本质让我写了显示“已复制” By JoyWonderful*/
     /* 要是某个用户突然兴起狂点复制，屎山的本质据显现出来了吧。（大雾 我猜没有人会来看这行代码注释，除了我。*/
 </script>
@@ -262,9 +277,6 @@
 </span>
 <span class="links-of-author-item">
     <a href="https://www.qireader.com/discover" rel="noopener me" target="_blank">通过qireader订阅（无法定向，请点击最下面的按钮复制链接后粘贴至搜索框）</a>
-</span>
-<span class="links-of-author-item">
-    <a href="https://www.readdig.com/feed/6496a90063a9490018d26791" rel="noopener me" target="_blank">通过readdig订阅</a>
 </span>
 <span class="links-of-author-item">
     <a href="/atom.xml">通过atom.xml源文件</a>
@@ -291,7 +303,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-paper-plane"></i>
   </span>
@@ -303,14 +315,16 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">72k</span>
+    <span>93k</span>
   </span>
   <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
+    <span aria-label="按 550字符/分钟 计算" balloon-shown="up">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-coffee"></i>
+      </span>
+        <span>站点阅读时长 &asymp;</span>
+      <span>2:48</span>
     </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:11</span>
   </span>
 </div>
 

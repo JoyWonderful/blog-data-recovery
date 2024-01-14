@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/pic/icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/pic/icon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/pic/icon-16x16.png">
-  <link rel="mask-icon" href="/pic/icon.png" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -26,10 +26,10 @@
 <meta property="og:description" content="写递归的要点明白一个函数的作用并相信它能完成这个任务，千万不要跳进这个函数里面企图探究更多细节， 否则就会陷入无穷的细节无法自拔，人脑能压几个栈啊。—— OI-wiki  递归，就是一个函数自身调用自身。递归起到类似与循环的效果。但是，与循环不同，递归可以分支。如果循环一定是一条直线，那么递归可能是树形结构。 循环 -&gt; 递归前面说了，循环和递归很像。那么，我们可以将 for 循环尝试转为">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mermaid.ink/svg/pako:eNqNVE1vgzAM_SsoJ1eiU81HPzjstON22W4Tl6ikLVKBKg2aprb_fSHVYhPUaRwQzzbvPduBi9h2lRKF2B27r-1BahO9vpdtZK-zsQjcfXaP1BUC4MyjBCAhlAKkhDKAjFAOkBNaAiwJrQBWhNYAa0IbgA0hXFj5BcODHeYHrSFkjtBaQuYJrSlkrtDaQueLdRzN589XvA5pX-diyRBLfO8ulg6x1E8gmj_ZoFam121YPc4E3I4n87MjvdxPMGTg1Y-5eca1N-3V6Sz9bqj_ld8QeVz7PYWqvHqcCbgdz8ZvmM17QYsOOXj9Y_Z_dOvUkUaETD-hg0STwZSO02TSozeCXKhxZ8voMDLlnI7khGf0xl8ak-5FLBqlG1lX9gO_DKWlMAfVqFIU9rFSO9kfTSnK9mZLZW-6j-92KwqjexWL_lRJo15qudey-Q2qqjadfrv_M9yvIxYn2X52nS3ZyeNZ3X4Adj46Eg">
-<meta property="og:image" content="https://joywonderful.github.io/pic/jianzhi-shiyi-blue-yx.jpg">
-<meta property="og:image" content="https://joywonderful.github.io/pic/jianzhi-shiyi-red-zx.jpg">
+<meta property="og:image" content="https://s2.loli.net/2023/12/16/K1HvhlyVkfStFWY.jpg">
+<meta property="og:image" content="https://s2.loli.net/2023/12/16/IzMv2uQLaJOfNqw.jpg">
 <meta property="article:published_time" content="2023-07-05T04:39:34.000Z">
-<meta property="article:modified_time" content="2023-08-18T09:48:00.502Z">
+<meta property="article:modified_time" content="2023-12-23T04:12:58.390Z">
 <meta property="article:author" content="JoyWonderful">
 <meta property="article:tag" content="基础算法">
 <meta property="article:tag" content="递归">
@@ -111,15 +111,12 @@
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
 
-    <div id="more-el-div">
-        <li class="menu-item menu-item-more">
-          <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
-          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
-          <a href="/pic/" rel="section" id="morepic" class="morebtn-item"><i class="fa fa-image fa-fw"></i>留影</a>
-          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
-          <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
-        </li>
-    </div>
+    <li class="menu-item menu-item-more">
+      <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
+      <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
+      <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
+      <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
+    </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -183,7 +180,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -194,7 +191,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -262,14 +259,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-07-05 12:39:34" itemprop="dateCreated datePublished" datetime="2023-07-05T12:39:34+08:00">2023-07-05</time>
+      <time aria-label="创建时间：2023-07-05 12:39:34" balloon-shown="down" itemprop="dateCreated datePublished" datetime="2023-07-05T12:39:34+08:00">2023-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-18 17:48:00" itemprop="dateModified" datetime="2023-08-18T17:48:00+08:00">2023-08-18</time>
+      <time aria-label="修改时间：2023-12-23 12:12:58" balloon-shown="down" itemprop="dateModified" datetime="2023-12-23T12:12:58+08:00">2023-12-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -342,7 +339,7 @@
 <li>当这一列放过以后，就将这一列打上标记，不再将棋子放在这一列。</li>
 <li>这一个对角线放过后，打上标记，不再将棋子放到对角线上</li>
 </ul>
-<p>但是，对角线的标记比较难弄，对角线似乎无法打标记。对角线的标记并不是无解，对角线的 (x,y) 是有规律的。引用原文图片来找规律。<br><strong>先看右斜的对角线有什么规律：</strong><br><img src="/pic/jianzhi-shiyi-blue-yx.jpg"><br>可以看到，中间一条蓝色的线对应圈起来的坐标，(3,3) (5,5)；靠左一条蓝色的线对应划线的坐标，(4,2) (6,4)。不难看出，$3-3&#x3D;0&#x3D;5-5&#x3D;0; \hspace{5px} 4-2&#x3D;2&#x3D;6-4&#x3D;2$。可见，同一条右斜对角线上，x 坐标减 y 坐标的绝对值相等。但是相对的对角线上x 坐标减 y 坐标的绝对值也一样，这就比较麻烦。C++ 不能用负数，也不能两条对角线都是同一个标记。老师给了我们一个办法，将他们的差加上 20（别的数也行），问题就解决了。<br><strong>再看左斜的对角线有什么规律：</strong><br><img src="/pic/jianzhi-shiyi-red-zx.jpg"><br>同上，中间一条对应 (2,5) (5,2)，左上一条对应 (1,3) (3,1)。与右斜的对角线不同，它们不是差有规律而是和有规律。$2+5&#x3D;7&#x3D;5+2&#x3D;7; \hspace{5px} 1+3&#x3D;4&#x3D;3+1&#x3D;4$。那么，打标记时将 x+y 作为下标即可。</p>
+<p>但是，对角线的标记比较难弄，对角线似乎无法打标记。对角线的标记并不是无解，对角线的 (x,y) 是有规律的。引用原文图片来找规律。<br><strong>先看右斜的对角线有什么规律：</strong><br><img src="https://s2.loli.net/2023/12/16/K1HvhlyVkfStFWY.jpg" alt="blue-bhh"><br>可以看到，中间一条蓝色的线对应圈起来的坐标，(3,3) (5,5)；靠左一条蓝色的线对应划线的坐标，(4,2) (6,4)。不难看出，$3-3&#x3D;0&#x3D;5-5&#x3D;0; \hspace{5px} 4-2&#x3D;2&#x3D;6-4&#x3D;2$。可见，同一条右斜对角线上，x 坐标减 y 坐标的绝对值相等。但是相对的对角线上x 坐标减 y 坐标的绝对值也一样，这就比较麻烦。C++ 不能用负数，也不能两条对角线都是同一个标记。老师给了我们一个办法，将他们的差加上 20（别的数也行），问题就解决了。<br><strong>再看左斜的对角线有什么规律：</strong><br><img src="https://s2.loli.net/2023/12/16/IzMv2uQLaJOfNqw.jpg" alt="red-bhh"><br>同上，中间一条对应 (2,5) (5,2)，左上一条对应 (1,3) (3,1)。与右斜的对角线不同，它们不是差有规律而是和有规律。$2+5&#x3D;7&#x3D;5+2&#x3D;7; \hspace{5px} 1+3&#x3D;4&#x3D;3+1&#x3D;4$。那么，打标记时将 x+y 作为下标即可。</p>
 <p>加上<a href="/posts/dfs" style="border-bottom:none">深搜</a>，代码就出来了：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> flagy[<span class="number">50</span>], flagzx[<span class="number">50</span>], flagyx[<span class="number">50</span>];</span><br><span class="line"><span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> s[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x == n + <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		sum++ ;</span><br><span class="line">		<span class="keyword">if</span>(sum &lt;= <span class="number">3</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, s[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(flagy[i] == <span class="number">0</span> &amp;&amp; flagzx[x + i] == <span class="number">0</span> &amp;&amp; flagyx[x - i + <span class="number">20</span>] == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			flagy[i] = <span class="number">1</span>;</span><br><span class="line">			flagzx[x + i] = <span class="number">1</span>;</span><br><span class="line">			flagyx[x - i + <span class="number">20</span>] = <span class="number">1</span>;</span><br><span class="line">			s[x] = i;</span><br><span class="line">			<span class="built_in">dfs</span>(x + <span class="number">1</span>);</span><br><span class="line">			flagy[i] = <span class="number">0</span>;</span><br><span class="line">			flagzx[x + i] = <span class="number">0</span>;</span><br><span class="line">			flagyx[x - i + <span class="number">20</span>] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -394,7 +391,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-paper-plane"></i>
   </span>
@@ -406,14 +403,16 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">72k</span>
+    <span>93k</span>
   </span>
   <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
+    <span aria-label="按 550字符/分钟 计算" balloon-shown="up">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-coffee"></i>
+      </span>
+        <span>站点阅读时长 &asymp;</span>
+      <span>2:48</span>
     </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:11</span>
   </span>
 </div>
 

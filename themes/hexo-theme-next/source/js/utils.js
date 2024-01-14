@@ -54,7 +54,7 @@ NexT.utils = {
       if (!CONFIG.copycode.enable) return;
       let target = element;
       if (CONFIG.copycode.style !== 'mac') target = element.querySelector('.table-container') || element;
-      target.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="far fa-clipboard fa-fw"></i></div>');
+      target.insertAdjacentHTML('beforeend', '<div class="copy-btn" aria-label="复制代码" balloon-shown="left"><i class="far fa-clipboard fa-fw"></i></div>');
       const button = element.querySelector('.copy-btn');
       button.addEventListener('click', () => {
         const lines = element.querySelector('.code') || element.querySelector('code');
@@ -63,8 +63,10 @@ NexT.utils = {
           // https://caniuse.com/mdn-api_clipboard_writetext
           navigator.clipboard.writeText(code).then(() => {
             button.querySelector('i').className = 'fa fa-check-circle fa-fw';
+            button.setAttribute("aria-label", "复制成功");
           }, () => {
             button.querySelector('i').className = 'fa fa-times-circle fa-fw';
+            button.setAttribute("aria-label", "抱歉，复制出现错误");
           });
         } else {
           const ta = document.createElement('textarea');
@@ -79,6 +81,7 @@ NexT.utils = {
           ta.readOnly = false;
           const result = document.execCommand('copy');
           button.querySelector('i').className = result ? 'fa fa-check-circle fa-fw' : 'fa fa-times-circle fa-fw';
+          button.setAttribute("aria-label", (result ? "复制成功" : "抱歉，复制出现错误"));
           ta.blur(); // For iOS
           button.blur();
           document.body.removeChild(ta);

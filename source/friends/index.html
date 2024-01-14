@@ -13,6 +13,9 @@ date: 2023-06-23 14:01:09
         margin-bottom: 20px;
         padding: 1rem;
     }
+    @media (max-width: 767px) {
+        .frienddiv {grid-template-columns: 1fr;}
+    }
     .friendcon
     {
         padding: 0.5rem;
@@ -109,23 +112,6 @@ date: 2023-06-23 14:01:09
 <div style="text-align:center;">
     <a href="https://forms.office.com/r/kfku3EmH0M">收录或更新友链</a>
 </div>
-
-<script>
-    function editGridCol() {
-        var winWid = window.innerWidth;
-        var styleNode = document.querySelectorAll("style#my-friend-style");
-        if(winWid <= 1000)
-        {
-            styleNode[0].innerHTML = '\n    .frienddiv\n    {\n        display: grid;\n        grid-template-columns: 1fr;\n        grid-gap: 1.5rem;\n        gap: 1.5rem;\n        margin-bottom: 20px;\n        padding: 1rem;\n    }\n    .friendcon\n    {\n        padding: 0.5rem;\n        position: relative;\n        border: solid 1px #ccc;\n        border-radius: 3px;\n        transition: all 0.6s;\n        min-width: 0;\n    }\n    .friendcon:hover\n    {\n        background-color: #efefef;\n    }\n    img.friendicon\n    {\n        display: inline;\n        margin: auto;\n        float: left;\n        width: 75px;\n        height: 75px;\n    }\n    .friendname\n    {\n        padding-left: 15px;\n        position: relative;\n        line-height: 40px;\n        margin-top: 20px;\n        display: inline;\n        font-size: 20px;\n        font-weight: bold;\n    }\n    .friendtag\n    {\n        margin: 0 0 0;\n        line-height: 20px;\n        display: inline;\n        font-size: 15px;\n        background-color: #bf4e3f;\n        color: #fff;\n        border-radius: 5px;\n    }\n    .friendtalk\n    {\n        line-height: 18px;\n        padding-left: 15px;\n        margin: 5px 10px 0 0;\n        font-size: 15px;\n        color: #999;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n    }\n    a\n    {\n        border-bottom: none;\n    }\n'
-        }
-        else
-        {
-            styleNode[0].innerHTML = '\n    .frienddiv\n    {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        grid-gap: 1.5rem;\n        gap: 1.5rem;\n        margin-bottom: 20px;\n        padding: 1rem;\n    }\n    .friendcon\n    {\n        padding: 0.5rem;\n        position: relative;\n        border: solid 1px #ccc;\n        border-radius: 3px;\n        transition: all 0.6s;\n        min-width: 0;\n    }\n    .friendcon:hover\n    {\n        background-color: #efefef;\n    }\n    img.friendicon\n    {\n        display: inline;\n        margin: auto;\n        float: left;\n        width: 75px;\n        height: 75px;\n    }\n    .friendname\n    {\n        padding-left: 15px;\n        position: relative;\n        line-height: 40px;\n        margin-top: 20px;\n        display: inline;\n        font-size: 20px;\n        font-weight: bold;\n    }\n    .friendtag\n    {\n        margin: 0 0 0;\n        line-height: 20px;\n        display: inline;\n        font-size: 15px;\n        background-color: #bf4e3f;\n        color: #fff;\n        border-radius: 5px;\n    }\n    .friendtalk\n    {\n        line-height: 18px;\n        padding-left: 15px;\n        margin: 5px 10px 0 0;\n        font-size: 15px;\n        color: #999;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n    }\n    a\n    {\n        border-bottom: none;\n    }\n'
-        }
-    }
-    window.addEventListener("load", editGridCol);
-    window.addEventListener("resize", editGridCol);
-</script>
 
 <script>
     function genAllTalk() {

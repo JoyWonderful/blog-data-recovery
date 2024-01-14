@@ -5,7 +5,6 @@ tags:
 - 语言入门
 - 指针
 categories: 课程笔记
-#comments: false
 ---
 
 ## 指针的作用

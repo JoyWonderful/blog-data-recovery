@@ -1,10 +1,7 @@
 ---
 title: test-tag-pulgins
 date: 2023-06-04 11:14:18
-tags: 网站测试
-categories: 测试
 hidden: true
-#comments: false
 ---
 
 {% note default %}

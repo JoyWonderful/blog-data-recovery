@@ -9,10 +9,12 @@ categories: 编程随记
 
 <!--more-->
 
-<span>测试：<span><span aria-label="左边提示" balloon-shown="left" style="margin-left:30px;">把鼠标悬浮到这段文字上会在左边显示提示</span>  
-<span style="margin-right:20px;">这是一个使用场景的实例（图标解说）：</span><a aria-label="刷新" balloon-shown="right" style="border-bottom:none;border:1px solid #aaa;border-radius:3px;background-color:inherit;transition:backgrond-color .3s;padding:5px;" href="#" class="yigethis-page-button"><i class="fa fa-rotate"></i></a>  
-<span style="margin-right:20px;">实例（更详细的说明）</span><span aria-label="公开程度" balloon-shown="up" style="border:1px solid #aaa;border-radius:2em;padding:1px 7px;">受保护的</span>  
-<span style="margin-right:20px;">使用场景实例</span><a aria-label="共 3 只" balloon-shown="down" class="tag-cloud-1" href="#">猫咪</a> <a aria-label="共 2 只" balloon-shown="down" class="tag-cloud-1" href="#">狗勾</a> <a aria-label="共 1 只" balloon-shown="down" class="tag-cloud-1" href="#">蛙蛙</a> <a aria-label="共 4 只" balloon-shown="down" class="tag-cloud-1" href="#">仓鼠</a> <a aria-label="共 2 只" balloon-shown="down" class="tag-cloud-1" href="#">乌龟</a>  
+| 代码 | 效果 |
+| :--- | :--- |
+| `<span aria-label="左边提示" balloon-shown="left">鼠标</span>` | <span aria-label="左边提示" balloon-shown="left">鼠标</span> |
+| `<span aria-label="右边提示" balloon-shown="right">悬浮</span>` | <span aria-label="右边提示" balloon-shown="right">悬浮</span> |
+| `<span aria-label="上边提示" balloon-shown="up">文字</span>` | <span aria-label="上边提示" balloon-shown="up">文字</span> |
+| `<span aria-label="上边提示" balloon-shown="down">提示</span>` | <span aria-label="下边提示" balloon-shown="down">提示</span> |
 
 代码是这样的：
 ```css
@@ -109,4 +111,3 @@ categories: 编程随记
 <标签 aria-label="文字" balloon-shown="up"或"down"或"left"或"right">文字</标签>
 ```
 
-可以回到上面的实例部分右键选择审查元素。

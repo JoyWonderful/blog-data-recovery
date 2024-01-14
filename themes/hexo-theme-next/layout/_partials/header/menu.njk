@@ -7,15 +7,12 @@
       {{- menu_item.render(node) | trim }}
     {%- endfor %}
 
-    <div id="more-el-div">
-        <li class="menu-item menu-item-more">
-          <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
-          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
-          <a href="/pic/" rel="section" id="morepic" class="morebtn-item"><i class="fa fa-image fa-fw"></i>留影</a>
-          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
-          <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
-        </li>
-    </div>
+    <li class="menu-item menu-item-more">
+      <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
+      <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
+      <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
+      <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
+    </li>
 
     {%- if theme.algolia_search.enable or theme.local_search.enable %}
       <li class="menu-item menu-item-search">

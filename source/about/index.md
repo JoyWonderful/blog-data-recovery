@@ -4,9 +4,9 @@ date: 2023-05-01 09:21:17
 #comments: false
 ---
 
-<script>
+{# <script>
     console.log("%cHello from %cJoyWonderful%c!\n恭喜你发现了彩蛋！ https://joywonderful.github.io/gift/clrftodsp.h", "color:#000;", "font-weight:bold; color:#8500ad;", "color:#000;");
-</script>
+</script> #}
 
 这个博客是由 <a target="_blank" rel="noopener" href="https://hexo.io">Hexo <i class="fa fa-arrow-up-right-from-square" style="font-size:15px;"></i></a> 和主题 <a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT. <i class="fa fa-arrow-up-right-from-square" style="font-size:15px;"></i></a> 搭建支持的。做了很多美化工作。
 
@@ -20,8 +20,6 @@ date: 2023-05-01 09:21:17
 你既然看到这里了，不如就在 [留言板](/comments) 留个言吧。
 
 upd: 删了一些段落，不写的那么伤感了。
-
-等会儿， Github 好像现在暂时访问不了了（悲）
 
 省流：  
 The blog hosted on Github Pages, use frame Hexo theme NexT.  

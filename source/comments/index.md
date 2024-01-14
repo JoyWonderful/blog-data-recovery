@@ -10,17 +10,6 @@ date: 2023-06-01 19:58:58
 
 加载可能较慢，请耐心等待！
 
-<!--
-<script src="https://utteranc.es/client.js"
-        repo="JoyWonderful/git-comments"
-        issue-term="url"
-        label="说些什么吧..."
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
--->
-
 <script src="https://giscus.app/client.js"
         data-repo="JoyWonderful/git-comments"
         data-repo-id="R_kgDOJqKeHA"
@@ -30,8 +19,8 @@ date: 2023-06-01 19:58:58
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
+        data-input-position="top"
+        data-theme="https://joywonderful.github.io/css/giscus.css"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>

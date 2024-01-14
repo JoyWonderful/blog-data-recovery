@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/pic/icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/pic/icon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/pic/icon-16x16.png">
-  <link rel="mask-icon" href="/pic/icon.png" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -25,15 +25,15 @@
 <meta property="og:site_name" content="JoyWonderful的小窝">
 <meta property="og:description" content="又是一个闲着没事干的随记。。。直接进入正题吧。 考虑使用数组存储图片的链接，然后随机显示。随机显示数组图片自然需要随机数，而随机显示图片还需要查找元素，所以就写这些。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://joywonderful.github.io/pic/icon.png">
-<meta property="og:image" content="https://joywonderful.github.io/pic/icon.png">
+<meta property="og:image" content="https://joywonderful.github.io/images/icon.png">
+<meta property="og:image" content="https://joywonderful.github.io/images/icon.png">
 <meta property="article:published_time" content="2023-08-26T03:45:14.000Z">
-<meta property="article:modified_time" content="2023-08-26T05:50:52.131Z">
+<meta property="article:modified_time" content="2023-12-17T02:28:03.807Z">
 <meta property="article:author" content="JoyWonderful">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://joywonderful.github.io/pic/icon.png">
+<meta name="twitter:image" content="https://joywonderful.github.io/images/icon.png">
 
 
 <link rel="canonical" href="https://joywonderful.github.io/posts/js-random-pic/">
@@ -110,15 +110,12 @@
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-rectangle-list fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
 
-    <div id="more-el-div">
-        <li class="menu-item menu-item-more">
-          <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
-          <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
-          <a href="/pic/" rel="section" id="morepic" class="morebtn-item"><i class="fa fa-image fa-fw"></i>留影</a>
-          <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
-          <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
-        </li>
-    </div>
+    <li class="menu-item menu-item-more">
+      <a rel="section" id="morebtn"><i class="fa fa-ellipsis-vertical fa-fw"></i>更多</a>
+      <a href="/friends/" rel="section" id="morefriend" class="morebtn-item"><i class="far fa-address-card fa-fw"></i>友情链接</a>
+      <a href="/comments/" rel="section" id="morecomt" class="morebtn-item"><i class="fa fa-pen-to-square fa-fw"></i>留言板</a>
+      <a href="/about/" rel="section" id="moreabt" class="morebtn-item"><i class="fa fa-circle-info fa-fw"></i>关于</a>
+    </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -182,7 +179,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -193,7 +190,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -260,9 +257,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-08-26 11:45:14 / 修改时间：13:50:52" itemprop="dateCreated datePublished" datetime="2023-08-26T11:45:14+08:00">2023-08-26</time>
+      <time aria-label="创建时间：2023-08-26 11:45:14" balloon-shown="down" itemprop="dateCreated datePublished" datetime="2023-08-26T11:45:14+08:00">2023-08-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time aria-label="修改时间：2023-12-17 10:28:03" balloon-shown="down" itemprop="dateModified" datetime="2023-12-17T10:28:03+08:00">2023-12-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,11 +317,11 @@
 
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>结合上面的内容，就可以做随机显示图片了。</p>
 <p>代码是这样的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> picLink = [<span class="string">&quot;/pic/naozhong.jpg&quot;</span>, <span class="string">&quot;/pic/dog-heihei.jpg&quot;</span>, <span class="string">&quot;/pic/pencil-box.jpg&quot;</span>, <span class="string">&quot;/pic/class-balloon.jpg&quot;</span>, <span class="string">&quot;/pic/dgbbs-bridge.jpg&quot;</span>, <span class="string">&quot;/pic/dhbbs-ting.jpg&quot;</span>, <span class="string">&quot;/pic/dhbbs-boat.jpg&quot;</span>];</span><br><span class="line"><span class="keyword">var</span> imgSel = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;img#random-pic&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> randomNumber = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * (picLink.<span class="property">length</span>) - <span class="number">1</span>);</span><br><span class="line">imgSel[<span class="number">0</span>].<span class="property">src</span> = picLink[randomNumber];</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> picLink = [<span class="string">&quot;https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg&quot;</span>, <span class="string">&quot;https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg&quot;</span>];</span><br><span class="line"><span class="keyword">var</span> imgSel = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;img#random-pic&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> randomNumber = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * (picLink.<span class="property">length</span>) - <span class="number">1</span>);</span><br><span class="line">imgSel[<span class="number">0</span>].<span class="property">src</span> = picLink[randomNumber];</span><br></pre></td></tr></table></figure>
 
 <script>
     function showRandomPic() {
-        var picLink = ["/pic/naozhong.jpg", "/pic/dog-heihei.jpg", "/pic/pencil-box.jpg", "/pic/class-balloon.jpg", "/pic/dgbbs-bridge.jpg", "/pic/dhbbs-ting.jpg", "/pic/dhbbs-boat.jpg"];
+        var picLink = ["https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg", "https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg", "https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg", "https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg", "https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png", "https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg", "https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg"];
         var imgSel = document.querySelectorAll("img#random-pic");
         var randomNumber = Math.round(Math.random() * (picLink.length - 1));
         console.log("[INFO] randomNumber: " + randomNumber + "\n[INFO] picLink: " + picLink[randomNumber]);
@@ -328,17 +331,17 @@
 </script>
 
 <p style="border-radius:2px; border:1px solid #999;">
-    <img id="random-pic" style="margin:3px; width:70%;" alt="img1" src="/pic/icon.png">
+    <img id="random-pic" style="margin:3px; width:70%;" alt="img1" src="/images/icon.png">
     <a href="javascript:showRandomPic()" class="btn" style="margin:5px;">换张图片？</a>
 </p>
 
 <h2 id="封装函数"><a href="#封装函数" class="headerlink" title="封装函数"></a>封装函数</h2><p style="border-radius:2px; border:1px solid #999;">
-    <img id="random-pic2" alt="img" style="margin:3px; width:70%;" src="/pic/icon.png">
+    <img id="random-pic2" alt="img" style="margin:3px; width:70%;" src="/images/icon.png">
     <a id="rdm-btn" class="btn" style="margin:5px;">换张图片？</a>
 </p>
 
 <script>
-    var imgArr = ["/pic/naozhong.jpg", "/pic/dog-heihei.jpg", "/pic/pencil-box.jpg", "/pic/class-balloon.jpg", "/pic/dgbbs-bridge.jpg", "/pic/dhbbs-ting.jpg", "/pic/dhbbs-boat.jpg", "/pic/tree-sun.jpg", "/pic/Inkeddog-huahua.jpg"];
+    var imgArr = ["https://s2.loli.net/2023/12/16/pz9HK4SACUaNoOl.jpg", "https://s2.loli.net/2023/12/16/hNZeUdKxq79s3Rp.jpg", "https://s2.loli.net/2023/12/16/FSTYoytCWcxhQEv.jpg", "https://s2.loli.net/2023/12/16/8bCe5rYSxuoHKdh.jpg", "https://s2.loli.net/2023/02/03/T1FbVC6SEgcIxzi.png", "https://s2.loli.net/2023/12/16/onqcjm8YaxXZ4Ds.jpg", "https://s2.loli.net/2023/12/16/qZHx9oflL4wSjuv.jpg"];
 
     function showRandomImage(ImgArray, Selector) {
         return function() {
@@ -410,7 +413,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-paper-plane"></i>
   </span>
@@ -422,14 +425,16 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">72k</span>
+    <span>93k</span>
   </span>
   <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
+    <span aria-label="按 550字符/分钟 计算" balloon-shown="up">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-coffee"></i>
+      </span>
+        <span>站点阅读时长 &asymp;</span>
+      <span>2:48</span>
     </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:11</span>
   </span>
 </div>
 

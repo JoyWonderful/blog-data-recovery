@@ -24,14 +24,14 @@ categories: 课程笔记
 
 ### 判断一张图是否为树
 树最重要的就是**每两个结点之间有且只有一条路径可以到达**，也就是说，不可以形成环，不可以在一个树中无法到达所有结点。例如，下面就是一个树：
-![tree-graph](/pic/graph-tree-1.png)
+![graph-tree-1.png](https://s2.loli.net/2023/12/16/5UZo8kn4QAYD1F9.png)
 下面两张图不是树，他们分别违反了“不可以形成环”、“不可以在一个树中无法到达所有结点”。
-![err-tree1](/pic/graph-tree-2.png)
-![err-tree2](/pic/graph-tree-3.png)
+![err-tree1](https://s2.loli.net/2023/12/16/VgfdiEJmDvSz2OB.png)
+![err-tree2](https://s2.loli.net/2023/12/16/SEGpmcFVrNv95w2.png)
 
 ### 更多的概念
 首先放一张图：
-![lizi](/pic/graph-tree-4.png)
+![lizi](https://s2.loli.net/2023/12/16/O51sWLVJvfdu9ai.png)
 
 以这张图为例，来说下面的概念吧。  
 **根结点 root**：根结点通常在最上方，是所有子结点的父结点。在上面的那张图中，结点 1 就是整张图的根结点。在上面的图中，根结点可以更换，也不会影响到什么，但是根结点一变就会让树形态发生变化（假如结点 2 是整个树的根结点，那么树会变[下面的图](#tree-root-node2)）。一个树是必须要有根结点的，<span style="background-color:#efefef">根结点只有一个。</span>  
@@ -88,4 +88,4 @@ n 叉树中，又出现了一个**二叉树 Binary Tree** 这么个奇怪的概�
 
 <p id="tree-root-node2">假设根结点为 2 时的情况：</p>
 
-![node2](/pic/graph-tree-5.png)
+![node2](https://s2.loli.net/2023/12/16/HBYzUod6LN2vQay.png)

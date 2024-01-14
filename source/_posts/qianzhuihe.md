@@ -5,7 +5,6 @@ tags:
 - 基础算法
 - 前缀和，差分
 categories: 课程笔记
-#comments: false
 ---
 
 ## 开始

@@ -465,7 +465,6 @@ figure.highlight .table-container {
   line-height: 1.6;
   opacity: 0;
   visibility: hidden;
-  padding: 2px 6px;
   position: absolute;
   transition: all 0.2s ease-in-out;
   background: #ffffff;
@@ -2962,7 +2961,7 @@ a#morebtn:hover ~ .morebtn-item, .menu-item-more:hover .morebtn-item, body.site-
   }
 }
 body {
-  background: url("/pic/background3.png");
+  background: url("/images/background3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -3135,5 +3134,9 @@ details[open] summary {
 }
 [aria-label][balloon-shown="up"]:hover::after, [aria-label][balloon-shown="up"]:hover::before, [aria-label][balloon-shown="down"]:hover::after, [aria-label][balloon-shown="down"]:hover::before {
   transform: translate(-50%, 0);
+}
+
+.tag-cloud-tags a[aria-label][balloon-shown]::after {
+  font-size: 15px;
 }
 

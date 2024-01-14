@@ -10,6 +10,7 @@ document.addEventListener('page:loaded', () => {
         tags      : CONFIG.mathjax.tags
       },
       options: {
+        enableMenu: false,
         renderActions: {
           insertedScript: [200, () => {
             document.querySelectorAll('mjx-container').forEach(node => {
@@ -28,6 +29,7 @@ document.addEventListener('page:loaded', () => {
       }
     });
   } else {
+    MathJax.options.enableMenu = false;
     MathJax.startup.document.state(0);
     MathJax.typesetClear();
     MathJax.texReset();

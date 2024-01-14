@@ -1,7 +1,7 @@
 ---
 title: 并查集概念
 date: 2023-11-26 10:29:30
-tags: 并查集
+tags: 基础算法
 categories: 课程笔记
 ---
 
