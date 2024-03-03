@@ -2961,11 +2961,9 @@ a#morebtn:hover ~ .morebtn-item, .menu-item-more:hover .morebtn-item, body.site-
   }
 }
 body {
-  background: url("/images/background3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("/images/background3.svg");
+  background-repeat: repeat;
   background-attachment: fixed;
-  background-position: 50% 50%;
 }
 @media (prefers-color-scheme: dark) {
   body {
