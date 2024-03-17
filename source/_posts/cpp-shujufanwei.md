@@ -3,6 +3,7 @@ title: C++ 数据范围
 date: 2023-07-02 17:30:34
 tags: 语言入门
 categories: 编程随记
+mathjax: true
 ---
 
 这就是一个随记，方便自己用的。

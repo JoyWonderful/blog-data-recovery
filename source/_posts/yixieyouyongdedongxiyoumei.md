@@ -3,6 +3,7 @@ title: 一些有用的东西有没有用的东西
 date: 2023-05-17 20:13:18
 tags: 语言入门
 categories: 课程笔记
+mathjax: true
 ---
 
 ## 宏定义和类型定义

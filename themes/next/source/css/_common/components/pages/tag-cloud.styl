@@ -1,0 +1,38 @@
+.tag-cloud {
+  text-align: center;
+  
+  .tag-cloud-title {text-align:left;}
+  a {
+    display: inline-block;
+    margin: 10px; // mod tag style -jywondf
+    border-bottom: none;
+    border-radius: 4px;
+    box-shadow: 0.8px 0.8px rgba(0,0,0,0.08), -0.8px -0.8px rgba(0,0,0,0.08);
+    transition: color .3s, background-color .3s, box-shadow .3s;
+    &:hover {
+      color: #fff;
+      background-color: #333;
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    }
+  }
+}
+
+for $tag-cloud in (0 .. 10) {
+  $tag-cloud-color = mix($tag-cloud-end, $tag-cloud-start, $tag-cloud * 10);
+  .tag-cloud-{$tag-cloud} {
+    border-bottom-color: $tag-cloud-color;
+    color: $tag-cloud-color;
+  }
+}
+
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    for $tag-cloud in (0 .. 10) {
+      $tag-cloud-color = mix($tag-cloud-end-dark, $tag-cloud-start-dark, $tag-cloud * 10);
+      .tag-cloud-{$tag-cloud} {
+        border-bottom-color: $tag-cloud-color;
+        color: $tag-cloud-color;
+      }
+    }
+  }
+}

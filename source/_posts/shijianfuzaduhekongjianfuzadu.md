@@ -4,6 +4,7 @@ date: 2023-05-08 20:13:18
 tag:
 - 语言入门
 categories: 课程笔记
+mathjax: true
 ---
 
 ## 时间复杂度

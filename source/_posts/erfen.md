@@ -5,6 +5,7 @@ tags:
 - 基础算法
 - 优化
 categories: 课程笔记
+mathjax: true
 ---
 
 ## 二分的意义

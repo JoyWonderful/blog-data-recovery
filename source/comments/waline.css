@@ -64,9 +64,17 @@
 }
 
 [data-waline] hr {
+    background: none;
+    height: 0;
+    border-radius: 0;
     margin: .825em 0;
     border-style: dashed;
+    border-width: thin;
     border-color: var(--waline-bgcolor-light)
+}
+
+[data-waline] hr::before {
+    content: none
 }
 
 [data-waline] code,
@@ -104,6 +112,8 @@
 
 [data-waline] pre code {
     padding: 0;
+    border: none;
+    text-shadow: none;
     background: rgba(0, 0, 0, 0);
     color: var(--waline-color);
     white-space: pre-wrap;
@@ -1184,7 +1194,8 @@
 .wl-content .token.operator,
 .wl-content .token.entity,
 .wl-content .token.url {
-    color: #67cdcc
+    color: #67cdcc;
+    background: none;
 }
 
 .wl-content .token.important,
