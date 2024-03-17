@@ -6,6 +6,7 @@ tags:
 - 搜索
 - 基础算法
 categories: 课程笔记
+mathjax: true
 ---
 
 ## 前置知识：图论

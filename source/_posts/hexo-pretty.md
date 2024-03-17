@@ -575,10 +575,3 @@ categories:
 <p style="color:#f0ad4e;margin-bottom:0px;font-weight:bold;">警告</p>
 <span>写了好长时间，还相当于自己又建了一个博客，不建议像我这样写这么长的文章（狗头）<br>开玩笑的啦~<br>工作区终于清静了。。。</span>
 {% endnote %}
-
-<script>
-    Toast.fire({
-        icon: "warning",
-        html: "文章<strong>很长</strong>，建议<kbd>Ctrl</kbd>+<kbd>F</kbd>查找自己需要的内容。"
-    }).then(() => {Toast.fire({icon:"question",text:"一般也没人看到啊。。。"});});
-</script>

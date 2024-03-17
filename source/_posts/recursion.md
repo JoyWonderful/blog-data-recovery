@@ -5,6 +5,7 @@ tags:
 - 基础算法
 - 递归
 categories: 课程笔记
+mathjax: true
 ---
 
 > **写递归的要点**  

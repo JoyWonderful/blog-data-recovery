@@ -6,6 +6,7 @@ tag:
 - 排序
 - 优化
 categories: 课程笔记
+mathjax: true
 ---
 
 ## 一些说在前面的要点
