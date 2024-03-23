@@ -11,7 +11,8 @@
   position: relative;
 }
 pre[class*="language-"] {
-  border-radius: 4px; // add codeblock style(line 9 to line ) -jywondf
+  border-radius: 4px; // add codeblock style(line 9 to line 34) -jywondf
+  position: relative;
   &::before {
     content: attr(data-language);
     opacity: .4;
@@ -21,6 +22,15 @@ pre[class*="language-"] {
     right: 5px;
     top: 5px;
     transition: opacity .3s, visibility .3s;
+  }
+  &::-webkit-scrollbar {
+    height: 6px;
+    background-color: #dfdfdf;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 6px;
   }
 }
 
