@@ -365,6 +365,7 @@
     border: none;
     color: var(--waline-color);
     outline: none;
+    font-family: "Fira Code";
     transition: all .25s ease
 }
 
@@ -1114,7 +1115,6 @@
     background: none;
     color: #ccc;
     font-size: 1em;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
