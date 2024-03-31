@@ -14,22 +14,18 @@
     opacity: .3;
     visibility: visible;
     font-weight: 600;
+    font-size: .6em;
     font-family: $code-font-family;
     position: absolute;
-    right: 6px;
+    right: 5px;
     transition: opacity .3s, visibility .3s;
   }
 }
 pre[class*="language-"] {
   border-radius: 4px; // add codeblock style(line 9 to line 34) -jywondf
+  scrollbar-width: none;
   &::-webkit-scrollbar {
-    height: 6px;
-    background-color: #dfdfdf;
-    border-radius: 6px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #aaa;
-    border-radius: 6px;
+    height: 0;
   }
 }
 

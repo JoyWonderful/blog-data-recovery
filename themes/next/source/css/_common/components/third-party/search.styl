@@ -80,7 +80,8 @@ if (hexo-config('local_search.enable') or hexo-config('algolia_search.enable')) 
 
     .search-result-container {
       height: calc(100% - 55px);
-      overflow: auto;
+      overflow: hidden auto;
+      scrollbar-width: thin; // edit overflow there -jywondf
       padding: 5px 25px;
 
       hr {
