@@ -10,9 +10,9 @@ date: 2023-06-01 19:58:58
 <link rel="stylesheet" href="/comments/waline.css">
 <div id="waline" style="margin-top:50px;"></div>
 <script type="module">
-    import '/comments/waline.js';
+    import {init} from '/comments/waline.js';
     
-    Waline.init({
+    init({
         el: "#waline",
         path: location.pathname,
         lang: "zh-CN",
