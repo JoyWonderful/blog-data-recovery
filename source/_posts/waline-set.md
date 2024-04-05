@@ -20,6 +20,13 @@ categories: 编程随记
 
 鼠标悬浮到卡片上，点击右上角“Waline”及其徽标，在 url 后增加 `/ui/register`，也就是 `https://waline-x-xxxxxxx.deta.app/ui/register`，注册一个账号成为管理员，就可以点击“管理”选项卡管理用户和评论了。
 
+{% note info %}
+直接使用
+
+不需要 LeanCloud，直接将 Waline 部署到 DetaSpace 上，Waline 会自动将数据存储到 DetaBase 里。  
+点击灰色的 deta 图标，选择 `View App Data -> Base` 选项卡，这里就是 Waline 直接存储的数据。
+{% endnote %}
+
 ## 客户端
 通过 CDN 引入 [waline.js](https://cdnjs.cloudflare.com/ajax/libs/waline/2.15.8/waline.js) 和 [waline.css](https://cdnjs.cloudflare.com/ajax/libs/waline/2.15.8/waline.css)，在想加入评论框的页面引入。  
 新增 script 标签，可参考：

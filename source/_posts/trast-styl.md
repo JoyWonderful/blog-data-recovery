@@ -154,8 +154,8 @@ button.egprsbtn {
     border: 2px solid var(--egprs-color);
     color: var(--egprs-color);
     background-color: var(--egprs-bgcolor);
-    box-shadow: inset 0 calc(0px - var(--egprs-btnhei)) 0 0 var(--egprs-color);
-    transition: padding .2s, color .2s, box-shadow .2s, background-color .2s;
+    box-shadow: 0 var(--egprs-btnhei) 0 0 var(--egprs-color);
+    transition: transform .2s, color .2s, box-shadow .2s, background-color .2s;
 }
 button.egprsbtn:hover {
     background-color: var(--egprs-hvbgc);
@@ -163,8 +163,8 @@ button.egprsbtn:hover {
 button.egprsbtn:active {
     color: var(--egprs-bgcolor);
     background-color: var(--egprs-color);
-    box-shadow: inset 0 var(--egprs-btnhei) 0 0 #444;
-    padding: calc(15px + var(--egprs-btnhei)) 15px 15px 15px;
+    box-shadow: none;
+    transform: translateY(var(--egprs-btnhei))
 }
 ```
 
@@ -180,8 +180,8 @@ button.egprsbtn:active {
         border: 2px solid var(--egprs-color);
         color: var(--egprs-color);
         background-color: var(--egprs-bgcolor);
-        box-shadow: inset 0 calc(0px - var(--egprs-btnhei)) 0 0 var(--egprs-color);
-        transition: padding .2s, color .2s, box-shadow .2s, background-color .2s;
+        box-shadow: 0 var(--egprs-btnhei) 0 0 var(--egprs-color);
+        transition: transform .2s, color .2s, box-shadow .2s, background-color .2s;
     }
     button.egprsbtn:hover {
         background-color: var(--egprs-hvbgc);
@@ -189,8 +189,8 @@ button.egprsbtn:active {
     button.egprsbtn:active {
         color: var(--egprs-bgcolor);
         background-color: var(--egprs-color);
-        box-shadow: inset 0 var(--egprs-btnhei) 0 0 #444;
-        padding: calc(15px + var(--egprs-btnhei)) 15px 15px 15px;
+        box-shadow: none;
+        transform: translateY(var(--egprs-btnhei))
     }
 </style>
 
