@@ -58,6 +58,10 @@ hexo.extend.filter.register('after_generate', () => {
     hexo.route.remove('js/third-party/analytics/growingio.js');
   }
 
+  if(!theme.matomo.enable) {
+    hexo.route.remove('js/third-party/analytics/matomo.js'); // edit minify -jywondf
+  }
+
   // Chat
   if (!theme.chatra.enable) {
     hexo.route.remove('js/third-party/chat/chatra.js');
@@ -148,5 +152,9 @@ hexo.extend.filter.register('after_generate', () => {
 
   if (!theme.quicklink.enable) {
     hexo.route.remove('js/third-party/quicklink.js');
+  }
+
+  if(!theme.addtoany.enable) {
+    hexo.route.remove('js/third-party/addtoany.js');
   }
 });
