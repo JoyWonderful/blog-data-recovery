@@ -1,7 +1,6 @@
 ---
 title: 有关进制的一些小记
-tags:
-  - 语言入门
+tags: 语言入门
 categories: 编程随记
 date: 2023-08-12 10:00:41
 mathjax: true

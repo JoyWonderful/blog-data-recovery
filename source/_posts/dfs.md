@@ -2,9 +2,9 @@
 title: 深度优先搜索
 date: 2023-07-14 17:18:43
 tags: 
-- 递归
-- 搜索
-- 基础算法
+    - 递归
+    - 搜索
+    - 基础算法
 categories: 课程笔记
 mathjax: true
 ---

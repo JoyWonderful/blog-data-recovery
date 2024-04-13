@@ -2,8 +2,8 @@
 title: 前缀和
 date: 2023-05-07 18:20:04
 tags:
-- 基础算法
-- 前缀和，差分
+	- 基础算法
+	- 前缀和，差分
 categories: 课程笔记
 mathjax: true
 ---

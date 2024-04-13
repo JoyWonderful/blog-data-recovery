@@ -2,8 +2,8 @@
 title: 数论：质数筛法
 date: 2023-08-08 14:34:23
 tags:
-- 基础算法
-- 数论
+    - 基础算法
+    - 数论
 categories: 课程笔记
 mathjax: true
 ---

@@ -1,8 +1,7 @@
 ---
 title: 命名空间
 date: 2023-05-05 20:21:43
-tags:
-- 语言入门
+tags: 语言入门
 categories: 课程笔记
 mathjax: true
 ---

@@ -2,8 +2,8 @@
 title: 二叉树的性质
 date: 2024-03-31 15:23:12
 tags:
-- 树
-- 数据结构
+    - 树
+    - 数据结构
 categories: 课程笔记
 mathjax: true
 ---

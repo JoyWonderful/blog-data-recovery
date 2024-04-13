@@ -1,7 +1,6 @@
 ---
 title: scanf 和 printf 的格式符
-tags:
-  - 语言入门
+tags: 语言入门
 categories: 编程随记
 date: 2023-08-17 20:37:48
 ---

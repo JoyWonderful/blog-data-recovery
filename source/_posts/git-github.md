@@ -1,8 +1,7 @@
 ---
 date: 2023-08-13 17:23:21
 title: Git 的连接 Github 小记
-tags:
-- Git
+tags: Git
 categories: 编程随记
 ---
 
