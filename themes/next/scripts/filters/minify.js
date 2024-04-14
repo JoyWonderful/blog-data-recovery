@@ -35,7 +35,10 @@ hexo.extend.filter.register('after_generate', () => {
   if (!theme.pjax) {
     hexo.route.remove('js/pjax.js');
   }
-
+  
+  if(!theme.comments.active) {
+    hexo.route.remove('js/comments.js');
+  }
   if (theme.comments.style !== 'buttons') {
     hexo.route.remove('js/comments-buttons.js');
   }

@@ -1,11 +1,5 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-{%- if theme.darkmode %}
-<meta name="theme-color" content="{{ theme.theme_color.light }}" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="{{ theme.theme_color.dark }}" media="(prefers-color-scheme: dark)">
-{%- else %}
-<meta name="theme-color" content="{{ theme.theme_color.light }}">
-{%- endif %}
 {%- if config.meta_generator %}
   {{- meta_generator() }}
 {%- endif %}
@@ -47,9 +41,9 @@
 <link rel="stylesheet" href="{{ url_for(theme.css) }}/main.css">
 
 {{ next_font() }}
-<link rel="stylesheet" href="/webfonts/lxgw/lxgwwenkailite-regular.css"> {# add lxgw here -jywondf #}
-<link rel="stylesheet" href="/webfonts/firacode/fira_code.css"> {# add firacode -jywondf #}
-<link rel="stylesheet" href="/webfonts/fontawesome/fontawsm.min.css"> {# modify vendor to local -jywondf #}
+<link rel="stylesheet" href="/webfonts/lxgw/lxgw.css"> {# add lxgw here -jywondf #}
+<link rel="stylesheet" href="/webfonts/firacode/fira.css"> {# add firacode -jywondf #}
+<link rel="stylesheet" href="/webfonts/fontawesome/fontaw.css"> {# modify vendor to local -jywondf #}
 
 {%- if theme.motion.enable %}
   {{ next_vendors('animate_css') }}
