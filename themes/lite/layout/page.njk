@@ -1,0 +1,26 @@
+{%- extends "_layout.njk" %}
+
+
+{%- block pagetitle %}{{ page.title }} | {{ config.title }}{%- endblock %}
+
+
+{%- block pagebody %}
+
+{%- if page.type === 'tags' %}
+{%- set cloudcontent = '<div class="tag-cloud"><div class="tag-cloud-title">目前共计 ' + site.tags.length + ' 个标签</div>' + '<div class="tag-cloud-tags">' + tagcloud(themeconf.tagcloud_config) + '</div></div>' %}
+{{ partial('_partials/postblock.njk', {thispage: page, thispage_content: cloudcontent, thispage_footer:false, frompages: false}) }}
+
+{%- elif page.type === 'categories' %}
+{%- set catecontent = '<div class="categories-all"><div class="categories-all-title">目前共计 ' + site.categories.length + ' 个分类</div>' + list_categories() + '</div>' %}
+{{ partial('_partials/postblock.njk', {thispage: page, thispage_content: catecontent, thispage_footer:false, frompages: false}) }}
+
+{%- else %}
+{{ partial('_partials/postblock.njk', {thispage: page, thispage_content: page.content, thispage_footer:false, frompages: false}) }}
+{%- endif %}
+
+{%- endblock %}
+
+
+{%- block pagesidebar %}
+{{ partial('_partials/sidebarinfo.njk') }}
+{%- endblock %}

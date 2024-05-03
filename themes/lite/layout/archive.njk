@@ -1,0 +1,16 @@
+{%- extends "_layout.njk" %}
+
+{%- block pagetitle %}归档 | {{ config.title }}{% endblock %}
+
+{%- block pagebody %}
+{# posts #}
+{%- block timelinecontent %}
+{{ partial('_partials/timeline.njk', {showtitle: '目前共计 ' + site.posts.length + ' 篇文章', postlist: page.posts.toArray()}) }}
+{%- endblock %}
+{# pagination #}
+{{ partial('_partials/pagenationbar.njk') }}
+{%- endblock %}
+
+{%- block pagesidebar %}
+{{ partial('_partials/sidebarinfo.njk') }}
+{%- endblock %}

@@ -1,0 +1,14 @@
+{%- extends "_layout.njk" %}
+
+{%- block pagebody %}
+{# posts #}
+{%- for node in page.posts.toArray() %}
+{{ partial('_partials/postblock.njk', {thispage: node, thispage_content: node.excerpt, thispage_footer:false, frompages: true}) }}
+{%- endfor %}
+{# pagination #}
+{{ partial('_partials/pagenationbar.njk') }}
+{%- endblock %}
+
+{%- block pagesidebar %}
+{{ partial('_partials/sidebarinfo.njk') }}
+{%- endblock %}

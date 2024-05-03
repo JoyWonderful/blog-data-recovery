@@ -1,0 +1,56 @@
+<div class="post-block">
+    <header class="post-header">
+        <h2 class="post-title">{% if frompages %}<a href="{{ url_for(thispage.path) }}">{% endif %}{{ thispage.title }}{% if frompages %}</a>{% endif %}</h2>
+        {%- if thispage.layout == 'post' %}
+        <div class="post-meta">
+            <span class="post-meta-item">
+                <i class="far fa-calendar post-meta-item-icon"></i>
+                <span class="post-meta-item-text">发表于 </span>
+                <time datetime="{{ post_time(thispage.date, '') }}">{{ post_time(thispage.date, 'YYYY[-]MM[-]DD') }}</time>
+            </span>
+            {%- if thispage.updated %}
+            <span class="post-meta-item">
+                <i class="far fa-calendar-check post-meta-item-icon"></i>
+                <span class="post-meta-item-text">更新于 </span>
+                <time datetime="{{ post_time(thispage.updated, '') }}">{{ post_time(thispage.updated, 'YYYY[-]MM[-]DD') }}</time>
+            </span>
+            {%- endif %}
+            {%- if thispage.categories and thispage.categories.length %}
+            <span class="post-meta-item">
+                <i class="far fa-folder post-meta-item-icon"></i>
+                <span class="post-meta-item-text">分类于 </span>
+                {%- for cat in thispage.categories.toArray() %}
+                <a href="{{ url_for(cat.path) }}">{{ cat.name }}</a>
+                {%- endfor %}
+            </span>
+            {%- endif %}
+        </div>
+        {%- endif %}
+    </header>
+    <div class="post-body">
+        {{ thispage_content }}
+    </div>
+    {%- if thispage_footer %}
+    <div class="post-footer">
+        {%- if thispage.tags and thispage.tags.length %}
+        <div class="post-tags">
+            {%- for tag in thispage.tags.toArray() %}
+            <a href="{{ url_for(tag.path) }}"><i class="fa fa-tag"></i> {{ tag.name }}</a>
+            {%- endfor %}
+        </div>
+        {%- endif %}
+        <div class="post-nav">
+            <div class="post-nav-item">
+                {%- if thispage.prev %}
+                <a href="{{ url_for(thispage.prev.path) }}"><i class="fa fa-angle-left"></i> {{ thispage.prev.title }}</a>
+                {%- endif %}
+            </div>
+            <div class="post-nav-item">
+                {%- if thispage.next %}
+                <a href="{{ url_for(thispage.next.path) }}">{{ thispage.next.title }} <i class="fa fa-angle-right"></i></a>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+    {%- endif %}
+</div>

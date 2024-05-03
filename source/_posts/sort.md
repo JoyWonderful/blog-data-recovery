@@ -30,33 +30,25 @@ mathjax: true
 ### 例子
 例如有这样一个数组：
 
-$$
+```mathKatex
 8 \ 5 \ 7 \ 9 \ 2 \ 6
-$$
+```
 
 遍历后得知 $2$ 是最小的，与第一个元素 $8$ 进行交换。
 
-$$
+```mathKatex
 {\color{red}2} \ 5 \ 7 \ 9 \ {\color{red}8} \ 6
-$$
+```
 
 以此类推：
 
-$$
+```mathKatex
 {\color{green}2} \ {\color{red}5} \ 7 \ 9 \ 8 \ 6 \\
-$$
-$$
 {\color{green}2} \ {\color{green}5} \ {\color{red}6} \ 9 \ 8 \ {\color{red}7} \\
-$$
-$$
 {\color{green}2} \ {\color{green}5} \ {\color{green}6} \ {\color{red}7} \ 8 \ {\color{red}9} \\
-$$
-$$
 {\color{green}2} \ {\color{green}5} \ {\color{green}6} \ {\color{green}7} \ {\color{green}8} \ 9 \\
-$$
-$$
 {\color{green}2} \ {\color{green}5} \ {\color{green}6} \ {\color{green}7} \ {\color{green}8} \ {\color{green}9} \\
-$$
+```
 
 ### 示例程序
 ```cpp
@@ -109,57 +101,25 @@ int main()
 ### 例子
 还是上面的那个例子，利用冒泡排序：
 
-$$
+```mathKatex
 8 \ 5 \ 7 \ 9 \ 2 \ 6 \ \\ \\
-$$
-$$
 {\color{red}5} \ {\color{red}8} \ 7 \ 9 \ 2 \ 6 \ \\
-$$
-$$
 5 \ {\color{red}7} \ {\color{red}8} \ 9 \ 2 \ 6 \ \\
-$$
-$$
 5 \ 7 \ {\color{red}8} \ {\color{red}9} \ 2 \ 6 \ \\
-$$
-$$
 5 \ 7 \ 8 \ {\color{red}2} \ {\color{red}9} \ 6 \ \\
-$$
-$$
 5 \ 7 \ 8 \ 2 \ {\color{red}6} \ {\color{red}9} \ \\
-$$
-$$
 {\color{red}5} \ {\color{red}7} \ 8 \ 2 \ 6 \ {\color{green}9} \ \\
-$$
-$$
 5 \ {\color{red}7} \ {\color{red}8} \ 2 \ 6 \ {\color{green}9} \ \\
-$$
-$$
 5 \ 7 \ {\color{red}2} \ {\color{red}8} \ 6 \ {\color{green}9} \ \\
-$$
-$$
 5 \ 7 \ 2 \ {\color{red}6} \ {\color{red}8} \ {\color{green}9} \ \\
-$$
-$$
 {\color{red}5} \ {\color{red}7} \ 2 \ 6 \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 5 \ {\color{red}2} \ {\color{red}7} \ 6 \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 5 \ 2 \ {\color{red}6} \ {\color{red}7} \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 {\color{red}2} \ {\color{red}5} \ 6 \ {\color{green}7} \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 2 \ {\color{red}5} \ {\color{red}6} \ {\color{green}7} \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 {\color{red}2} \ {\color{red}5} \ {\color{green}6} \ {\color{green}7} \ {\color{green}8} \ {\color{green}9} \ \\
-$$
-$$
 {\color{green}2} \ {\color{green}5} \ {\color{green}6} \ {\color{green}7} \ {\color{green}8} \ {\color{green}9} \ \\
-$$
+```
 
 ### 示例程序
 ```cpp
@@ -212,40 +172,34 @@ int main()
 ### 例子
 依然是前面那个样例，在这里，我们假设有一个空间是已排序空序列，另一个是未排序序列。
 
-$$
+```mathKatex
 \boxed{
 \begin{aligned}
-&\text{说明:}\\\\
-&? \ \text{代表未排序序列} \\\\
-&! \ \text{代表已排序序列} \\\\
+&\text{说明:} \\
+&? \ \text{代表未排序序列} \\
+&! \ \text{代表已排序序列} \\
 \end{aligned}
 }
-$$
+```
 
 
-$$
+```mathKatex
 \begin{aligned}
-? \ &8 \ 5 \ 7 \ 9 \ 2 \ 6 \ \\\\
-! \ &[Empty] \\\\ \\\\
-
-? \ &5 \ 7 \ 9 \ 2 \ 6 \ \\\\
-! \ &{\color{yellow}8} \\\\ \\\\
-
-? \ &7 \ 9 \ 2 \ 6 \ \\\\
-! \ &{\color{yellow}8} \ {\color{yellow}5} \\\\ \\\\
-
+? \ &8 \ 5 \ 7 \ 9 \ 2 \ 6 \ \\
+! \ &[Empty] \\ \\
+? \ &5 \ 7 \ 9 \ 2 \ 6 \ \\
+! \ &{\color{yellow}8} \\ \\
 ? \ &7 \ 9 \ 2 \ 6 \ \\
-! \ &{\color{yellow}5} \ {\color{yellow}8} \\\\ \\\\
-
-? \ &9 \ 2 \ 6 \ \\\\
-! \ &{\color{yellow}5} \ {\color{yellow}8} \ {\color{yellow}7} \\\\ \\\\
-
-? \ &9 \ 2 \ 6 \ \\\\
-! \ &{\color{yellow}5} \ {\color{yellow}7} \ {\color{yellow}8} \\\\ \\\\
-
+! \ &{\color{yellow}8} \ {\color{yellow}5} \\ \\
+? \ &7 \ 9 \ 2 \ 6 \ \\
+! \ &{\color{yellow}5} \ {\color{yellow}8} \\ \\
+? \ &9 \ 2 \ 6 \ \\
+! \ &{\color{yellow}5} \ {\color{yellow}8} \ {\color{yellow}7} \\ \\
+? \ &9 \ 2 \ 6 \ \\
+! \ &{\color{yellow}5} \ {\color{yellow}7} \ {\color{yellow}8} \\ \\
 &...(\text{不再详细演示})
 \end{aligned}
-$$
+```
 
 
 ### 示例程序
@@ -306,9 +260,9 @@ int main()
 ### 例子
 假设有这样一个数组 $a$ ：
 
-$$
+```mathKatex
 8 \ 8 \ 8 \ 5 \ 5 \ 7 \ 5 \ 2 \ 2 \ 6 \ 6 \ 2
-$$
+```
 
 统计结果是这样的：  
 $8$ 出现了 `3` 次， $5$ 出现了 `3` 次， $7$ 出现了 `1` 次， $6$ 出现了 `2` 次， $2$ 出现了 `3` 次。

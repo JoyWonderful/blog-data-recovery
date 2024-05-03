@@ -1,0 +1,7 @@
+{%- extends "archive.njk" %}
+
+{%- block pagetitle %}标签&lt;{{ page.tag }}&gt; | {{ config.title }}{% endblock %}
+
+{%- block timelinecontent %}
+{{ partial('_partials/timeline.njk', {showtitle: page.tag + '<small>标签</small>', postlist: page.posts.toArray()}) }}
+{%- endblock %}

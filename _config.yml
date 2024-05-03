@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JoyWonderful的小窝
+title: Some Notes
 subtitle: Be HardWorking Every Day.
 description: ''
 keywords:
@@ -90,7 +90,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: lite
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

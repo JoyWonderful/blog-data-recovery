@@ -9,7 +9,7 @@ categories: 编程随记
 C++ 读写文件，也算是比较平常的。当数据点大的时候输出到文件里更方便。就在这里小记一下读写文件的操作。
 <!--more-->
 
-----------
+<hr>
 
 `fstream` 有两个类，分别是 `ofstream` 和 `ifstream`。`ofstream` 是写文件的，`ifstream` 是读文件的。这是一个打开文件的语法：
 ```cpp

@@ -1,0 +1,32 @@
+<div class="post-block">
+    <div class="post-body">
+        {%- if page.current == 1 %}
+        <span class="timeline-title">{{ showtitle }}</span>
+        <div class="timeline">
+            <div class="time-line-start"></div>
+        {%- else %}
+        <div class="line-connect-head"></div>
+        <div class="timeline">
+        {%- endif %}
+            {%- set currentyear = '1900' %}{% set cnt = 0 %}
+            {%- for evepost in postlist %}
+            {%- set evepostyear = post_time(evepost.date, 'YYYY') %}
+            {%- if evepostyear !== currentyear %}
+            {%- set currentyear = evepostyear %}
+            <div class="timeline-year{% if not cnt %} firstel{% endif %}"><span>{{ evepostyear }}</span></div>
+            {%- set cnt = cnt + 1 %}
+            {%- endif %}
+            <div class="timeline-item">
+                <span class="timeline-item-date">{{ post_time(evepost.date, 'MM[-]DD') }}</span>
+                <a href="{{ url_for(evepost.path) }}">{{ evepost.title }}</a>
+            </div>
+            {%- endfor %}
+        {%- if page.current === page.total %}
+            <span class="time-line-end"></span>
+        </div>
+        {%- else %}
+        </div>
+        <div class="line-connect-bottom"></div>
+        {%- endif %}
+    </div>
+</div>

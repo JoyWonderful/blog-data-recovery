@@ -6,13 +6,6 @@ date: 2023-08-12 10:00:41
 mathjax: true
 ---
 
-
-<style>
-    .TEX-B {
-        color: #000;
-    }
-</style>
-
 x 进制，代表着在这个计数方法中逢 x 进一，例如十进制就代表着**逢十进一**。  
 我们平常在生活中用的都是十进制。进制一类的东西在 OI 中也比较重要~~CCF 喜欢考~~，计算机中的数据都是以二进制储存的，二进制也完美地利用了每一个比特。当然，只要有足够的表示方法，人们可以弄出三十二进制、六十四进制，甚至一千进制。~~闲的没事情干，~~进制有关的以及进制之间的转换就是我想记下来的话题。
 
@@ -28,17 +21,14 @@ $\mathbf{1} \to 2^6 \ \ \ \mathbf{0} \to 2^5 \ \ \ \mathbf{1} \to 2^4 \ \ \ \mat
 
 从二进制转换为十进制只需要将当前二进制位的值乘上权值即可。还是 <span style="font-family:monospace;">1011001</span>：
 
-$$
+```mathKatex
 \begin{aligned}
-&(1011001)\_2
-\\\\
-= &(\mathbf{1} \times 2^6) + (\mathbf{0} \times 2^5) + (\mathbf{1} \times 2^4) + (\mathbf{1} \times 2^3) + (\mathbf{0} \times 2^2) + (\mathbf{0} \times 2^1) + (\mathbf{1} \times 2^0)
-\\\\
-= &64 + 0 + 16 + 8 + 0 + 0 + 1
-\\\\
-= &(89)\_{10}
+&(1011001)_2 \\
+= \ &(\mathbf{1} \times 2^6) + (\mathbf{0} \times 2^5) + (\mathbf{1} \times 2^4) + (\mathbf{1} \times 2^3) + (\mathbf{0} \times 2^2) + (\mathbf{0} \times 2^1) + (\mathbf{1} \times 2^0) \\
+= \ &64 + 0 + 16 + 8 + 0 + 0 + 1 \\
+= \ &(89)_{10}
 \end{aligned}
-$$
+```
 
 可见，二进制 <span style="font-family:monospace;">1011001</span> 转换为十进制是 <span style="font-family:monospace;">89</span>。  
 ~~话说 hexo next 的 mathjax 渲染越来越奇怪了。。。~~
@@ -47,25 +37,18 @@ $$
 可以使用短除法，将十进制除以二取余，直至商为零。最后将取余的结果倒序输出。  
 比如说，还是那个数字 $(89)\_{10}$：
 
-$$
+```mathKatex
 \begin{aligned}
-2 \ | \underline{ \ \ \ \ \ \ \ \ } &\underline{89 \ }
-\\\\
-2 \ | \underline{ \ \ \ \ \ \ \ } &\underline{44 \ } \ \ \ \ \ \ \textbf{1}
-\\\\
-2 \ | \underline{ \ \ \ \ \ \ } &\underline{22 \ } \ \ \ \ \ \ \textbf{0}
-\\\\
-2 \ | \underline{ \ \ \ \ \ } &\underline{11 \ } \ \ \ \ \ \ \textbf{0}
-\\\\
-2 \ | \underline{ \ \ \ \ } &\underline{\ \ 5 \ } \ \ \ \ \ \ \textbf{1}
-\\\\
-2 \ | \underline{ \ \ \ } &\underline{\ \ 2 \ } \ \ \ \ \ \ \textbf{1}
-\\\\
-2 \ | \underline{ \ \ } &\underline{\ \ 1 \ } \ \ \ \ \ \ \textbf{0}
-\\\\
+2 \ | \underline{ \ \ \ \ \ \ \ \ } &\underline{89 \ } \\
+2 \ | \underline{ \ \ \ \ \ \ \ } &\underline{44 \ } \ \ \ \ \ \ \textbf{1} \\
+2 \ | \underline{ \ \ \ \ \ \ } &\underline{22 \ } \ \ \ \ \ \ \textbf{0} \\
+2 \ | \underline{ \ \ \ \ \ } &\underline{11 \ } \ \ \ \ \ \ \textbf{0} \\
+2 \ | \underline{ \ \ \ \ } &\underline{\ \ 5 \ } \ \ \ \ \ \ \textbf{1} \\
+2 \ | \underline{ \ \ \ } &\underline{\ \ 2 \ } \ \ \ \ \ \ \textbf{1} \\
+2 \ | \underline{ \ \ } &\underline{\ \ 1 \ } \ \ \ \ \ \ \textbf{0} \\
 2 \ | &\underline{\ \ 0 \ } \ \ \ \ \ \ \textbf{1}
 \end{aligned}
-$$
+```
 
 最后，倒着输出即可得知 $(89)\_{10} = (1011001)\_2$ 。  
 ~~ps: mathjax 没有特定的短除公式，只好用这种奇特的方法模拟短除。~~
@@ -76,7 +59,9 @@ P.S. 另一种更方便的双向转换方法
 可以发现，其实二进制十进制的互相转换都离不开 二的 i 次方，也可以将这张表记下来（也就是从右往左不断地乘二嘛），之后的转换会方便很多。  
 其实这张表也就是二的 i 次方：
 
-$$... 256 \ \ 128 \ \ 64 \ \ 32 \ \ 16 \ \ 8 \ \ 4 \ \ 2 \ \ 1$$
+```mathKatex
+... 256 \ \ 128 \ \ 64 \ \ 32 \ \ 16 \ \ 8 \ \ 4 \ \ 2 \ \ 1
+```
 
 {% tabs demo %}
 <!-- tab 二进制进制转十进制 -->
@@ -112,17 +97,14 @@ $(89)\_{10} = (1011001)\_2$
 其实，任何进制之间的转换都可以将那个进转换为十进制后再转换为目标进制。十进制也可以转换为任何进制。至于怎么转换，其实和 <a href="#二进制和十进制的转换"> <i class="fa-solid fa-hashtag" style="font-size:15px;"></i> 二进制和十进制之间的转换</a> 差不多。  
 同样的，x 进制转十进制 每一位的 每一位乘上每一位的权值 之和。例如：
 
-$$
+```mathKatex
 \begin{aligned}
-&(1021102)\_3
-\\\\
-= &(\mathbf{1} \times 3^6) + (\mathbf{0} \times 3^5) + (\mathbf{2} \times 3^4) + (\mathbf{1} \times 3^3) + (\mathbf{1} \times 3^2) + (\mathbf{0} \times 3^1) + (\mathbf{2} \times 3^0)
-\\\\
-= &729 + 0 + 162 + 27 + 9 + 0 + 2
-\\\\
-= &929
+&(1021102)_3 \\
+= \ &(\mathbf{1} \times 3^6) + (\mathbf{0} \times 3^5) + (\mathbf{2} \times 3^4) + (\mathbf{1} \times 3^3) + (\mathbf{1} \times 3^2) + (\mathbf{0} \times 3^1) + (\mathbf{2} \times 3^0) \\
+= \ &729 + 0 + 162 + 27 + 9 + 0 + 2 \\
+= \ &929
 \end{aligned}
-$$
+```
 
 $x$ 进制的从右往左数（从 1 开始数）第 $i$ 位的权值就是 $x^{(i - 1)}$。转换为十进制只需要将每一位的 每一位的权值乘那一位的数 加起来即可。
 
@@ -220,27 +202,23 @@ int main()
 
 {% tabs binhex %}
 <!-- tab 二进制转八进制-->
-$$
+```mathKatex
 \because
-\underset{\text{八进制：}}{\text{二进制：}} ( \underset{1}{\underline{1}} \ \underset{2}{\underline{010}} \ \underset{7}{\underline{111}} )\_{2}
-$$
-
-$$
+\underset{\text{八进制：}}{\text{二进制：}} ( \underset{1}{\underline{1}} \ \underset{2}{\underline{010}} \ \underset{7}{\underline{111}} )_{2}
+\\
 \therefore
-(1010111)\_{2} = (127)\_{8}
-$$
+(1010111)_{2} = (127)_{8}
+```
 <!-- endtab -->
 
 <!-- tab 二进制转十六进制 -->
-$$
+```mathKatex
 \because
-\underset{\text{十六进制：}}{\text{二进制：}} ( \underset{3}{\underline{11}} \ \underset{\text{A}}{\underline{1010}} \ \underset{1}{\underline{0001}} )\_{2}
-$$
-
-$$
+\underset{\text{十六进制：}}{\text{二进制：}} ( \underset{3}{\underline{11}} \ \underset{\text{A}}{\underline{1010}} \ \underset{1}{\underline{0001}} )_{2}
+\\
 \therefore
-(1110100001)\_{2} = (\text{3A1})\_{16}
-$$
+(1110100001)_{2} = (\text{3A1})_{16}
+```
 <!-- endtab -->
 {% endtabs %}
 
@@ -265,47 +243,35 @@ printf("%d %d %d %d\n",
 #### 十进制小数转 x 进制
 简单来说就是小数点前面正常转换，小数点之后乘 x 取整，正常输出。例如十进制 0.3 转换为二进制：
 
-$$
+```mathKatex
 \begin{aligned}
-&0.3 \times 2 = \mathbf{0}.6
-\\\\
-\text{二进制小数：}&0.\mathbf{0}
-\\\\
-\\\\
-&0.6 \times 2 = \mathbf{1}.2
-\\\\
-\text{二进制小数：}&0.0\mathbf{1}
-\\\\
-\\\\
-&0.2 \times 2 = \mathbf{0}.4
-\\\\
-\text{二进制小数：}&0.01\mathbf{0}
-\\\\
-\\\\
-&0.4 \times 2 = \mathbf{0}.8
-\\\\
-\text{二进制小数：}&0.010\mathbf{0}
-\\\\
-\\\\
-&0.8 \times 2 = \mathbf{1}.6
-\\\\
-\text{二进制小数：}&0.0100\mathbf{1}
-\\\\
-\\\\
-&0.6 \times 2 = \mathbf{1}.2
-\\\\
-\text{二进制小数：}&0.01001\mathbf{1}
-\\\\
-\\\\
+&0.3 \times 2 = \mathbf{0}.6 \\
+\text{二进制小数：}&0.\mathbf{0} \\
+\\
+&0.6 \times 2 = \mathbf{1}.2 \\
+\text{二进制小数：}&0.0\mathbf{1} \\
+\\
+&0.2 \times 2 = \mathbf{0}.4 \\
+\text{二进制小数：}&0.01\mathbf{0} \\
+\\
+&0.4 \times 2 = \mathbf{0}.8 \\
+\text{二进制小数：}&0.010\mathbf{0} \\
+\\
+&0.8 \times 2 = \mathbf{1}.6 \\
+\text{二进制小数：}&0.0100\mathbf{1} \\
+\\
+&0.6 \times 2 = \mathbf{1}.2 \\
+\text{二进制小数：}&0.01001\mathbf{1} \\
+\\
 &...
 \end{aligned}
-$$
+```
 
 最后可以得出：
 
-$$
-(0.3)\_{10} = (0.0\dot{1}00\dot{1})
-$$
+```mathKatex
+(0.3)_{10} = (0.0\dot{1}00\dot{1})
+```
 
 注：无限循环小数
 
@@ -330,14 +296,14 @@ $$
 其实所有位运算也可以在 C++ 中用十进制直接运算，例如 `10 & 3`，用 `0b` 前缀也行，也就是 `0b1010 & 0b11` 或 `0b1010 & 0b0011`。  
 举个更详细的例子：
 
-$$
+```mathKatex
 \begin{matrix}
-& 1011001 \\\\
-\\& & 0111101 \\\\
+& 1011001 \\
+\& & 0111101 \\
 \hline
 & 0011001
 \end{matrix}
-$$
+```
 
 转为十进制就是 <span style="font-family:monospace;">89 & 61 = 15</span>。
 
@@ -354,14 +320,14 @@ $$
 这个运算符也有一个备选关键字 `bitor`，`10 | 3` 等价于 `10 bitor 3`。  
 例子：
 
-$$
+```mathKatex
 \begin{matrix}
-& 1011001 \\\\
-| & 0111101 \\\\
+& 1011001 \\
+| & 0111101 \\
 \hline
 & 1111101
 \end{matrix}
-$$
+```
 
 转为十进制就是 <span style="font-family:monospace;">89 | 61 = 125</span>。
 
@@ -369,13 +335,13 @@ $$
 这算是最简单的运算符了，即将每一位取反。例如 `~0` 就等于 1，`~1` 就等于 0。
 例子：
 
-$$
+```mathKatex
 \begin{matrix}
-\sim & 0111101 \\\\
+\sim & 0111101 \\
 \hline
 & 1000010
 \end{matrix}
-$$
+```
 
 ### 按位异或 `^`
 其实就是比较每一位是否相同，若相同为 `0`， 不相同为 `1`。
@@ -390,14 +356,14 @@ $$
 C++ 中也有备选关键字，就是 `xor`。`10 ^ 3` 等价于 `10 xor 3`。  
 例如：
 
-$$
+```mathKatex
 \begin{matrix}
-& 1011001 \\\\
-\text{^} & 0111101 \\\\
+& 1011001 \\
+\text{\textasciicircum} & 0111101 \\
 \hline
 & 1100100
 \end{matrix}
-$$
+```
 
 转为十进制就是 <span style="font-family:monospace;">89 ^ 61 = 100</span>。
 
@@ -445,37 +411,34 @@ printf("%d %lld\n", a, b);
 
 在原码中，除符号位外，剩下的二进制都是按照 <a href="#二进制-gt-十进制"> <i class="fa-solid fa-hashtag" style="font-size:15px;"></i> 二进制转十进制</a> 一样。若符号位是 1 那就将转换的十进制加个负号。例如：
 
-$$
+```mathKatex
 \begin{aligned}
-(5)\_{10} &= [00000101]\_{\text{原}}
-\\\\
-(-12)\_{10} &= [10001100]\_{\text{原}}
+(5)_{10} &= [00000101]_{\text{原}} \\
+(-12)_{10} &= [10001100]_{\text{原}}
 \end{aligned}
-$$
+```
 
 ### 反码
 原码变成反码，若原码是正数（符号位为 0）则不需要做任何改变；若原码是负数（符号位为 1）则将除符号位以外的位全部取反。例如：
 
-$$
+```mathKatex
 \begin{aligned}
-(24)\_{10} &= [00011000]\_{\text{原}} = [00011000]\_{\text{反}}
-\\\\
-(-17)\_{10} &= [10010001]\_{\text{原}} = [11101110]\_{\text{反}}
+(24)_{10} &= [00011000]_{\text{原}} = [00011000]_{\text{反}} \\
+(-17)_{10} &= [10010001]_{\text{原}} = [11101110]_{\text{反}}
 \end{aligned}
-$$
+```
 
 ### 补码
 其实这才是计算机真正使用的二进制编码，前面的两种编码基本上只供学习和理解用。
 
 若那个二进制为正数，原码、反码和补码相同；若为负数，那么它的补码是它的反码加一。（请注意，二进制加法逢二进一）例如：
 
-$$
+```mathKatex
 \begin{aligned}
-(27)\_{10} &= [00011011]\_{\text{原}} = [00011011]\_{\text{反}} = [00011011]\_{\text{补}}
-\\\\
-(-53)\_{10} &= [10110101]\_{\text{原}} = [11001010]\_{\text{反}} = [11001011]\_{\text{补}}
+(27)_{10} &= [00011011]_{\text{原}} = [00011011]_{\text{反}} = [00011011]_{\text{补}} \\
+(-53)_{10} &= [10110101]_{\text{原}} = [11001010]_{\text{反}} = [11001011]_{\text{补}}
 \end{aligned}
-$$
+```
 
 {% note info %}
 P.S. 补码的快速转十进制方法
@@ -483,18 +446,18 @@ P.S. 补码的快速转十进制方法
 同普通二进制转十进制一样，可以弄一张差不多一样的表，不同的是，这张表的最左边的数（符号位）是负数。  
 还是以 8 位整型为例，这张表是这样的：
 
-$$-128 \ \ 64 \ \ 32 \ \ 16 \ \ 8 \ \ 4 \ \ 2 \ \ 1$$
+```mathKatex
+-128 \ \ 64 \ \ 32 \ \ 16 \ \ 8 \ \ 4 \ \ 2 \ \ 1
+```
 
 刚才的 -53 就可以以这种方法转换：
 
-$$
+```mathKatex
 \begin{aligned}
-&[11001011]\_{\text{补}}
-\\\\
-= &-128 + 64 + 0 + 0 + 8 + 0 + 2 + 1
-\\\\
-= &(-53)\_{10}
+&[11001011]_{\text{补}} \\
+= &-128 + 64 + 0 + 0 + 8 + 0 + 2 + 1 \\
+= &(-53)_{10}
 \end{aligned}
-$$
+```
 
 {% endnote %}

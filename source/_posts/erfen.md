@@ -38,39 +38,19 @@ for(int i = 1; i <= m; i ++)
 ```
 此时， $l$ 或 $r$ 其实已经是正确答案了，但是它会陷入死循环。例如 $a$ 为 $1 \ 2 \ 3 \ 4 \ 5$， $x$ 为 $4$ 时，是这样的：
 
-$$
+```mathKatex
 {\color{green}1 \ 2 \ 3 \ 4 \ 5} \\
-$$
-$$
 (\texttt{mid}=(1+5)/2=3, a[\texttt{mid}]=3, 4>3, l=\texttt{mid}=3, r=5) \\
-$$
-$$
 {\color{red}1 \ 2 \ }{\color{green} 3 \ 4 \ 5} \\
-$$
-$$
 (\texttt{mid}=(4+5)/2=4, a[\texttt{mid}]=4, 4=4, l=3, r=\texttt{mid}=4) \\
-$$
-$$
 {\color{red}1 \ 2 \ }{\color{green} 3 \ 4 \ }{\color{red}5} \\
-$$
-$$
 (\texttt{mid}=(3+4)/2=3, a[\texttt{mid}]=3, 4>3, l=\texttt{mid}=3, r=4) \\
-$$
-$$
 {\color{red}1 \ 2 \ }{\color{green} 3 \ 4 \ }{\color{red}5} \\
-$$
-$$
 (\texttt{mid}=(3+4)/2=3, a[\texttt{mid}]=3, 4>3, l=\texttt{mid}=3, r=4) \\
-$$
-$$
 {\color{red}1 \ 2 \ }{\color{green} 3 \ 4 \ }{\color{red}5} \\
-$$
-$$
 (\texttt{mid}=(3+4)/2=3, a[\texttt{mid}]=3, 4>3, l=\texttt{mid}=3, r=4) \\
-$$
-$$
 \textup{...Forever...}
-$$
+```
 
 因此，我们为什么不把 $l$ 的赋值加上一个呢？这样就不会无限循环下去了。就像这样：
 

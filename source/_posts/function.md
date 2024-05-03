@@ -41,7 +41,7 @@ int add(int x, int y)
 }
 ```
 
-----------
+<hr>
 
 **注意**：当不返回(无`return`)时，函数类型应为`void`(表面含义*无类型*)。
 
@@ -142,7 +142,7 @@ int main()
 Hello
 ```
 
-----------
+<hr>
 
 **注意：**仅仅函数类型不同不足以区分两个函数！
 
@@ -160,7 +160,7 @@ int main(int argc, char *argv[])
 int main(int argc, char **argv)
 ```
 
-----------
+<hr>
 
 含义：
 

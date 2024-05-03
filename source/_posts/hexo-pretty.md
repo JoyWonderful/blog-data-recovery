@@ -531,7 +531,7 @@ top: true
 
 可以给置顶的文章增加标识。在 source/data 下新建文件 post-meta.njk：
 
-```jinja
+```jinja2
 {% if post.top %}
   <div style="padding-left: 8px;">
     <span class="post-meta-divider" style="padding-right: 8px;">|</span>

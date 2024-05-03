@@ -1,0 +1,11 @@
+{% set menu = [['首页', '/', 'fa fa-home'],
+               ['标签', '/tags/', 'fa fa-tags'],
+               ['分类', '/categories/', 'fa fa-rectangle-list'],
+               ['存档', '/archives/', 'fa fa-archive']] %}
+
+{% set more_menu = [['友情链接', '/friends/', 'far fa-address-card'],
+                    ['留言板', '/guestbook/', 'fa fa-pen-to-square'],
+                    ['关于', '/about/', 'fa fa-circle-info fa-fw']] %}
+
+
+{% set tagcloud_config = {amount: 400, order: 1, min_font: 10, max_font: 24, class: "cloud-tags-item", show_count: true, count_class: "tags-item-count"} %}
