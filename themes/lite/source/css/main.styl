@@ -58,8 +58,8 @@ img {
     &.on {
         transform: translateY(0);
         visibility: visible;
-        opacity: .7;
-        &:hover {opacity:1}
+        opacity: .6;
+        &:hover {opacity:0.9}
     }
 }
 
@@ -675,6 +675,12 @@ footer.footer {
 
 // prismjs code style: vslight
 @import '_codeprism.styl'
+
+
+// katex
+.katex-display {
+    overflow: auto;
+}
 
 
 // +mobile() {}

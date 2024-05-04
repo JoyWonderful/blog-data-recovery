@@ -9,6 +9,7 @@ window.lite = {
                 ".main-inner",
                 ".site-sidebar"
             ],
+            cacheBust: false,
             scrollTo: false
         });
     },
@@ -38,6 +39,7 @@ window.lite = {
                 throwOnError: false
             });
             document.querySelectorAll("code.language-mathKatex").forEach((el) => {
+                el.parentNode.className = "katex-display";
                 katex.render(el.innerText, el.parentElement, {throwOnError: false});
             });
         }
@@ -119,7 +121,7 @@ window.lite = {
 }
 
 window.addEventListener("DOMContentLoaded", function() {
-    console.log("Hexo 7.2.0 <https://hexo.io/>\nTheme author is the author of this site.")
+    console.log("Hexo 7.2.0 https://hexo.io/ \nTheme author is the author of this site.")
     lite.registerPjaxStart();
     lite.activeMenuItem();
     lite.registerCodeCopy();
@@ -129,7 +131,7 @@ window.addEventListener("DOMContentLoaded", function() {
     lite.renderKatex();
 });
 window.addEventListener("pjax:success", function() {
-    anime({ targets: document.scrollingElement, scrollTop: 0, duration: 200, easing: "linear" });
+    if(!window.location.hash) anime({ targets: document.scrollingElement, scrollTop: 0, duration: 200, easing: "linear" });
     lite.activeMenuItem();
     lite.registerCodeCopy();
     lite.registerTOC();
