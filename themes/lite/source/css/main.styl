@@ -36,6 +36,43 @@ img {
     max-width: 100%;
     border-radius: 3px;
     box-shadow: 5px 5px 5px rgba(0 0 0 0.06), -2px -2px 5px rgba(0 0 0 0.04);
+    margin-bottom: $elmarginbtm;
+}
+p img:last-child {
+    margin-bottom: 0;
+}
+table {
+    margin-bottom: $elmarginbtm;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    thead {
+        height: 2.125em;
+        background: #fafafa;
+        tr th {
+            font-weight: 600;
+            border: 1px solid #ccc;
+            padding: 0 .375em;
+            border-bottom-width: 2px;
+        }
+    }
+    tbody {
+        tr {height: 2em}
+        tr td {
+            border: 1px solid #ccc;
+            padding: 0 .375em;
+        }
+    }
+    tr {
+        transition: background-color .3s;
+        &:hover {background-color:#eee}
+    }
+}
+blockquote {
+    margin: 0 0 $elmarginbtm 0;
+    color: #888;
+    padding-left: 10px;
+    border-left: 3px solid #aaa;
 }
 
 
@@ -676,6 +713,8 @@ footer.footer {
         border-top-color: transparent;
         .tab-pane {
             padding: 20px 20px 0;
+            display: none;
+            &.active {display:block}
         }
     }
 }
@@ -688,6 +727,12 @@ footer.footer {
 // katex
 .katex-display {
     overflow: auto hidden; // Disable some unknow overflow-y
+}
+
+
+::selection {
+    background: #c0c0c0;
+    color: #fff;
 }
 
 
