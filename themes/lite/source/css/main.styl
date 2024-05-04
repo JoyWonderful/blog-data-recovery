@@ -249,12 +249,20 @@ main.main {
         padding: 0 2px 0 10px;
     }
     .toc-child {
-        max-height: 0;
         color: #999;
-        transition: max-height .3s;
     }
-    .toc-link-active + .toc-child {
-        max-height: 100px;
+    .toc-item:has(.toc-child) {
+        display: grid;
+        grid-template-rows: 0fr 0fr;
+        transition: grid-template-rows .3s;
+        & > .toc-child {
+            min-height: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &:has(.toc-link-active) {
+            grid-template-rows: 0fr 1fr;
+        }
     }
     li.toc-item {
         &::marker {content:none}
