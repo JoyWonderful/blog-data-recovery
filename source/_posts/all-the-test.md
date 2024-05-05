@@ -101,11 +101,6 @@ hidden: true
     }
 </style>-->
 
-<details>
-    <summary>test</summary>
-    <p>这是一条折叠的信息</p>
-</details>
-
 {% note info %}
 info #428bca
 
