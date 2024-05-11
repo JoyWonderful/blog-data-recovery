@@ -1,7 +1,7 @@
 ---
 title: 使用 gdb 调试代码
 tags: 编译
-categories: 编程随记
+categories: Programming
 date: 2023-08-30 11:09:49
 ---
 

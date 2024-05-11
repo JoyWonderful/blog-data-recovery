@@ -5,7 +5,7 @@ tags:
     - 搜索
     - 队列
     - 基础算法
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 这不，刚学完<a style="border-bottom:none;" href="/posts/dfs">深搜</a>没多久，又来写广搜笔记了（话说我队列笔记还没来得急写呢）。**广度优先搜索**，广搜，英文为**Breadth First Search**，简称 **BFS**。是从一个结点向其他方向的结点不断扩散，如同一道水晕在湖面上荡漾开来。主要可以用来找路径**权值一定**的最短路径。  

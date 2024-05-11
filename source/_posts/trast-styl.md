@@ -2,7 +2,7 @@
 title: 样式过渡动画
 date: 2024-03-17 09:13:44
 tags: CSS
-categories: 编程随记
+categories: Programming
 ---
 
 一些可以用到 `:hover` 状态上的样式过渡。

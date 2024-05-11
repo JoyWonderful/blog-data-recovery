@@ -2,7 +2,7 @@
 date: 2023-08-13 17:23:21
 title: Git 的连接 Github 小记
 tags: Git
-categories: 编程随记
+categories: Programming
 ---
 
 又是一个随记，方便自己使用的。  

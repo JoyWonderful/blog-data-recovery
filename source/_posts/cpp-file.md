@@ -2,7 +2,7 @@
 title: C++ 文件操作
 date: 2023-07-17 17:23:11
 tags: 语言入门
-categories: 编程随记
+categories: Programming
 ---
 
 我曾经用 Python 的 tkinter 库写过一个<a style="border-bottom:none;" href="https://github.com/JoyWonderful/My-Python-File/blob/main/text-txt.py">文本编辑器</a>，一百多行，当时幼稚的我以为自己很了不起，因为当时的我认为读写文件是一件很复杂的事情。后来看看，这个东西做得很蹩脚，一个简单的 <code>with open()</code> 就完成了读写文件的操作，可见文件的读写是个很平常的事情。当年的喜悦大概是学到读写文件的喜悦吧。  

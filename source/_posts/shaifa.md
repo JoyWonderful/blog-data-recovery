@@ -4,7 +4,7 @@ date: 2023-08-08 14:34:23
 tags:
     - 基础算法
     - 数论
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

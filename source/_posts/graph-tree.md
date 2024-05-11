@@ -5,7 +5,7 @@ tags:
     - 数据结构
     - 基础算法
     - 树
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

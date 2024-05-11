@@ -2,7 +2,7 @@
 title: Waline 评论加入记录
 date: 2024-02-05 15:53:18
 tags: JavaScript
-categories: 编程随记
+categories: Programming
 ---
 
 看了看“[归档](/archives)”页面才发现自己没有在 2024 **发布**过文章。最近寒假作业写累了（思维导图太烦啦），就更新了下留言板，从 [giscus](https://giscus.app/zh-CN) 换成了 [waline](https://waline.js.org)，不用登录就可以留言了，管理也更方便。  

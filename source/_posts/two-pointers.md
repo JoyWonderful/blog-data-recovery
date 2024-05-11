@@ -4,7 +4,7 @@ date: 2023-06-26 18:00:45
 tags: 
     - 基础算法
     - 解题思想
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 > 双指针其实不是真正的指针，而是有两个变量在序列上进行一些操作。

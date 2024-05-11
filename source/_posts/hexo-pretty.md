@@ -1,7 +1,7 @@
 ---
 title: Hexo 建立静态博客记录
 tags: HTML
-categories: 编程随记
+categories: Programming
 date: 2023-12-26 15:35:17
 ---
 

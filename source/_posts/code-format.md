@@ -3,7 +3,7 @@ title: 个人意见：如何写出漂亮的代码
 date: 2023-07-07 16:42:34
 tags: 
     - 优化
-categories: 编程随记
+categories: Programming
 ---
 
 {% note warning %}

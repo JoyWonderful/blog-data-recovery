@@ -4,7 +4,7 @@ date: 2023-08-05 16:45:21
 tags:
     - 基础算法
     - 树
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 更前面的知识：<a style="border-bottom:none;" href="/posts/graph-tree">树的概念</a>

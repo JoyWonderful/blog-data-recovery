@@ -5,7 +5,7 @@ tag:
     - 基础算法
     - 排序
     - 优化
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

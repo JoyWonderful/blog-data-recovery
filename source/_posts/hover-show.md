@@ -4,7 +4,7 @@ date: 2023-11-12 11:45:14
 tags: 
     - HTML
     - CSS
-categories: 编程随记
+categories: Programming
 ---
 
 最近弄的 github 卡片，弄了半天弄出来的鼠标悬浮显示文字的效果。使用 CSS 伪元素弄出来的小提示。但是不适合 `overflow: hidden;` 的元素。不管怎么说，还是很好用的，忘掉了就不太好，也就放到博客里来了。

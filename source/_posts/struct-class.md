@@ -2,7 +2,7 @@
 title: C++类（结构体）
 date: 2023-05-31 19:16:45
 tags: 语言入门
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 ## 结构体

@@ -4,7 +4,7 @@ date: 2023-07-05 12:39:34
 tags:
     - 基础算法
     - 递归
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

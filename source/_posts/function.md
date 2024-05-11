@@ -4,7 +4,7 @@ date: 2023-05-03 20:25:59
 tags:
     - 语言入门
     - 函数，参数
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 ## 函数的作用

@@ -5,7 +5,7 @@ tags:
     - 递归
     - 搜索
     - 基础算法
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

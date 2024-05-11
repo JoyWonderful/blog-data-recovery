@@ -4,7 +4,7 @@ date: 2023-05-18 19:50:56
 tags:
     - 语言入门
     - 指针
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 ## 指针的作用

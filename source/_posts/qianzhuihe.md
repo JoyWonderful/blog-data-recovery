@@ -4,7 +4,7 @@ date: 2023-05-07 18:20:04
 tags:
 	- 基础算法
 	- 前缀和，差分
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

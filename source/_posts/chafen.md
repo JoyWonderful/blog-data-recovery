@@ -5,7 +5,7 @@ tags:
     - 基础算法
     - 前缀和，差分
     - 优化
-categories: 课程笔记
+categories: CourseNotes
 mathjax: true
 ---
 

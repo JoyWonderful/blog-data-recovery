@@ -4,7 +4,7 @@ date: 2024-04-13 13:29:52
 tags: 
     - 搜索
     - 树
-categories: 课程笔记
+categories: CourseNotes
 ---
 
 其实之前也写过关于[图的储存](/posts/graph-tree/#树的储存)的文章，但是没写全，也没有写代码。在这里把最近复习的重新补上来。  

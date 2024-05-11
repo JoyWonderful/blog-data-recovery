@@ -2,7 +2,7 @@
 title: 一些随笔记录和想法
 date: 2023-12-31 17:20:14
 tags: 作文
-categories: 琐碎
+categories: Others
 ---
 
 <style>

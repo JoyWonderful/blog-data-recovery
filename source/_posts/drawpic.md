@@ -1,7 +1,7 @@
 ---
 title: 自己画的一些画
 date: 2023-06-23 13:48:32
-categories: 琐碎
+categories: Others
 ---
 
 {% note info %}

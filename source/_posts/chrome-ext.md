@@ -1,7 +1,7 @@
 ---
 title: 更改 Edge 新标签页 —— 简单浏览器扩展
 date: 2024-03-02 17:13:45
-categories: 编程随记
+categories: Programming
 tags: JavaScript
 ---
 
