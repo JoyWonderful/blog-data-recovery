@@ -187,6 +187,17 @@ window.lite = {
             resultcon.innerHTML = "<ul>" + resultitems.map(result => result.item).join('') + "</ul>";
             pjax.refresh(resultcon);
         });
+    },
+    pjaxReqProg: {
+        set: function(str) {
+            var target = document.querySelector("aside.pjax-prog");
+            target.classList.add("active");
+            target.innerHTML = str;
+        },
+        destroy: function() {
+            var target = document.querySelector("aside.pjax-prog");
+            setTimeout(() => {target.classList.remove("active")}, 1000);
+        }
     }
 }
 
@@ -205,6 +216,7 @@ window.addEventListener("DOMContentLoaded", function() {
 window.addEventListener("pjax:success", function() {
     if(!window.location.hash) anime({ targets: document.scrollingElement, scrollTop: 0, duration: 200, easing: "linear" });
     const sa = document.querySelector(".search-overlay.active"); if(sa) {sa.classList.remove("active");}
+    lite.pjaxReqProg.set("加载完成"); lite.pjaxReqProg.destroy();
     lite.activeMenuItem();
     lite.registerCodeCopy();
     lite.registerTOC();
@@ -212,6 +224,6 @@ window.addEventListener("pjax:success", function() {
     lite.registerTabClick();
     lite.renderKatex();
 });
-window.addEventListener("scroll", function() {
-    lite.activeTOC();
-})
+window.addEventListener("pjax:send", () => {lite.pjaxReqProg.set("加载中，请稍候...");});
+window.addEventListener("pjax:error", function() {lite.pjaxReqProg.set("加载失败，请尝试在新标签页内打开"); lite.pjaxReqProg.destroy();});
+window.addEventListener("scroll", function() {lite.activeTOC();});

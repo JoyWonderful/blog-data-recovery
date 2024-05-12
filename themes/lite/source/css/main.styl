@@ -843,6 +843,26 @@ body:has(.search-overlay.active) {
 }
 
 
+.pjax-prog {
+    position: fixed;
+    top: 0;
+    background: #1118;
+    color: #fff;
+    padding: .25em;
+    width: 100%;
+    z-index: 60;
+    -webkit-user-select: none;
+    user-select: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
 ::selection {
     background: #c0c0c0;
     color: #fff;

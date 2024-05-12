@@ -41,10 +41,11 @@
                 {% block pagebody %}{% endblock %}
             </div>
         </main>
-        <div class="back-to-top"><i class="fa fa-angles-up"></i><span class="progress"></span></div>
+        <div class="back-to-top"><i class="fa fa-angles-up fa-fw"></i><span class="progress"></span></div>
+        <aside class="pjax-prog"></aside>
         {%- include "_search.njk" %}
         <footer class="footer">
-            © {{ post_time(void, "YYYY") }} &nbsp;<i class="fa fa-paper-plane"></i>&nbsp; {{ config.author }}
+            &copy; {{ post_time(void, "YYYY") }} &nbsp;<i class="fa fa-paper-plane"></i>&nbsp; {{ config.author }}
         </footer>
         {%- include "_javascriptload.njk" %}
     </body>
