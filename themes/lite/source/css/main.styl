@@ -120,19 +120,23 @@ main.main {
     margin: 0 auto;
     align-items: stretch;
     width: calc(100% - 100px);
-    +mobile() {width: calc(100% - 10px)}
+    +mobile() {
+        width: calc(100% - 10px);
+        flex-direction: column;
+    }
 }
 .main-inner {
     box-sizing: border-box;
     width: calc(100% - 252px);
     margin-top: 10px;
+    +mobile() {width:100%}
 }
 
 
 // menu styles
 .column {
     width: 240px;
-
+    +mobile() {width:100%;}
     header {
         margin-top: 10px;
         +mobile() {margin-top: 0;}
@@ -146,9 +150,6 @@ main.main {
     border-radius: $theme-bdrd $theme-bdrd 0 0;
     color: #fff;
     display: flex;
-
-    .site-nav-left {display: none;}
-    .site-nav-right {display: none;}
 
     .site-meta {
         padding: 20px 0;
@@ -172,6 +173,10 @@ main.main {
         display: block;
         margin: auto;
         padding-left: 5%;
+        +mobile() {
+            display:inline-block;
+            padding: 0;
+        }
         
         i[class^="fa"] {
             margin-right: 8px;
@@ -186,6 +191,7 @@ main.main {
             border-radius: 3px;
             line-height: 2;
             cursor: pointer;
+            +mobile() {display:inline-block}
             &::after {
                 background: #555;
                 opacity: 0.1;
@@ -203,6 +209,7 @@ main.main {
         }
         a.menu-item-active {
             &::before {
+                +mobile() {content:none;display:none;}
                 background: #bfbfbf;
                 border-radius: 6px;
                 content: "";
@@ -256,6 +263,7 @@ main.main {
     background-color: $contentbg;
     max-height: calc(90dvh - 24px);
     overflow-y: auto;
+    +mobile() {display:none}
 }
 
 .site-overview {
