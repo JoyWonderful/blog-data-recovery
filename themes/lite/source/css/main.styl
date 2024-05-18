@@ -687,7 +687,8 @@ footer.footer {
             }
         }
     }
-    :last-child {margin-bottom:0}
+    :last-child:not(.tab-pane *) {margin-bottom:0}
+    .code-container:last-child > pre[class*="language-"] {margin-bottom:0}
 }
 
 
@@ -859,6 +860,9 @@ body:has(.search-overlay.active) {
     &.active {
         visibility: visible;
         opacity: 1;
+        max-height: 3em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
