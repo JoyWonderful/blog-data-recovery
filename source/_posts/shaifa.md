@@ -3,7 +3,7 @@ title: 数论：质数筛法
 date: 2023-08-08 14:34:23
 tags:
     - 基础算法
-    - 数论
+    - 数学
 categories: CourseNotes
 mathjax: true
 ---

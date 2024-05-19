@@ -1,7 +1,9 @@
 ---
 title: 动态规划：01 背包
 date: 2023-08-16 19:21:10
-tags: 搜索
+tags: 
+    - 搜索
+    - 动态规划
 categories: CourseNotes
 ---
 
