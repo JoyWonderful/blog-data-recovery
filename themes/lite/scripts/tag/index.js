@@ -6,7 +6,7 @@ hexo.extend.tag.register('litever', function() {
     const { dependencies } = require('./../../../../package.json');
     var allPkg = Object.keys(dependencies);
     var str = '';
-    allPkg.forEach((depname) => {str += depname + ': ' + dependencies[depname] + '<br>'});
+    allPkg.forEach((depname) => {str += `<a href="https://www.npmjs.com/package/${depname}">${depname}</a>: ${dependencies[depname]}\n`});
     return `<pre class="language-none"><code class="language-none">${str}</code></pre>`;
 }, true);
 
