@@ -2,6 +2,7 @@
 title: 测试全部渲染
 date: 2023-07-08 18:52:56
 hidden: true
+mathjax: true
 ---
 
 ## 二级标题
@@ -44,12 +45,13 @@ hidden: true
 ```
 
 ##### 五级标题
-![](/pic/icon.png)
-[Back to home](/)
+![](/fonts/favicon)
+[Back to home](/)  
+[404 check](/404A114514)
 
 |test1|test2|test3|
 |:---:|:----|----:|
-居中的一列middle|居左的一列left|居右的一列right|
+|居中的一列middle|居左的一列left|居右的一列right|
 |test|test|test|
 
 ###### 六级标题
@@ -78,29 +80,6 @@ hidden: true
 
 <i class="fa-solid fa-arrow-up"></i> 上面是一条分隔线
 
-<!--<style>
-    details {
-        border: 1px solid #aaa;
-        border-radius: 4px;
-        padding: 0.5em 0.5em 0;
-    }
-
-    summary {
-        font-weight: bold;
-        margin: -0.5em -0.5em 0;
-        padding: 0.5em;
-    }
-
-    details[open] {
-        padding: 0.5em;
-    }
-
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 0.5em;
-    }
-</style>-->
-
 {% note info %}
 info #428bca
 
@@ -124,3 +103,12 @@ success #5cb85c
 
 test
 {% endnote %}
+
+## Katex
+
+$\KaTeX$
+
+```mathKatex
+\textcolor{#222222}{\lim\limits_{x\to 404} \frac{1}{404-x} = \textrm{DNE}} \\
+\KaTeX
+```
