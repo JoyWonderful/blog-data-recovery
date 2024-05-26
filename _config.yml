@@ -89,6 +89,12 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+### hexo-generator-search-db
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
 ## Themes: https://hexo.io/themes/
 theme: lite
 
