@@ -31,7 +31,7 @@ open(const char* __s, ios_base::openmode __mode = ios_base::out | ios_base::trun
     - `ios::ate` 打开定位到末尾。用于 `ofstream`。
     - `ios::trunc` 若文件存在，则覆盖文件，不保留原始内容。在 `ofstream` 中，默认是 `ios::trunc`。
 
-当写入或读取文件时，和 `cin``cout` 差不多。例如：
+当写入或读取文件时，和 `cin` `cout` 差不多。例如：
 ```cpp
 #include <iostream>
 #include <fstream>
