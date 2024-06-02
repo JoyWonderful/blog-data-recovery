@@ -27,6 +27,13 @@ pre[class*="language-"] {
 
 .code-container {
     position: relative;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    margin-bottom: $elmarginbtm;
+    pre[class*="language-"] {
+        margin: 0;
+        border: none;
+    }
 }
 .code-container[data-language]::before {
     content: attr(data-language);
