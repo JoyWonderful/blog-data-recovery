@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>404 NOT FOUND</title>
+        <style>.token.keyword{color:#0000ff}.token.directive-hash{color:#FF0000}.token.number,.token.boolean,.token.constant{color:#36acaa}.token.string{color:#A31515}.token.comment{color:#008000;font-style:italic}</style>
+    </head>
+    <body>
+        <h1>404 NOT FOUND</h1>
+        <p><a href="javascript:window.history.back()" style="font-size:1.5rem;font-weight:600;">返回上一页</a></p>
+
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// if(404 == true)</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">w<span class="token punctuation">,</span>c<span class="token punctuation">,</span>t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token constant">STAT404</span> <span class="token operator">=</span> <span class="token string">"NDA0JTIwTk9UJTIwRk9VTkQ="</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token constant">NOT</span> <span class="token operator">=</span> w<span class="token punctuation">.</span><span class="token function">atob</span><span class="token punctuation">(</span><span class="token constant">STAT404</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token constant">FOUND</span> <span class="token operator">=</span> <span class="token function">decodeURI</span><span class="token punctuation">(</span><span class="token constant">NOT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    c<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token constant">FOUND</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">\n???\nReally?\n</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token function">Number</span><span class="token punctuation">(</span><span class="token constant">FOUND</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">true</span><span class="token operator">?</span><span class="token string">"But \"404\" is found."</span><span class="token operator">:</span><span class="token string">"Yes, not found."</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span>console<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// if(404)</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token keyword">int</span> STAT404 <span class="token operator">=</span> <span class="token number">404</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d NOT FOUND\n???\nReally?\n"</span><span class="token punctuation">,</span> STAT404<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>STAT404<span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"But \"404\" is found."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Yes, not found."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+    </body>
+</html>
