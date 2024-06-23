@@ -108,3 +108,26 @@ int main()
 *有符号*， `signed` ，符号即为 $-$ ，在一般的数据定义中，**都是**有符号的类型。*无符号*， `unsigned` ，即**没有**复数，正数数据范围会大很多。比如普通的 `int` （ `signed int` ）数据范围是 $-2147483648 \sim 2147483647$ 而无符号 `int` （ `unsigned int` ）数据范围是 $0 \sim 4294967295$ ，这是因为 `unsigned int` 将附属部分拿来存正数部分，所以可以存的正数会大很多。
 
 在变量类型中，只有 `signed` 会被认作 `signed int` ；只有 `unsigned` 也会被认作 `unsigned int` ；不带 `signed` 和 `unsigned` 的任何数据类型都会被认做有符号 `signed` 数据类型。因此，在某些时候主函数 `int main()` 也可以写成 `signed main()` 
+
+## 读写数据
+当数据很大时，直接从控制台输入是不可能的。同样地，控制台输出数据过多也不方便比较数据。
+
+```cpp
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    FILE *fpi = freopen("test.in", "r", stdin);
+    FILE *fpo = freopen("test.out", "w", stdout);
+
+    fclose(fpi);
+    fclose(fpo);
+    return 0;
+}
+```
+
+```bash
+fc test.out test.ans
+code -d test.out test.ans
+```
