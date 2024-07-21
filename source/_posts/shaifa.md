@@ -88,7 +88,7 @@ bool vis[TEMP];
 int pri[TEMP], cnt = 0;
 void is_prime(int n)
 {
-    for(int i = 2; i < n; ++i)
+    for(int i = 2; i <= n; ++i)
     {
         if(!vis[i])
         {
@@ -96,7 +96,7 @@ void is_prime(int n)
         }
         for(int j = 0; j < cnt; ++j)
         {
-            if(i * pri[j] >= n)
+            if(i * pri[j] > n)
             {
                 break;
             }
