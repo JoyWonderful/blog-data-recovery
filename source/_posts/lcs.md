@@ -1,9 +1,11 @@
 ---
-title: 最长上升子序列
+title: 最长上升/公共子序列
 date: 2024-07-11 16:44:28
 categories: CourseNotes
 tags: 动态规划
 ---
+
+## 最长上升子序列
 
 即从原序列中按顺序取出数字排列在一起，保证这些数字是**递增**（不包括相等）的。
 
@@ -82,3 +84,37 @@ int main()
 }
 ```
 
+## 最长公共子序列
+
+```cpp
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int dp[3003][3003]; // dp[i][j] 代表第一个字符串前 i 个字符 和 第二个前 j 个字符的最长公共子序列
+int longest_common_subsequence(char a[3003], char b[3003])
+{
+    int lena = strlen(a), lenb = strlen(b);
+    for(int i = 0; i <= lena; i++)
+    {
+        for(int j = 0; j <= lenb; j++)
+        {
+            if(i == 0 || j == 0) dp[i][j] = 0; // 前零个字符，没有公共子序列
+            else if(a[i - 1] == b[j - 1]) dp[i][j] = dp[i - 1][j - 1] + 1;
+            else dp[i][j] = (dp[i - 1][j] > dp[i][j - 1]) ? (dp[i - 1][j]) : (dp[i][j - 1]);
+        }
+    }
+    return dp[lena][lenb];
+}
+
+char str1[3003], str2[3003];
+int main()
+{
+    scanf("%s", &str1);
+    scanf("%s", &str2);
+    
+    printf("%d\n", longest_common_subsequence(str1, str2));
+    
+    return 0;
+}
+```
