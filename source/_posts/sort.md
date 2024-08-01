@@ -465,13 +465,11 @@ int main()
 
 这么多排序算法，头都要晕了。为什么不用别人现成的函数来排序呢？看， `C++` 就有一个超级好用的头文件 -> `<algorithm>` ，用它里面的 `sort()` 函数就可以啦！并且，它支持**自定义排序**。
 
-从小到大排序时，还有一个更方便的方法：
+从大到小排序时，还有一个更方便的方法：
 
 ```cpp
 sort(a, a + 10, greater<int>());
 ```
-
-`greater` 是一个模板，可以把它理解为在这个函数中把大于号和小于号的含义交换。
 
 两个重载：
 
@@ -488,4 +486,4 @@ template<typename _RandomAccessIterator, typename _Compare>
 	 _Compare __comp)
 ```
 
-想要用的时候，就直接 `sort(&a[0], &a[n])` 或者 `sort(a, a + n)` 就可以了。写排序函数 `cmp` 时，想交换就 `return true` ，否则就 `return false` 。
+想要用的时候，就直接 `sort(&a[0], &a[n])` 或者 `sort(a, a + n)` 就可以了。写排序函数 `cmp(x, y)` 时两个参数代表数组里的元素可以理解为 `a[i - 1]`, `a[i]`，升序（默认）写做 `return x > y`。
