@@ -136,46 +136,132 @@ bool SPFA(int start, int n)
 }
 ```
 
-## Dijkstra 代码
+## Dijkstra
+
+### 实现
+
+迪克斯特拉（？），用于求**单源**最短路（只从一个结点出发到另一结点的最短路径），*不可以有负权值的边*。
+
+使用优先队列优化的 dijkstra 步骤：
+
+1. 设从起点到编号为 i 的结点的最短路为 dis\[i\]，设起点编号为 s。初始时 dis[s] = 0; 其他的均为无穷大。
+2. 优先队列(pq) 里存该遍历的结点，排序方案为按结点的最短路大小（dis\[结点\]）排序。
+3. 将 pq 顶部元素弹出，是前一个点。如果从起点到  前一个点(top) 的最短路(dis\[top\])  加上到  这个点(tv) 的边的权值(tw)  小于  从起点到这个点的最短路(dis\[tv\])  ，则执行 `dis[tv] = dis[top] + tw`，将 {tv, dis[tv]}(结构体) 加入 pq。
+
+重复第 3 步，直到 pq 为空。
+
+### 代码
+
+[P4779 单源最短路径](https://www.luogu.com.cn/problem/P4779)
 
 ```cpp
-const int MAXN = 2e6 + 5;
-#define typec int
-const typec INF = 0x3f3f3f3f; // 防止后面溢出，这个不能太大
-bool vis[MAXN];
-int pre[MAXN];
-void Dijkstra(typec cost[][MAXN], typec lowcost[], int n, int beg)
+#include <cstdio>
+#include <vector>
+#include <queue>
+using namespace std;
+
+const int TMP = 2e5 + 3;
+struct edge
 {
-    for (int i = 0; i < n; i++)
+    int v, w;
+};
+struct node
+{
+    int id, dis;
+    bool operator< (const node &x) const
     {
-        lowcost[i] = INF;
-        vis[i] = false;
-        pre[i] = 0;
+        return x.dis < dis;
     }
-    lowcost[beg] = 0;
-    for (int j = 0; j < n; j++)
+};
+int n, m, s, dis[TMP], vis[TMP];
+vector<edge> gr[TMP];
+priority_queue<node> pq;
+int main()
+{
+    scanf("%d %d %d", &n, &m, &s);
+    for(int i = 1; i <= m; i++)
     {
-        int k = ? 1;
-        int Min = INF;
-        for (int i = 0; i < n; i++)
+        int v, u, w;
+        scanf("%d %d %d", &u, &v, &w); // u --w--> v
+        edge tmp;
+        tmp.v = v; tmp.w = w;
+        gr[u].push_back(tmp);
+    }
+    
+    for(int i = 1; i <= n; i++)
+    {
+        dis[i] = 0x7fffffff;
+    }
+    dis[s] = 0;
+    node tmp; tmp.id = s; tmp.dis = 0;
+    pq.push(tmp);
+    while(!pq.empty())
+    {
+        node top = pq.top();
+        pq.pop();
+        if(!vis[top.id])
         {
-            if (!vis[i] && lowcost[i] < Min)
+            vis[top.id] = 1;
+            for(int i = 0; i < gr[top.id].size(); i++)
             {
-                Min = lowcost[i];
-                k = i;
-            }
-            if(k==?1)
-                break;
-            vis[k] = true;
-        }
-        for (int i = 0; i < n; i++)
-        {
-            if (!vis[i] && lowcost[k] + cost[k][i] < lowcost[i])
-            {
-                lowcost[i] = lowcost[k] + cost[k][i];
-                pre[i] = k;
+                int tv = gr[top.id][i].v, tw = gr[top.id][i].w;
+                if(dis[top.id] + tw < dis[tv])
+                {
+                    dis[tv] = dis[top.id] + tw;
+                    node ptmp; ptmp.id = tv; ptmp.dis = dis[tv];
+                    pq.push(ptmp);
+                }
             }
         }
     }
+    for(int i = 1; i <= n; i++)
+    {
+        printf("%d ", dis[i]);
+    }
+    
+    return 0;
 }
 ```
+
+### 演示
+
+设 起点(s) 为 1，INF 代表无穷大，上方注释 c 表示这次访问并改变了，v 表示仅访问过。如下：
+
+![spth1](https://s21.ax1x.com/2024/08/28/pAkOcQA.png)
+
+```
+dis[4] = {0, INF, INF, INF};
+vis[4] = {0, 0, 0, 0};
+pq = {{.id=1, .dis=0}};
+```
+
+
+![spth2](https://s21.ax1x.com/2024/08/28/pAkOgsI.png)
+
+```
+//           c  c  c
+dis[4] = {0, 2, 5, 4};
+vis[4] = {1, 0, 0, 0};
+pq = {{.id=2, .dis=2},  {.id=4, .dis=4},  {.id=3, .dis=5}};
+```
+
+
+![spth3](https://s21.ax1x.com/2024/08/28/pAkO2Lt.png)
+
+```
+//              c  c
+dis[4] = {0, 2, 4, 3};
+vis[4] = {1, 1, 0, 0};
+pq = {{.id=4, .dis=3},  {.id=4, .dis=4},  {.id=3, .dis=4},  {.id=3, .dis=5}};
+```
+
+
+![spth4](https://s21.ax1x.com/2024/08/28/pAkOyzd.png)
+
+```
+//              v  v
+dis[4] = {0, 2, 4, 3};
+vis[4] = {1, 1, 1, 1};
+pq = {};
+```
+
