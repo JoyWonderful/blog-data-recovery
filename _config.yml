@@ -96,7 +96,7 @@ search:
   content: true
   format: striptags
 ## Themes: https://hexo.io/themes/
-theme: lite
+theme: lite # my theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
