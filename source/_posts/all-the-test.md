@@ -45,7 +45,7 @@ mathjax: true
 ```
 
 ##### 五级标题
-![favicon](/fonts/favicon.svg)
+![favicon](https://src-jywon.glitch.me/favicon.svg)
 [Back to home](/)  
 [404 check](/404A114514)
 

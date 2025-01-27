@@ -18,7 +18,7 @@ date: 2024-05-26 10:29:51
 
 例如 $14 + (1 + 2) \times (7 - (6 \div 2))$，表示为：
 
-![mermaid-expr-tree](https://mermaid.ink/svg/pako:eNpd0E0KwjAQBeCrlHEzWoM09kfq1hvoMpvQplZoE4kJIuLdHa2N1qzyvQmPIXeoTK2ghKYz16qV1kWHndARHZ0gJvP5BxyRB6wR84D0d5IhFgE5FaSjTEx98Vf8VwvEGU-ybQhWryAtvgGjYFNw_k5CY8QYo0X_zMeSgesp07HxTbOaUGfjRsM0TqZmYf3heT61WcASemV7earpU--vqQDXql4JKOlaq0b6zgkQ-kFPpXdmf9MVlM56tQRr_LGFspHdheTPtXRqd5JHK_tP-ngCh9psJw)
+![mermaid-expr-tree](https://src-jywon.glitch.me/img/blog-expres.svg)
 
 使用后序遍历即表示为 $\mathtt{14 \ \ 1 \ \ 2 \ \ + \ \ 7 \ \ 6 \ \ 2 \ \ \div \ \ - \ \ \times \ \ +}$，这就是它的后缀表达式。它们的结果都是 $26$。
 

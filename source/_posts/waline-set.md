@@ -5,6 +5,13 @@ tags: JavaScript
 categories: Programming
 ---
 
+{% note danger %}
+Deta space 已经关闭
+
+Deta 官方已经把 space 关闭了，着手开发 [surf](https://deta.surf/)（好像是一个 AI 浏览器）。不能再使用 Deta，所以本篇文章的 [服务端](#服务端) 部分已经没有意义。  
+[留言板](/guestbook) 部分已经换用 Twikoo，使用 glitch 部署。
+{% endnote %}
+
 看了看“[归档](/archives)”页面才发现自己没有在 2024 **发布**过文章。最近寒假作业写累了（思维导图太烦啦），就更新了下留言板，从 [giscus](https://giscus.app/zh-CN) 换成了 [waline](https://waline.js.org)，不用登录就可以留言了，管理也更方便。  
 
 <!--more-->

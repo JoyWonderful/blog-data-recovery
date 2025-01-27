@@ -75,6 +75,6 @@ Edge 在断网的时候其实有个[干净的标签页](#localntp)，实际是 [
 <hr>
 
 **图片们：**
-<img src="https://s11.ax1x.com/2024/02/25/pFanNbn.jpg" alt="edgentp" id="edgentp" loading="lazy">
-<img src="https://s11.ax1x.com/2024/03/02/pF04Xcj.png" alt="ntpstroage" id="ntpstroage" loading="lazy">
-<img src="https://s11.ax1x.com/2024/03/02/pF0oghT.png" alt="localntp" id="localntp" loading="lazy">
+<img src="https://src-jywon.glitch.me/img/blog-chromeExt-edgentp.jpg" alt="edgentp" id="edgentp" loading="lazy">
+<img src="https://src-jywon.glitch.me/img/blog-chromeExt-ntpstorage.png" alt="ntpstroage" id="ntpstroage" loading="lazy">
+<img src="https://src-jywon.glitch.me/img/blog-chromeExt-localntp.png" alt="localntp" id="localntp" loading="lazy">
