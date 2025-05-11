@@ -34,13 +34,19 @@ chmod u+x .git/hooks/post-receive
 
 新建 `.github/workflows/sync.yml` 文件（其实文件名可以随便），添加如下内容：
 
+{% note warning %}
+Glitch 默认分支变更
+
+现在的 Glitch 新建项目默认分支 `master` 好像变成了 `main`，老项目不用改，但新项目要把 `destination_branch` 改成 `main`。
+{% endnote %}
+
 ```yml
 name: Glitch Sync
 
 on:
   push:
     branches:
-      - main # 改成你要的分支
+      - main # 改成你要推送的分支
 
 jobs:
   sync:
@@ -50,9 +56,9 @@ jobs:
         uses: wei/git-sync@v3
         with:
           source_repo: https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          source_branch: main
+          source_branch: main # 改成你要推送的分支
           destination_repo: ${{ secrets.GLITCH_GIT_URL }}
-          destination_branch: master
+          destination_branch: main # 最好在项目的控制台中看看 git branch 是什么，一般来说默认是 main，不用改
 ```
 
 ### Hexo 问题
