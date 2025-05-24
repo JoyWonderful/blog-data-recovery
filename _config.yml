@@ -102,6 +102,6 @@ theme: lite # my theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:JoyWonderful/blog.git
+  repository: git@github.com:JoyWonderful/joywonderful.github.io.git
   branch: main
   ignore_hidden: false
