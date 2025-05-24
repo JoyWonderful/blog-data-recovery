@@ -5,6 +5,17 @@ categories: Programming
 tags: Git
 ---
 
+{% note danger %}
+Glitch 好像要关了?……
+
+详见这篇[官方公告](https://blog.glitch.com/post/changes-are-coming-to-glitch)，和[讨论](https://support.glitch.com/t/discussion-thread-project-hosting-ending-july-8/75660)。官方也说得模棱两可的。  
+因此这篇文章可能会在 2025 年 7 月 8 日过时。请注意不要再在 Glitch 上部署新项目。
+
+这篇文章好像又要没用了。  
+为什么好像我用什么东西部署我的网站，什么东西不久就要关闭？先是 [Deta space](/posts/waline-set/)，再是 Glitch。  
+我的留言板、博客又要进行痛苦的迁移了……
+{% endnote %}
+
 由于 Github Pages 实在太慢，我的很多东西都迁移到功能和速度都更好的 Glitch 上。如你所见。  
 Glitch 项目也是一个 Git Repository，可以 push。这里利用 Github Actions，使用 [wei/git-sync](https://github.com/wei/git-sync) 项目，进行落实。
 
