@@ -227,7 +227,7 @@ int main()
 
 设 起点(s) 为 1，INF 代表无穷大，上方注释 c 表示这次访问并改变了，v 表示仅访问过。如下：
 
-![spth1](https://src-jywon.glitch.me/img/blog-shortestPth-1.png)
+![spth1](https://src-jywon.netlify.app/img/blog-shortestPth-1.png)
 
 ```
 dis[4] = {0, INF, INF, INF};
@@ -236,7 +236,7 @@ pq = {{.id=1, .dis=0}};
 ```
 
 
-![spth2](https://src-jywon.glitch.me/img/blog-shortestPth-2.png)
+![spth2](https://src-jywon.netlify.app/img/blog-shortestPth-2.png)
 
 ```
 //           c  c  c
@@ -246,7 +246,7 @@ pq = {{.id=2, .dis=2},  {.id=4, .dis=4},  {.id=3, .dis=5}};
 ```
 
 
-![spth3](https://src-jywon.glitch.me/img/blog-shortestPth-3.png)
+![spth3](https://src-jywon.netlify.app/img/blog-shortestPth-3.png)
 
 ```
 //              c  c
@@ -256,7 +256,7 @@ pq = {{.id=4, .dis=3},  {.id=4, .dis=4},  {.id=3, .dis=4},  {.id=3, .dis=5}};
 ```
 
 
-![spth4](https://src-jywon.glitch.me/img/blog-shortestPth-4.png)
+![spth4](https://src-jywon.netlify.app/img/blog-shortestPth-4.png)
 
 ```
 //              v  v

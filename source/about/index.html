@@ -13,8 +13,12 @@ date: 2023-05-01 09:21:17
 <br>
 <p style="text-align:center;color:#777;font-size:.875rem;margin-top:30px">以下是一些信息</p>
 
+<p style="margin-bottom:5px"><strong>Site Deploy Status:</strong></p>
+<a style="border-bottom:none" href="https://app.netlify.com/projects/blog-jywon/deploys"><img alt="Netlify Status" src=https://api.netlify.com/api/v1/badges/5b6267ec-b34a-4b27-8b5d-fdd10de7ea7e/deploy-status></img></a>
 
-<p style="margin-bottom:5px"><strong>Glitch Sync with Github Status:</strong></p>
+
+{# 
+<p style="margin-bottom:5px"><strong>Atomgit Sync with Github Status:</strong></p>
 
 <style>
     div#last-deploy-info {
@@ -53,7 +57,7 @@ date: 2023-05-01 09:21:17
 </div>
 
 <script>
-    fetch("https://api.github.com/repos/joywonderful/joywonderful.github.io/actions/runs?per_page=1").then((result) => {
+    fetch("https://api.github.com/repos/joywonderful/blog/actions/runs?per_page=1").then((result) => {
         if(!result.ok) {
             console.error(result.status);
             var emsgd = document.querySelector("#last-deploy-info");
@@ -94,6 +98,8 @@ date: 2023-05-01 09:21:17
         update.innerHTML = `<span class="ititle">Created At</span><br><span class="indexcnt">${d2.getFullYear()}-${d2.getMonth()+1}-${d2.getDate()} ${d2.getHours()}:${d2.getMinutes()}:${d2.getSeconds()}</span>`;
     });
 </script>
+
+#}
 
 
 <p style="margin-bottom:5px"><strong>NPM Dependencies which this Site are Using:</strong></p>

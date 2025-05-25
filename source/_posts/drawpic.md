@@ -13,5 +13,5 @@ categories: Others
 
 放假了闲着没事情干，便画了一些画，放在这儿，留此纪念。
 <!--more-->
-![pencil-box](https://src-jywon.glitch.me/img/blog-drawpic-pencilBox.jpg)
-![naozhong](https://src-jywon.glitch.me/img/blog-drawpic-naozhong.jpg)
+![pencil-box](https://src-jywon.netlify.app/img/blog-drawpic-pencilBox.jpg)
+![naozhong](https://src-jywon.netlify.app/img/blog-drawpic-naozhong.jpg)

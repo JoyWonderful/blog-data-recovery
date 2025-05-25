@@ -328,7 +328,7 @@ int main()
 ### 例子
 一个数列 $8 \ 5 \ 7 \ 9 \ 2 \ 6$ 的归并排序：
 
-![merge-sort](https://src-jywon.glitch.me/img/blog-sort.svg)
+![merge-sort](https://src-jywon.netlify.app/img/blog-sort.svg)
 
 ### 示例程序
 ```cpp
