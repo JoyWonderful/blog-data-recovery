@@ -324,22 +324,26 @@ scheme: Pisces
 {% tabs themeShow, 4 %}
 <!-- tab Muse -->
 {% cdnimg muse, muse.png %}
+
 **文档演示**：[https://theme-next.js.org/muse/](https://theme-next.js.org/muse/)
 <!-- endtab -->
 
 <!-- tab Mist -->
 {% cdnimg mist, mist.png %}
+
 **文档演示**：[https://theme-next.js.org/mist/](https://theme-next.js.org/mist/)
 <!-- endtab -->
 
 <!-- tab Pisces -->
 {% cdnimg pisces, pisces.png %}
+
 **文档演示**：[https://theme-next.js.org/pisces/](https://theme-next.js.org/pisces/)
 <!-- endtab -->
 
 <!-- tab Gemini -->
 {% cdnimg gemini, gemini.png %}
-**文档演示**：[https://theme-next.js.org/](https://theme-next.js.org/)
+
+**文档演示**：[https://theme-next.js.org/](https://theme-next.js.org/)  
 ***自己用了这个 NexT 主题***，敲好看的。
 <!-- endtab -->
 {% endtabs %}
