@@ -103,7 +103,7 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 {% endnote %}
 
 访问 `http://localhost:4000/` 查看效果。初始的欢迎页面大概是这个样子：
-![local-hexo-landscape.jpg](https://src-jywon.netlify.app/img/blog-hexoPretty-localHexoLandscape.jpg)
+{% cdnimg local-hexo-landscape.jpg, localHexoLandscape.jpg %}
 
 
 
@@ -308,7 +308,7 @@ theme: hexo-theme-next
 找到 `language` 字样，更改其值为 `zh-CN`。
 
 此时本地运行大概是这个样子：  
-![test-theme-next](https://src-jywon.netlify.app/img/blog-hexoPretty-testThemeNext.jpg)
+{% cdnimg test-theme-next, testThemeNext.jpg %}
 
 可以根据需要更改 NexT 主题。打开 themes/hexo-theme-next/_config.yml（主题配置文件）找到 `scheme` 字样，选择一个去掉 `#` 注释，把原本的用 `#` 注释上。例如：
 
@@ -323,22 +323,22 @@ scheme: Pisces
 主题效果（图片和演示链接）：
 {% tabs themeShow, 4 %}
 <!-- tab Muse -->
-![muse](https://src-jywon.netlify.app/img/blog-hexoPretty-muse.png)
+{% cdnimg muse, muse.png %}
 **文档演示**：[https://theme-next.js.org/muse/](https://theme-next.js.org/muse/)
 <!-- endtab -->
 
 <!-- tab Mist -->
-![mist](https://src-jywon.netlify.app/img/blog-hexoPretty-mist.png)
+{% cdnimg mist, mist.png %}
 **文档演示**：[https://theme-next.js.org/mist/](https://theme-next.js.org/mist/)
 <!-- endtab -->
 
 <!-- tab Pisces -->
-![pisces](https://src-jywon.netlify.app/img/blog-hexoPretty-pisces.png)
+{% cdnimg pisces, pisces.png %}
 **文档演示**：[https://theme-next.js.org/pisces/](https://theme-next.js.org/pisces/)
 <!-- endtab -->
 
 <!-- tab Gemini -->
-![gemini](https://src-jywon.netlify.app/img/blog-hexoPretty-gemini.png)
+{% cdnimg gemini, gemini.png %}
 **文档演示**：[https://theme-next.js.org/](https://theme-next.js.org/)
 ***自己用了这个 NexT 主题***，敲好看的。
 <!-- endtab -->

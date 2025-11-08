@@ -41,7 +41,7 @@ date: 2025-10-26 19:56:25
 <!-- tab 网页(Web) -->
 可以访问 [vscode.dev](https://vscode.dev/) 后打开扩展搜索“Live Share”(@id:`MS-vsliveshare.vsliveshare`)点击安装。
 
-<img src="https://src-jywon.netlify.app/img/blog-liveshare-market.png" loading="lazy">
+{% cdnimg market, market.png, loading="lazy" %}
 
 或者主持人可以直接访问 [vscode.dev/editor/liveshare](https://vscode.dev/editor/liveshare/)，点击安装这一步都省了。（P.S.: 这样子 Live Share 会变成“内置(@builtin)”扩展）  
 协作者可以不用在 Web 端手动安装，直接访问主持人的邀请链接就可以了（也会自动安装 Live Share 为“内置”扩展，并自动加入协作）。
@@ -54,7 +54,7 @@ Visual Studio 内置 Live Share，不必手动安装。
 <!-- tab Visual Studio Code -->
 打开扩展搜索“[Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)”(@id:`MS-vsliveshare.vsliveshare`)点击安装。
 
-<img src="https://src-jywon.netlify.app/img/blog-liveshare-market.png" loading="lazy">
+{% cdnimg market2, market.png, loading="lazy" %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -74,7 +74,7 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
 | :--- | :-------- | :------ |
 | `liveshare.allowGuestDebugControl` | 允许协作者启动和停止调试会话。当项为 `true` 时，即 GUI 设置里打上勾时协作者也可以在主持者的终端上运行和调试程序。详见[TODO]。 | `false` |
 | `liveshare.allowGuestTaskControl` | 允许协作者运行和终止工作区的*任务*(Tasks)。也请见上[TODO]。 | `false` |
-| `liveshare.alwaysFollowHost` | 确保主持者总是被跟随。详见[TODO]。 | `false` |
+| `liveshare.alwaysFollowHost` | 确保主持者总是被跟随。详见[聚焦和跟踪](#聚焦和跟踪)。 | `false` |
 | `liveshare.anonymousGuestApproval` | 控制如何处理来自*匿名*（指未登录的）协作者的加入请求。当项为 `"prompt"` 时，显示一个消息询问；当项为 `"reject"` 时会自动拒绝；当项为`"accept"` 时自动允许。图片见[TODO]。 | `"prompt"` |
 | `liveshare.autoShareServers` | 控制是否自动共享当从*集成终端*(Integrated terminal)或*已知的扩展*(well-known extensions)服务器。详见[TODO]。 | `true` |
 | `liveshare.autoShareTerminals` | 控制是否自动与协作者共享终端（自动共享时为“只读”）。详见[TODO]。 | `true` |
@@ -174,3 +174,8 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
     "liveshare.showVerboseNotifications": true
 }
 ```
+
+
+## 普通协作
+
+### 聚焦和跟踪

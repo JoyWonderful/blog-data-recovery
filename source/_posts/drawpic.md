@@ -8,10 +8,10 @@ categories: Others
 附注：
 
 这个页面现在没意义了。  
-~~但由于它处于为数不多的“琐碎”分类~~，此文章将保留。
+~~但由于它处于为数不多的“Others”分类~~，此文章将保留。
 {% endnote %}
 
 放假了闲着没事情干，便画了一些画，放在这儿，留此纪念。
 <!--more-->
-![pencil-box](https://src-jywon.netlify.app/img/blog-drawpic-pencilBox.jpg)
-![naozhong](https://src-jywon.netlify.app/img/blog-drawpic-naozhong.jpg)
+{% cdnimg pencil-box, pencilBox.jpg %}
+{% cdnimg naozhong, naozhong.jpg %}
