@@ -8,12 +8,12 @@ hexo.extend.tag.register('litever', function() {
     var str = '';
     allPkg.forEach((depname) => {str += `<a href="https://www.npmjs.com/package/${depname}">${depname}</a>: ${dependencies[depname]}\n`});
     return `<pre class="language-none"><code class="language-none">${str}</code></pre>`;
-}, true);
+});
 
 hexo.extend.tag.register('note', function(args, content) {
     content = hexo.render.renderSync({text: content, engine: 'markdown'});
     return `<div class="note ${args[0]}">${content}</div>`
-}, true);
+}, {ends: true});
 
 // from theme next
 hexo.extend.tag.register('tabs', function(args, content) {
@@ -56,4 +56,4 @@ hexo.extend.tag.register('tabs', function(args, content) {
     tabContent = `<div class="tab-content">${tabContent}</div>`;
 
     return `<div class="tabs" id="${tabName.toLowerCase().split(' ').join('-')}">${tabNav + tabContent}</div>`;
-}, true);
+}, {ends: true});

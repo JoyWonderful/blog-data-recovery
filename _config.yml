@@ -95,6 +95,11 @@ search:
   field: post
   content: true
   format: striptags
+### my tag "cdnimg"
+cdnimg:
+  cdn: https://src-jywon.netlify.app/img/
+  prefix: [blog, :title] # the prefix of the image name, a list, :title means the post's file name
+  prefix_char: "-" # join between prefixes and the image name
 ## Themes: https://hexo.io/themes/
 theme: lite # my theme
 
