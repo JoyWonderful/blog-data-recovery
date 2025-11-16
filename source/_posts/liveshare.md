@@ -29,7 +29,7 @@ date: 2025-10-26 19:56:25
 
 扩展页面就是这样介绍的。微软大概有底气认为 Visual Studio (Code) 就是**您最喜欢的工具**。事实上我就是它的忠诚用户。  
 这个简介的重点显然是**您最喜欢的工具**。之所以这么说，是因为当进行协作时你的 VS(Code) 主题、设置等还是你自己的设定，不会跟着主持者一样。  
-**您喜欢的工具**是方便的，因为 Live Share 可以只用网页进行协作，主持者允许时协作者可以不用登录（但主持者还是要登 Github 或 Microsoft 账户的，而很多使用 VS(Code) 的人都至少有其中一个账号）。
+**您喜欢的工具**是方便的，因为 Live Share 可以只用网页进行协作，*主持者*(host)允许时*协作者*(participant)可以不用登录（但主持者还是要登 GitHub 或 Microsoft 账户的，而很多使用 VS(Code) 的人都至少有其中一个账号）。
 
 接下来详细介绍用法及各个功能。
 
@@ -74,9 +74,9 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
 | :--- | :-------- | :------ |
 | `liveshare.allowGuestDebugControl` | 允许协作者启动和停止调试会话。当项为 `true` 时，即 GUI 设置里打上勾时协作者也可以在主持者的终端上运行和调试程序。详见[TODO]。 | `false` |
 | `liveshare.allowGuestTaskControl` | 允许协作者运行和终止工作区的*任务*(Tasks)。也请见上[TODO]。 | `false` |
-| `liveshare.alwaysFollowHost` | 确保主持者总是被跟随。详见[聚焦和跟踪](#聚焦和跟踪)。 | `false` |
-| `liveshare.anonymousGuestApproval` | 控制如何处理来自*匿名*（指未登录的）协作者的加入请求。当项为 `"prompt"` 时，显示一个消息询问；当项为 `"reject"` 时会自动拒绝；当项为`"accept"` 时自动允许。图片见[TODO]。 | `"prompt"` |
-| `liveshare.autoShareServers` | 控制是否自动共享当从*集成终端*(Integrated terminal)或*已知的扩展*(well-known extensions)服务器。详见[TODO]。 | `true` |
+| `liveshare.alwaysFollowHost` | 确保主持者总是被跟踪。详见[聚焦和跟踪](#聚焦和跟踪)。 | `false` |
+| `liveshare.anonymousGuestApproval` | 控制如何处理来自*匿名*（指未登录的）协作者的加入请求。当项为 `"prompt"` 时，显示一个消息询问；当项为 `"reject"` 时会自动拒绝；当项为`"accept"` 时自动允许。消息和[这个](#request-join)差不多 | `"prompt"` |
+| `liveshare.autoShareServers` | 控制是否自动共享当从*集成终端*(Integrated terminal)或*已知的扩展*(well-known extensions)启动的服务器。详见[TODO]。 | `true` |
 | `liveshare.autoShareTerminals` | 控制是否自动与协作者共享终端（自动共享时为“只读”）。详见[TODO]。 | `true` |
 | `liveshare.codeLens` | 控制是否展示用于启动协作的 CodeLens。（我不知道怎么用，恕不介绍） | `true` |
 | `liveshare.comments` | 控制是否允许在协作绘画中的*评论*(Comments)。 | `true` |
@@ -86,13 +86,13 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
 | `liveshare.diagnosticMode` | 启用诊断*通知*(Notification)和日志。 | `false` |
 | `liveshare.featureSet` | 控制是否启用预览功能。当项为 `"stable"` 时不启用；当项为 `"insiders"` 时启用预览功能，选择它即表示你同意 [*Pre-Release Software License Terms*](https://aka.ms/vsls-license-preview/)（这个链接目前好像无效）和 [*Privacy Statement*](https://aka.ms/vsls-privacy) | `"stable"` |
 | `liveshare.focusBehavior` | 指定如何响应来自其他协作者的关注请求(Focus requests)。当为 `"accept"` 时自动允许；当为 `"prompt"` 时弹出对话框请求。详见[TODO] | `"accept"` |
-| `liveshare.guestApprovalRequired` | 控制主持者是否需要明确批准来宾请求加入协作会话。 | `false` |
+| `liveshare.guestApprovalRequired` | 控制主持者是否需要明确批准来宾请求加入协作会话。详见[创建](#创建) | `false` |
 | `liveshare.increasedGuestLimit` | 将协作者个数限制从 5 增加到 30 个。 | `true` |
 | `liveshare.joinDebugSessionOption` | 控制协作者如何加入正在进行的共享调试会话。详见[TODO] | `"Automatic"` |
 | `liveshare.keepAliveInterval` | 设置在空闲会话中发送保持连接消息前的等待秒数，用于检测异常的网络断开。设置为 -1 可禁用发送保持连接消息。 | `20` |
 | `liveshare.languages.allowGuestCommandControl` | 允许访客通过代码操作（“快速修复”）和 CodeLens 运行任意命令。 | `false` |
 | `liveshare.launcherClient` | 指定当单击 Live Share 共享链接时启动的客户端。可选值 `"web"`,`"visualStudio"`,`"visualStudioCode"`。 | `"web"` |
-| `liveshare.nameTagVisibility` | 控制何时显示协作者的名字标签而不是仅仅显示它们的光标。当为 `"Activity"` 时在协作者编辑时显示；当为 `"Always"` 时总是显示；当为 `"Never"` 时从不显示。图片见[TODO]。 | `"Activity"` |
+| `liveshare.nameTagVisibility` | 控制何时显示协作者的名字标签而不是仅仅显示它们的光标。当为 `"Activity"` 时在协作者编辑时显示；当为 `"Always"` 时总是显示；当为 `"Never"` 时从不显示。图片见[下面](#name-tag)。 | `"Activity"` |
 | `liveshare.notebooks.allowGuestExecuteCells` | 允许协作者运行 Notebook Cells。 | `false` |
 | `liveshare.openSharedServers` | 控制是否用默认浏览器自动打开已共享的服务器。 | `true` |
 | `liveshare.populateGitCoAuthors` | 指定何时自动在你的 Git 提交信息中加上协作者署名（使用 Git-co-author trailer）。可选值 `"always"`,`"never"` | `"always"` |
@@ -103,6 +103,9 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
 | `liveshare.showInStatusBar` | 显示或隐藏 Live Share 的状态栏项。可选值 `"always"`,`"whileCollaborating"`,`"never"` | `"always"` |
 | `liveshare.showReadOnlyUsersInEditor` | 控制只读协作者的光标和高亮的可见性。可选值 `"whileFollowing"`,`"always"`。 | `"whileFollowing"` |
 | `liveshare.showVerboseNotifications` | 控制是否显示详细通知，例如当访客加入或离开会话时。 | `true` |
+
+{% cdnimg nametag, nametag.png, id="name-tag"; loading="lazy"; title="名字标签" %}
+{% cdnimg cursor, cursor.png, loading="lazy"; title="没有名字标签的光标" %}
 
 ### JSON 版本
 
@@ -178,4 +181,26 @@ Live Share 有很多项设置，在这里全部翻译（说明好像只有英文
 
 ## 普通协作
 
+### 创建、加入与普通权限
+
+#### 创建
+
+创建会话前，你要先登录 Microsoft 或 GitHub 账户（只要授权一次，之后不用授权了）。  
+打开的文件夹就是将要共享的文件夹。如果打开了该文件夹外部的文件，也会自动共享。  
+主持者可以创建*只读*(Read-only)会话或*可读写*(Read/Write)会话。只读会话中所有文件都仅供协作者查看。可读写会话在协作者不登录加入时默认无读写权限，需要主持者授予（右键协作者，“Make Read/Write”）。  
+
+主持者可通过 `liveshare.guestApprovalRequired` 设置项为 `true` 启用批准来宾功能（默认为 `false`：来宾自动加入）。当来宾试图加入时，必须要经过主持者的批准。见下图。
+
+{% cdnimg reqj, requestjoin.png, id="request-join"; loading="lazy"; title="主持者批准请求" %}
+{% cdnimg wfap, waitingforapp.png, loading="lazy"; title="来宾等待主持者批准" %}
+
+
+
 ### 聚焦和跟踪
+
+先说明一下定义：
+
+- ***聚焦*(Focus)**：即打开文件到另一个协作者的位置，但不会自动跟踪位置；
+- ***跟踪*(Follow)**：顾名思义，自动跟跟随另一个协作的位置。
+
+[To Be Continued]
