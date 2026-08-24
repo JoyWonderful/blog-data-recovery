@@ -1,6 +1,7 @@
 ---
 title: ANSI 转义序列：控制终端文本样式及光标
 date: 2026-08-01 21:22:43 +08:00
+updated: 2026-08-24 22:25:32 +08:00
 tags:
   - 终端
 categories: Programming
@@ -305,6 +306,40 @@ CSI 序列应该是人们最常用，也最通用的。
         </tr>
     </tbody>
 </table></div>
+
+你还可以用 `\033[<n> q` 来设定光标样式。
+
+- `0` 默认样式；
+- `1` 闪烁方块（`█`）；
+- `2` 不闪烁方块；
+- `3` 闪烁下划线（`_`）；
+- `4` 不闪烁下划线；
+- `5` 闪烁条状（`I`, `|`）；
+- `6` 不闪烁条状。
+
+:::details 用于 Vim 不同模式
+
+在不同模式下改变光标样式对于 Vim 来说很好用，也很常见。
+
+```vim
+" 0 or 1 (blinking block), 2 (steady block), 3 (blinking underline), 4 (steady underline), 5 (blinking bar/I-beam), 6 (steady bar).
+let &t_SI = "\e[5 q" " 插入模式
+let &t_SR = "\e[1 q" " 替换模式
+let &t_EI = "\e[2 q" " 普通模式及其他
+function! s:SendCursorSeq(seq) abort
+    let l:seq = substitute(a:seq, '\\e', '\\033', 'g')
+    silent! call system('printf "' . l:seq . '" >/dev/tty')
+endfunction
+augroup CursorShapeByMode
+    autocmd!
+    " 启动时立即应用普通模式光标样式
+    autocmd VimEnter * call s:SendCursorSeq(&t_EI)
+    " 退出时恢复终端默认光标样式
+    autocmd VimLeave * call s:SendCursorSeq("\e[0 q")
+augroup END
+```
+
+:::
 
 
 #### 清除
