@@ -101,6 +101,13 @@ rehype plugins:
 由于无法解决的时区问题，请在 MarkDown 的 FrontMatter 的日期类型指明**时区**。
 方法为加上 ` +08:00`（指定时区为东八区）。
 
+#### FrontMatter - License
+
+许可的标识符来自 [SPDX License List](https://spdx.org/licenses/)。  
+仅识别 `src/config.schema.json` 里的 `example` 项里的许可。
+
+`license-reason` 将会以 Markdown 格式渲染。
+
 #### Container
 
 Container 的标题上**不能用 Markdown**，不然会有奇奇怪怪的 bug（但是可以有空格）。  
