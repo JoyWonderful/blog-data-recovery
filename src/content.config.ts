@@ -10,6 +10,8 @@ const blogPosts = defineCollection({
         updated: z.coerce.date().optional(),
         tags: z.array(z.string()).or(z.string()),
         categories: z.string(),
+        license: z.string().optional(),
+        license_reason: z.string().optional(),
         math: z.boolean().default(false)
     })
 });

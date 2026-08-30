@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import PostLicense from "~/components/PostLicense.astro";
 import "~/styles/components/PostFooter.scss";
 import config from "~/config.json";
 
@@ -18,6 +19,8 @@ else postTags = blogPosts[postIndex].data.tags;
 var prevHref = null, nextHref = null;
 if(postIndex - 1 >= 0) prevHref = `${config.posts_path}/${blogPosts[postIndex-1].id}`;
 if(postIndex + 1 < blogPosts.length) nextHref = `${config.posts_path}/${blogPosts[postIndex+1].id}`;
+
+var license = blogPosts[postIndex].data.license || config.license_default || undefined;
 ---
 <footer class="post-footer" data-pagefind-body>
     <div class="post-categories">
@@ -34,6 +37,11 @@ if(postIndex + 1 < blogPosts.length) nextHref = `${config.posts_path}/${blogPost
             return <a href={tag_href} data-pagefind-filter="tags">{tag}</a>;
         })}
     </div>
+    {license &&
+    <div class="post-license" id="LICENSE">
+        <PostLicense license={license} reason={blogPosts[postIndex].data.license_reason} />
+    </div>
+    }
     <nav class="post-nav" data-pagefind-ignore>
         {prevHref && <a rel="prev" href={prevHref}><i class="fa fa-angle-left fa-fw"></i><span>{blogPosts[postIndex-1].data.title}</span></a>}
         {nextHref && <a rel="next" href={nextHref}><span>{blogPosts[postIndex+1].data.title}</span><i class="fa fa-angle-right fa-fw"></i></a>}

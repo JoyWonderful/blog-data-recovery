@@ -1,0 +1,90 @@
+---
+import { Markdown } from "astro-remote";
+import { properties as schemaProperties } from "~/config.schema.json";
+import "~/styles/components/PostLicense.scss";
+
+const { license, reason }:Record<string, string> = Astro.props; // 这是许可证标识符
+
+const RIGHTS = {
+    share: {name:"共享", description:"可以在任何媒介以任何形式复制、发行本作品。"},
+    adapt: {name:"演绎", description:"可以在任何用途下修改、转换或以本作品为基础进行创作。"},
+    commercial: {name:"商业使用", description:"可以将本作品用于商业目的。"}
+};
+const DEEDS = {
+    BY: {name:"署名", description:"提供适当的署名，即注明出处。", icon:"fab fa-creative-commons-by"},
+    NC: {name:"非商业性使用", description:"不得将本作品用于商业目的。", icon:"fab fa-creative-commons-nc"},
+    SA: {name:"相同方式共享", description:"必需在相同许可下发布本作品。", icon:"fab fa-creative-commons-sa"},
+    ND: {name:"禁止演绎", description:"不能修改作品。", icon:"fab fa-creative-commons-nd"},
+    ZERO: {name:"无版权", description:"您可以复制、修改、分发和演绎作品，甚至用于商业性目的，均无须寻求同意。", icon:"fab fa-creative-commons-zero"}
+};
+var details_url = "";
+var icon = "";
+var deeds_name = []; // 实际的“需求”
+var deeds = [];
+var rights = [];
+
+var err_license = false;
+if(!schemaProperties.license_default.examples.includes(license)) {
+    Astro.logger.error(`Unknow license ${license}`);
+    err_license = true;
+}
+
+if(license.startsWith("CC-BY")) {
+    icon = "fab fa-creative-commons";
+    rights.push(RIGHTS.share);
+    if(!license.includes("ND")) rights.push(RIGHTS.adapt);
+    if(!license.includes("NC")) rights.push(RIGHTS.commercial);
+    for(const deed of Object.keys(DEEDS)) {
+        if(license.includes(deed)) {
+            deeds_name.push(deed.toLowerCase());
+            deeds.push(DEEDS[deed]);
+        }
+    }
+    details_url = `https://creativecommons.org/licenses/${deeds_name.join("-")}/4.0/deed.zh-hans`
+}
+else {
+    switch(license) {
+        case "GFDL-1.3-or-later":
+            details_url = "https://www.gnu.org/licenses/fdl-1.3.zh-cn.html";
+            icon = "fa fa-gavel";
+            rights.push(RIGHTS.share, RIGHTS.adapt, RIGHTS.commercial);
+            deeds.push(DEEDS.BY, DEEDS.SA);
+            break;
+        case "CC0-1.0":
+            details_url = "https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hans";
+            icon = "fab fa-creative-commons-zero";
+            rights.push(RIGHTS.share, RIGHTS.adapt, RIGHTS.commercial);
+            deeds.push(DEEDS.ZERO);
+            break;
+        case "CC-PDM-1.0":
+            details_url = "https://creativecommons.org/publicdomain/mark/1.0/deed.zh-hans";
+            icon = "fab fa-creative-commons-pd";
+            rights.push(RIGHTS.share, RIGHTS.adapt, RIGHTS.commercial);
+            deeds.push(DEEDS.ZERO);
+            break;
+    }
+}
+---
+{err_license ? 
+<p class="license-brief">未知许可：{license}。</p>
+:
+<Fragment>
+<p class="license-brief">
+    本文许可为：<i class:list={[icon, "fa-fw"]}></i><a href={details_url} target="_blank" rel="noopener noreferer"><strong>{license}</strong></a>。<br />
+    简要说明如下。
+</p>
+<ul class="license-deed">
+    {rights.map((right) =>
+    <li class="rights"><i class="far fa-circle-check"></i><strong>{right.name}</strong>：{right.description}</li>
+    )}
+    {deeds.map((deed) => 
+    <li><i class:list={[deed.icon, "fa-fw"]} title={deed.name}></i><strong>{deed.name}</strong>：{deed.description}</li>
+    )}
+</ul>
+{reason &&
+<div class="license-reason">
+    <Markdown content={reason} />
+</div>
+}
+</Fragment>
+}

@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../variables" as *;
+
+:is(.license-brief, .license-deed) {
+    i[class*="fa"] {
+        color: $color_text_3 !important;
+        font-size: 1.25rem;
+        margin-right: .125rem !important;
+        transition: color $transition_time;
+    }
+    a strong {
+        transition: color $transition_time;
+    }
+    a:hover strong {
+        color: $color_theme !important;
+    }
+}
+p.license-brief {
+    margin-bottom: .25rem;
+}
+ul.license-deed {
+    padding-left: 0;
+    li::marker {
+        content: none;
+    }
+    strong {
+        transition: color $transition_time;
+    }
+    li.rights :is(i[class*="fa"], strong) {
+        color: map.get($note-fg, "success") !important;
+    }
+    li:hover :is(i[class*="fa"], strong) {
+        color: $color_theme !important;
+    }
+}
+div.license-reason {
+    > :last-child {
+        margin-bottom: 0;
+    }
+}

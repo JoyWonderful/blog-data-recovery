@@ -26,10 +26,31 @@
             margin-right: 3px;
         }
     }
+    .post-license { // 这应该是许可区域外围的样式
+         // 左右将 .post-footer 的 padding 抵消掉，背景色才能将左右填满
+        margin: $indent_top (-$indent_top) 0 (-$indent_top);
+        padding: $indent_top;
+        background: $color_2;
+        position: relative;
+        overflow: clip;
+        > * {position: relative; z-index: 1;}
+        > :last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            @include fontawesome("\f24e"); // scale-balanced
+            position: absolute;
+            left: -.2em;
+            top: -.1em;
+            font-size: 6rem;
+            color: $color_3;
+            z-index: 0;
+        }
+    }
     .post-nav {
-        margin-top: 1rem;
-        padding-top: .25rem;
-        border-top: 1px dashed $color_text_1;
+        margin-top: $indent_top;
+        // padding-top: .25rem;
+        // border-top: 1px dashed $color_text_1;
         display: flex;
         flex-flow: row;
         a {
