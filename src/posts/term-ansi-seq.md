@@ -5,6 +5,8 @@ updated: 2026-08-24 22:25:32 +08:00
 tags:
   - 终端
 categories: Programming
+license: CC-BY-SA-4.0
+license_reason: 由于[历史](#历史)部分主要修改、整理自 [Wikipedia](https://zh.wikipedia.org/wiki/ANSI%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97)，百科使用 CC BY-SA 4.0 许可，要求使用“相同方式共享”。
 math: true
 ---
 
@@ -556,12 +558,3 @@ echo
 小学毕业时，我也写过[类似的头文件](https://github.com/JoyWonderful/JoyWonderful/blob/main/one-file-object/clrftodsp.h)，但是使用 Windows Console API。  
 没有写小学毕业礼物，只写了这个头文件，也没送出去。  
 我甚至把这个头文件发到洛谷上了。
-
-----------
-
-:::note{.danger} 例外许可
-
-由于[历史](#历史)部分主要修改、整理自 Wikipedia，百科使用 CC BY-SA 4.0 许可，要求使用“相同方式共享”。  
-因此，本文许可为 [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans "Creative Commons Attribution-ShareAlike 4.0 International（知识共享 署名—相同方式共享 4.0 协议 国际版）")。
-
-:::

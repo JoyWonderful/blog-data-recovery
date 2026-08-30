@@ -3,6 +3,10 @@ title: 自己画的一些画
 date: 2023-06-23 13:48:32 +08:00
 categories: Others
 tags: Other-Tag
+license: CC-BY-NC-ND-4.0
+license_reason: | 
+    这些**图片**也在这个许可下发布。  
+    讲实话，你也没什么修改的需求。
 ---
 
 :::note{.info} 附注：

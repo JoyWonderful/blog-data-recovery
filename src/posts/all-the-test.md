@@ -4,7 +4,8 @@ date: 2023-07-08 18:52:56 +08:00
 updated: 2024-03-31 09:34:43 +08:00
 categories: Others
 tags: Other-Tag
-hidden: true
+license: CC0-1.0
+license_reason: ~~只是一个测试而已，哪有什么好要版权的。~~
 math: true
 ---
 

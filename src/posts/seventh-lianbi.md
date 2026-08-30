@@ -3,6 +3,8 @@ title: 一些随笔记录和想法
 date: 2023-12-31 17:20:14 +08:00
 tags: 作文
 categories: Others
+license: CC-BY-NC-ND-4.0
+license_reason: 这更不能让别人乱改了。~~上培优班的时候还是太压抑了。~~
 ---
 
 <style>

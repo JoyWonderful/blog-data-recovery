@@ -3,6 +3,8 @@ title: 一些六年级的小练笔
 date: 2023-06-20 09:25:18 +08:00
 tags: 作文
 categories: Others
+license: CC-BY-NC-ND-4.0
+license_reason: 毕竟是**作文**。
 ---
 
 一些六年级写的小作文（小练笔），留作纪念。
