@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 pre.astro-code {
-    font-family: $font_mono;
+    // font-family: $font_mono; // 已在 main.scss 的 code 处定义
     white-space: pre;
     tab-size: 4;
     overflow: auto;
