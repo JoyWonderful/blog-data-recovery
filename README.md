@@ -96,6 +96,10 @@ rehype plugins:
 
 ### Attention
 
+#### Node Version
+
+`.node-version` 文件是为了避免 CF 或者其他什么部署平台使用过低版本的 Node 导致部署失败的。
+
 #### FrontMatter - Date
 
 由于无法解决的时区问题，请在 MarkDown 的 FrontMatter 的日期类型指明**时区**。
